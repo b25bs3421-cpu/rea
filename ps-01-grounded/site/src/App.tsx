@@ -72,10 +72,10 @@ export default function App() {
           hint="Move across the evidence"
           hintTouch="Touch the evidence"
           backdropText="evidence"
-          src="/sculpture-light.webp"
-          darkSrc="/sculpture-dark.webp"
-          mobileSrc="/sculpture-light.webp"
-          mobileDarkSrc="/sculpture-dark.webp"
+          src="/sculpture-light.png"
+          darkSrc="/sculpture-dark.png"
+          mobileSrc="/sculpture-light.png"
+          mobileDarkSrc="/sculpture-dark.png"
           imageAlt="A cloud of fine metallic filaments resolving into a solid loop — the material of many documents, gathered into one answer"
           theme={theme}
           themeToggle

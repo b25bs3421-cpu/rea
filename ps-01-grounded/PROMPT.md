@@ -184,10 +184,15 @@ You may only: (a) pass props, (b) place the component on the page, (c) build sec
   bodyFont="'Geist', 'Helvetica Neue', Arial, sans-serif"
   loadFonts
   // ── sculpture ───────────────────────────────────────────────────────
-  // Keep the packaged sculpture images. They are the design. Do not swap in
-  // stock imagery, a 3D render, or a logo mark.
-  // src, darkSrc, mobileSrc, mobileDarkSrc → leave at defaults
-  imageAlt="A cloud of fine metallic filaments resolving into a solid form — the material of a document, gathered into one answer"
+  // Ship a cut-out (transparent) image: an interwoven filament loop on nothing.
+  // A flat-background image also works, but it is keyed out by colour, so every
+  // sub-pixel gap around the strands keeps a film of the old ground — visible as
+  // a grey halo once the page background differs from the image's own ground.
+  src="/sculpture-light.png"       // transparent background, ink-dark strands
+  darkSrc="/sculpture-dark.png"    // transparent background, warm-light strands
+  mobileSrc="/sculpture-light.png"
+  mobileDarkSrc="/sculpture-dark.png"
+  imageAlt="A cloud of fine metallic filaments resolving into a solid loop — the material of many documents, gathered into one answer"
   // ── interaction (defaults, tune only if a device test demands it) ────
   interactive
   strength={1}
@@ -212,7 +217,13 @@ Notes:
 
 - `headline` uses a real newline (`"Every answer\ncites its source."`). The second line is the accent line — Instrument Serif italic. This is the single most important typographic moment on the site; do not shorten it to one line.
 - `intro` is `true` here (the packaged default is `false`): the assembly animation doubles as a metaphor — loose fragments of many documents settling into one coherent form. It self-disables under `prefers-reduced-motion`.
-- Leave `src`/`darkSrc`/`mobileSrc`/`mobileDarkSrc` at the packaged defaults. They are CORS-readable and already tuned for the component's background-keying. **If you replace them, the replacement must be a flat-background or cut-out image on a same-colour ground, served with permissive CORS, or the hero silently falls back to a static `<img>`.**
+- The sculpture image is part of the design and must stay a *loop of filaments*, never a stock photo,
+  a 3D render, a product shot or a logo. Two acceptable forms:
+  **cut-out PNG with real alpha (preferred)** or a flat-background image served same-origin with
+  permissive CORS. Anything else and the hero either falls back to a static `<img>` or paints a halo.
+- Produce the cut-out properly: key the ground out, then set the RGB of every fully transparent pixel
+  to the strand colour (not black). A black-under-transparent PNG anti-aliases into grey speckle at
+  the edges — visually identical to the "1.4 MB of grey mush" failure mode.
 - Keep `showCredit` — the component is by guglielmogiannattasio.it.
 
 ### 3.3 Wiring the theme toggle to the whole page

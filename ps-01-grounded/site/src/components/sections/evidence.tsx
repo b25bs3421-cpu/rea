@@ -57,7 +57,8 @@ function Sentence({
               byId(id).section
             }`}
             className={cn(
-              "rounded-[2px] border px-1 py-0.5 font-mono text-[9.5px] leading-none transition-colors duration-200",
+              // cite-hit: an invisible 8px halo, so the chip stays small and is still tappable
+              "cite-hit relative rounded-[2px] border px-[3px] py-[2px] font-mono text-[9px] leading-none transition-colors duration-200",
               active === id
                 ? "border-ink bg-ink text-paper"
                 : "border-rule/30 bg-raised text-cite hover:border-rule/60 hover:text-ink"

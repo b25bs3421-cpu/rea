@@ -96,7 +96,7 @@
   }
 
   .section {
-    @apply relative border-t border-rule/12 py-[72px] sm:py-[96px] lg:py-[132px];
+    @apply relative border-t border-rule/12 py-[64px] sm:py-[84px] lg:py-[112px];
   }
 
   .eyebrow {
@@ -138,6 +138,13 @@
   .cite-chip:hover,
   .cite-chip[data-active="true"] {
     @apply -translate-y-px border-rule/45 text-ink;
+  }
+
+  /* invisible hit area so a 9px chip is still usable on a phone */
+  .cite-hit::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
   }
 
   .cite-chip sup {

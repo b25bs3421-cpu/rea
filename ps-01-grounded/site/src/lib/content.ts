@@ -294,7 +294,7 @@ export const STATUS_LABEL: Record<CitationStatus, string> = {
 export const SCOPE = {
   eyebrow: "05 — Scope",
   line1: "What “done” means.",
-  line2: "Measured, not imagined.",
+  line2: "Measured, in public.",
   lead: "Written as acceptance criteria, not aspirations. These are the numbers the build is measured against — targets, not results.",
   criteria: [
     {

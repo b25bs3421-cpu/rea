@@ -25,7 +25,7 @@ export function TopBar({ mode, onToggleTheme }: TopBarProps) {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 border-b border-rule/12 bg-paper/95 transition-[transform,visibility] duration-300 ease-editorial",
+        "fixed inset-x-0 top-0 z-50 border-b border-rule/12 bg-paper/90 backdrop-blur-md transition-[transform,visibility] duration-300 ease-editorial",
         shown ? "visible translate-y-0" : "invisible -translate-y-full"
       )}
       aria-hidden={!shown}
@@ -61,14 +61,14 @@ export function TopBar({ mode, onToggleTheme }: TopBarProps) {
             onClick={onToggleTheme}
             tabIndex={shown ? 0 : -1}
             aria-label={mode === "dark" ? "Switch to light theme" : "Switch to dark theme"}
-            className="grid h-[34px] w-[34px] place-items-center rounded-full border border-rule/25 text-ink/80 transition-colors duration-250 hover:bg-ink hover:text-paper"
+            className="grid h-[34px] w-[34px] place-items-center rounded-full border border-rule/25 text-ink/80 transition-colors duration-200 hover:bg-ink hover:text-paper"
           >
             {mode === "dark" ? <SunIcon /> : <MoonIcon />}
           </button>
           <a
             href="#evidence"
             tabIndex={shown ? 0 : -1}
-            className="hidden rounded-full border border-rule/25 px-3.5 py-2 text-[13px] text-ink/80 transition-colors duration-250 hover:bg-ink hover:text-paper sm:inline-flex"
+            className="hidden rounded-full border border-rule/25 px-3.5 py-2 text-[13px] text-ink/80 transition-colors duration-200 hover:bg-ink hover:text-paper sm:inline-flex"
           >
             Try the demo
           </a>
