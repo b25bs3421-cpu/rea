@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* shadcn/ui-compatible design tokens (neutral base, warmed to the artwork). */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: "Geist Variable", "Geist", "Helvetica Neue", Arial, sans-serif;
+  --font-heading:
+    "Geist Variable", "Geist", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Instrument Serif", "Times New Roman", serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: #eceae8;
+  --foreground: #151514;
+  --card: #f3f1ee;
+  --card-foreground: #151514;
+  --popover: #f3f1ee;
+  --popover-foreground: #151514;
+  --primary: #151514;
+  --primary-foreground: #eceae8;
+  --secondary: #e2dfda;
+  --secondary-foreground: #151514;
+  --muted: #e2dfda;
+  --muted-foreground: #5c5a56;
+  --accent: #e2dfda;
+  --accent-foreground: #151514;
+  --destructive: #b3261e;
+  --border: #d8d4ce;
+  --input: #d8d4ce;
+  --ring: #151514;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+}
