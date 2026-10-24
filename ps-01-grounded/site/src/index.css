@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   Tokens — sampled from the hero so the whole page agrees with it
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --paper-rgb: 235 233 229; /* #EBE9E5 */
+  --raised-rgb: 244 242 238; /* #F4F2EE */
+  --ink-rgb: 21 21 20; /* #151514 */
+  --rule-rgb: 21 21 20;
+  --cite-rgb: 107 106 102; /* #6B6A66 */
+  --mark-rgb: 21 21 20;
+  --verify-rgb: 63 107 74; /* #3F6B4A */
+  --dot: rgb(21 21 20 / 0.07);
+  color-scheme: light;
+}
+
+.dark {
+  --paper-rgb: 17 17 16; /* #111110 */
+  --raised-rgb: 25 25 24; /* #191918 */
+  --ink-rgb: 241 239 234; /* #F1EFEA */
+  --rule-rgb: 241 239 234;
+  --cite-rgb: 165 162 155; /* #A5A29B */
+  --mark-rgb: 241 239 234;
+  --verify-rgb: 143 183 154; /* #8FB79A */
+  --dot: rgb(241 239 234 / 0.07);
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: rgb(var(--rule-rgb) / 0.12);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    margin: 0;
+    transition:
+      background-color 0.6s ease,
+      color 0.6s ease;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgb(var(--ink-rgb) / 0.14);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--ink-rgb));
+    outline-offset: 4px;
+    border-radius: 1px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    letter-spacing: -0.035em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* page shell */
+  .shell {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8 lg:px-12;
+  }
+
+  .section {
+    @apply relative border-t border-rule/12 py-[72px] sm:py-[96px] lg:py-[132px];
+  }
+
+  .eyebrow {
+    @apply flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.16em] text-ink/50;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-7 bg-ink/40;
+  }
+
+  .display {
+    @apply mt-7 text-[clamp(32px,4.2vw,58px)] font-medium leading-[1.02] tracking-[-0.04em];
+  }
+
+  .accent {
+    @apply font-serif font-normal italic tracking-[-0.02em];
+  }
+
+  .lead {
+    @apply mt-6 max-w-lead text-[clamp(16px,1.35vw,20px)] leading-[1.55] text-ink/70;
+  }
+
+  .body-copy {
+    @apply max-w-measure text-[15.5px] leading-[1.65] text-ink/70;
+  }
+
+  .caption {
+    @apply font-mono text-[11px] uppercase tracking-[0.12em] text-ink/45;
+  }
+
+  /* citation chip — the site's signature ornament */
+  .cite-chip {
+    @apply inline-flex max-w-full items-center gap-1.5 rounded-[2px] border border-rule/25 bg-raised px-1.5 py-[3px]
+      font-mono text-[11px] leading-none text-cite transition-all duration-200 ease-editorial;
+    vertical-align: 1px;
+  }
+
+  .cite-chip:hover,
+  .cite-chip[data-active="true"] {
+    @apply -translate-y-px border-rule/45 text-ink;
+  }
+
+  .cite-chip sup {
+    @apply text-[10px] text-ink/55;
+  }
+
+  /* hairline row that lifts a millimetre on hover */
+  .row-lift {
+    @apply transition-colors duration-200 ease-editorial;
+  }
+
+  /* the reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.42s cubic-bezier(0.22, 0.7, 0.2, 1),
+      transform 0.42s cubic-bezier(0.22, 0.7, 0.2, 1);
+    transition-delay: var(--d, 0ms);
+  }
+
+  .reveal[data-in="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* problem section: research desk */
+  .desk {
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: -1px -1px;
+  }
+
+  @media (max-width: 639px) {
+    .desk {
+      background-size: 16px 16px;
+    }
+  }
+
+  .sticky-note {
+    @apply relative rounded-[2px] border border-rule/18 bg-raised p-5 sm:p-6;
+    transform: rotate(var(--rot, 0deg));
+    box-shadow: 0 1px 0 rgb(var(--ink-rgb) / 0.03);
+    transition:
+      transform 0.35s cubic-bezier(0.22, 0.7, 0.2, 1),
+      box-shadow 0.35s cubic-bezier(0.22, 0.7, 0.2, 1);
+  }
+
+  @media (max-width: 639px) {
+    .sticky-note {
+      transform: none;
+    }
+  }
+
+  .sticky-note:hover {
+    transform: rotate(0deg) translateY(-2px);
+    box-shadow: 0 10px 22px -18px rgb(var(--ink-rgb) / 0.55);
+  }
+
+  .tape {
+    @apply absolute left-1/2 top-0 h-5 w-20 -translate-x-1/2 -translate-y-1/2 rotate-[-2deg] bg-ink/10;
+  }
+
+  /* mono quote of a document span */
+  .span-quote {
+    @apply font-mono text-[12px] leading-[1.6] text-cite;
+    background: rgb(var(--mark-rgb) / 0.06);
+    box-shadow: 0 0 0 2px rgb(var(--mark-rgb) / 0.06);
+  }
+
+  .span-quote[data-flash="true"] {
+    animation: flash-mark 1.2s ease-out;
+  }
+
+  @keyframes flash-mark {
+    0% {
+      background: rgb(var(--mark-rgb) / 0.22);
+      box-shadow: 0 0 0 2px rgb(var(--mark-rgb) / 0.22);
+    }
+    100% {
+      background: rgb(var(--mark-rgb) / 0.06);
+      box-shadow: 0 0 0 2px rgb(var(--mark-rgb) / 0.06);
+    }
+  }
+
+  /* evidence sentences stay quiet until their citation is touched */
+  .q-sentence {
+    @apply rounded-[2px] transition-colors duration-300;
+    box-shadow: 0 0 0 3px transparent;
+    background: transparent;
+  }
+
+  .q-sentence[data-lit="true"] {
+    background: rgb(var(--mark-rgb) / 0.09);
+    box-shadow: 0 0 0 3px rgb(var(--mark-rgb) / 0.09);
+  }
+}
