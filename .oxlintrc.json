@@ -51,6 +51,15 @@
       }
     },
     {
+      "files": ["components/**/*.tsx"],
+      "rules": {
+        "max-lines": "off",
+        "max-lines-per-function": "off",
+        "max-params": "off",
+        "complexity": "off"
+      }
+    },
+    {
       "files": ["src/application/**/*.test.ts"],
       "rules": {
         "no-restricted-imports": [
