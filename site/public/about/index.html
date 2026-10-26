@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How this site is generated · REA Workbench</title>
+<meta name="description" content="The pipeline, the catalog digests, the two captures and the deliberate limits behind this site.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#08090b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="REA Workbench">
+<meta property="og:title" content="How this site is generated · REA Workbench">
+<meta property="og:description" content="The pipeline, the catalog digests, the two captures and the deliberate limits behind this site.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem("rea-site-theme");var d=window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches;document.documentElement.dataset.theme=t||(d?"light":"dark");}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/" aria-label="REA Workbench, home">
+      <span style="color:var(--accent);display:flex"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square">
+    <path d="M5 11V5h6M21 5h6v6M27 21v6h-6M11 27H5v-6"/>
+    <path d="M12 22V10h5.2a3.6 3.6 0 0 1 0 7.2H12"/>
+    <path d="M18.4 17.2 22 22"/>
+  </g>
+</svg></span>
+      <span>REA Workbench<small>repository field guide</small></span>
+    </a>
+    <button class="iconbtn navtoggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+    </button>
+    <nav class="nav" data-nav aria-label="Primary" hidden>
+      <a href="/workflows/">Workflows</a>
+      <a href="/explore/">Explorer</a>
+      <a href="/reference/tools/">Tools</a>
+      <a href="/reference/cli/">Commands</a>
+      <a href="/reference/docs/">Documents</a>
+      <a href="/about/" aria-current="page">About</a>
+      <span class="nav__group">
+        <a href="https://github.com/b25bs3421-cpu/rea" rel="noreferrer">GitHub</a>
+        <a href="http://localhost:5180" rel="noreferrer" title="The local console, when it is running">Console ↗</a>
+      </span>
+    </nav>
+    <button class="iconbtn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+      <svg data-theme-icon="sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.2 3.2l1.4 1.4M11.4 11.4l1.4 1.4M12.8 3.2l-1.4 1.4M4.6 11.4l-1.4 1.4"/></svg>
+      <svg data-theme-icon="moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true" hidden><path d="M13 9.5A5.5 5.5 0 0 1 6.5 3a5.5 5.5 0 1 0 6.5 6.5Z"/></svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+
+
+<section class="pagehead">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/about/">About</a></nav>
+    <p class="kicker">About this site</p>
+    <h1>Generated, not written by hand</h1>
+    <p class="lede">Every number, name and table on this site comes from the repository at build time: a catalog snapshot, the Markdown sources, and two analyses run against the bundled sample. Here is the whole pipeline, including what it cannot do.</p>
+    
+  </div>
+</section>
+
+<section class="section section--flush">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">01 · pipeline</p>
+        <h2>Four steps, all in the repository</h2>
+      </div>
+      <p>Nothing is fetched from the network, and nothing below is hand-maintained
+      except the prose on this page and in the pages' introductions.</p>
+    </div>
+    <div class="grid grid--4">
+      <article class="card">
+        <span class="card__eyebrow">Step 1</span>
+        <h3>Snapshot</h3>
+        <p class="small muted"><code>npm run workbench:data</code> reads the MCP
+        contract catalog, product catalog, docs, README and source tree into
+        <code>workbench/data/</code>.</p>
+      </article>
+      <article class="card">
+        <span class="card__eyebrow">Step 2</span>
+        <h3>Capture</h3>
+        <p class="small muted"><code>npm run site:capture</code> runs the two
+        workflows against the bundled sample and stores the Evidence plus the
+        projections in <code>site/data/</code>.</p>
+      </article>
+      <article class="card">
+        <span class="card__eyebrow">Step 3</span>
+        <h3>Render</h3>
+        <p class="small muted"><code>npm run site:build</code> renders static HTML
+        from those files into <code>site/public/</code> — no framework, no bundler,
+        no runtime.</p>
+      </article>
+      <article class="card">
+        <span class="card__eyebrow">Step 4</span>
+        <h3>Serve</h3>
+        <p class="small muted"><code>npm run site:serve</code> previews the output
+        on port 5181. The <code>public/</code> folder deploys to any static host.</p>
+      </article>
+    </div>
+    <div style="margin-top:1.5rem">
+      
+<div class="term">
+  <div class="term__head">
+    <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot term__dot--live"></span>
+    <span style="margin-left:.35rem">rebuild everything</span>
+    <button class="copy" type="button" data-copy="" style="margin-left:auto">Copy</button>
+  </div>
+  <pre><code>npm run workbench:data   # refresh the catalog snapshot
+npm run site:capture     # re-run the two sample analyses
+npm run site:build       # render site/public
+npm run site:serve       # preview at http://localhost:5181</code></pre>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">02 · catalogs</p>
+        <h2>What the site reads</h2>
+      </div>
+      <p>Digests are recorded by the snapshot generator; run
+      <code>npm run workbench:check</code> to fail the build when they drift.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="data">
+        <caption>Catalog snapshot · generated 2026-10-26T05:07:20.430Z</caption>
+        <thead><tr><th scope="col">Dataset</th><th scope="col" class="num">Bytes</th><th scope="col">Prefix digest</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="mono">workbench/data/tools.json</td>
+            <td class="num">328,449</td>
+            <td class="mono faint">014eaa643ccc1137</td>
+          </tr>
+          <tr>
+            <td class="mono">workbench/data/cli.json</td>
+            <td class="num">23,017</td>
+            <td class="mono faint">75605b503496c5c0</td>
+          </tr>
+          <tr>
+            <td class="mono">workbench/data/product.json</td>
+            <td class="num">28,948</td>
+            <td class="mono faint">1ffb29a6dbed74cb</td>
+          </tr>
+          <tr>
+            <td class="mono">workbench/data/docs.json</td>
+            <td class="num">53,612</td>
+            <td class="mono faint">e1a5bdb976f1f8dd</td>
+          </tr>
+          <tr>
+            <td class="mono">workbench/data/repo.json</td>
+            <td class="num">31,753</td>
+            <td class="mono faint">0fc11eccb0e6c42e</td>
+          </tr>
+          <tr>
+            <td class="mono">workbench/data/prompts.json</td>
+            <td class="num">941</td>
+            <td class="mono faint">c8c3b7121ea38b15</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid grid--3" style="margin-top:1.5rem">
+      <div class="card">
+        <span class="card__eyebrow">Upstream sources</span>
+        <ul class="list-clean">
+          <li><code>.cache/mcp-tool-catalog.json</code> <span class="faint mono">0bd47f0c344de9fc</span></li>
+          <li><code>docs/public/product-catalog.json</code> <span class="faint mono">2b778952069871bf</span></li>
+          <li><code>README.md</code> <span class="faint mono">eaf16011c791c8a3</span></li>
+          <li><code>docs/mcp-prompts.md</code> <span class="faint mono">6bd9684f4de66a5b</span></li>
+          <li><code>package.json</code> <span class="faint mono">38a5cc894ddd0ca7</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card__eyebrow">Checkout</span>
+        <dl class="definition" style="grid-template-columns:88px minmax(0,1fr)">
+          <dt>Package</dt><dd class="mono">rea-agents · 6.4.0</dd>
+          <dt>Branch</dt><dd class="mono">arena/5cca6736-rea</dd>
+          <dt>Commit</dt><dd class="mono">8fef2aa</dd>
+          <dt>Remote</dt><dd class="mono">https://github.com/b25bs3421-cpu/rea.git</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <span class="card__eyebrow">Source size</span>
+        <dl class="definition" style="grid-template-columns:88px minmax(0,1fr)">
+          <dt>Modules</dt><dd class="mono">36</dd>
+          <dt>Product</dt><dd class="mono">268,702 lines / 1,326 files</dd>
+          <dt>Tests</dt><dd class="mono">188,023 lines / 790 files</dd>
+          <dt>Scripts</dt><dd class="mono">300</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">03 · captures</p>
+        <h2>Two analyses, kept verbatim</h2>
+      </div>
+      <p>Both were produced by <code>scripts/rea.mjs</code> in this checkout. The
+      projections are what the pages render; the raw Evidence is downloadable and
+      unmodified.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="data">
+        <thead><tr><th scope="col">Workflow</th><th scope="col">Target</th><th scope="col">Captured</th><th scope="col" class="num">Duration</th><th scope="col">Evidence</th><th scope="col"></th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="mono">analyze-javascript-application</td>
+            <td class="mono">website/public/examples/notes-electron</td>
+            <td>2026-10-26</td>
+            <td class="num">1,942 ms</td>
+            <td class="mono faint">ev_7b6182e4daa5087341bceff2e6b7277c2cf12fbf9a9fec668a3a7cc01a1d930b</td>
+            <td><a class="small" href="/evidence/application.json" download>JSON</a></td>
+          </tr>
+          <tr>
+            <td class="mono">inspect-artifact</td>
+            <td class="mono">notes-electron.zip</td>
+            <td>2026-10-26</td>
+            <td class="num">1,465 ms</td>
+            <td class="mono faint">ev_6192b4ffa6079b2a684fb175e988153ec4bf1f91a438ee993fa3a5f52f42a349</td>
+            <td><a class="small" href="/evidence/artifact.json" download>JSON</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:1.25rem">
+      <span>▸</span>
+      <span>The sample ZIP at <a href="/data/notes-electron.zip" download>data/notes-electron.zip</a>
+      is packed from <code>website/public/examples/notes-electron</code> with the
+      Workbench's own store-only ZIP writer, so the fixture is reproducible from the
+      checkout.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">04 · boundaries</p>
+        <h2>Deliberate limits</h2>
+      </div>
+      <p>Each of these is a decision, not an oversight.</p>
+    </div>
+    <div class="facets">
+      <article><h3>Static output <span>01</span></h3><p>No server, no database and no
+      analytics. The explorer reads a JSON island embedded in the page.</p></article>
+      <article><h3>Captured data <span>02</span></h3><p>The two datasets are frozen at
+      capture time. Live runs live in the Workbench console, which executes the
+      same CLI in your checkout.</p></article>
+      <article><h3>Engine-free <span>03</span></h3><p>No Hopper, Ghidra or IDA here,
+      so native-binary demos would be dishonest. Those paths are documented and
+      indexed, not simulated.</p></article>
+      <article><h3>Docs stay in place <span>04</span></h3><p>Documents are indexed, not
+      mirrored. One source of truth beats a copy that rots.</p></article>
+      <article><h3>No telemetry <span>05</span></h3><p>No cookies, no third-party
+      scripts, no fonts fetched at runtime.</p></article>
+      <article><h3>Provenance first <span>06</span></h3><p>Every figure can be traced
+      to a dataset digest or an Evidence id listed on this page.</p></article>
+    </div>
+    <div class="row" style="margin-top:1.5rem">
+      <a class="btn small" href="/api/meta.json">Build metadata (JSON)</a>
+      <a class="btn small" href="/sitemap.xml">Sitemap</a>
+      <a class="btn small" href="https://github.com/b25bs3421-cpu/rea" rel="noreferrer">Repository ↗</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="/"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square">
+    <path d="M5 11V5h6M21 5h6v6M27 21v6h-6M11 27H5v-6"/>
+    <path d="M12 22V10h5.2a3.6 3.6 0 0 1 0 7.2H12"/>
+    <path d="M18.4 17.2 22 22"/>
+  </g>
+</svg><span>REA Workbench</span></a>
+        <p class="small muted" style="margin:.8rem 0 0;max-width:34ch">
+          A static site generated from the rea-agents checkout:
+          its catalogs, its documents and two captured Evidence records.
+        </p>
+        <p class="small" style="margin:.9rem 0 0">
+          <span class="tag tag--accent">6.4.0</span>
+          <span class="tag">8fef2aa</span>
+        </p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/workflows/">Two workflows</a></li>
+          <li><a href="/explore/">Evidence explorer</a></li>
+          <li><a href="/reference/tools/">Tool catalog</a></li>
+          <li><a href="/reference/cli/">Command reference</a></li>
+          <li><a href="/reference/docs/">Documents</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="https://github.com/b25bs3421-cpu/rea" rel="noreferrer">Source on GitHub</a></li>
+          <li><a href="https://rea.tools" rel="noreferrer">rea.tools</a></li>
+          <li><a href="https://github.com/b25bs3421-cpu/rea/tree/main/docs" rel="noreferrer">docs/</a></li>
+          <li><a href="https://github.com/b25bs3421-cpu/rea/blob/main/README.md" rel="noreferrer">README</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>This site</h4>
+        <ul>
+          <li><a href="/about/">Provenance</a></li>
+          <li><a href="/sitemap.xml">Sitemap</a></li>
+          <li><a href="/api/meta.json">Build metadata</a></li>
+          <li><a href="/explore/?dataset=artifact">Sample artifact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Generated 2026-10-26 from arena/5cca6736-rea@8fef2aa · 193 tools · 144 commands · 57 documents</span>
+      <span>No trackers · no cookies · static files only</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>

@@ -99,6 +99,15 @@
           }
         ]
       }
+    },
+    {
+      "files": ["site/**/*.js", "site/**/*.mjs"],
+      "rules": {
+        "max-lines": "off",
+        "max-lines-per-function": "off",
+        "complexity": "off",
+        "max-depth": "off"
+      }
     }
   ],
   "env": {
@@ -116,6 +125,7 @@
     ".codex",
     ".devin",
     ".factory",
-    "third_party"
+    "third_party",
+    "site/public/**"
   ]
 }

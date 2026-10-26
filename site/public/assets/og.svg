@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#08090b"/>
+  <g stroke="#1b2027" stroke-width="1">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
+    <path d="M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/>
+  </g>
+  <g fill="none" stroke="#b8f24b" stroke-width="3" stroke-linecap="square">
+    <path d="M70 128V70h58M1072 70h58v58M1130 502v58h-58M128 560H70v-58"/>
+    <path d="M130 470V160h96a68 68 0 0 1 0 136h-96"/>
+    <path d="M250 296l66 174"/>
+  </g>
+  <text x="70" y="380" fill="#f2f5f7" font-family="Helvetica, Arial, sans-serif" font-size="86" font-weight="700" letter-spacing="-3">REA Workbench</text>
+  <text x="72" y="438" fill="#a4aeb8" font-family="Helvetica, Arial, sans-serif" font-size="34">Every answer arrives with its evidence.</text>
+  <text x="72" y="510" fill="#b8f24b" font-family="monospace" font-size="24" letter-spacing="2">193 TOOLS · 144 COMMANDS · 57 DOCUMENTS</text>
+  <text x="72" y="560" fill="#6d7783" font-family="monospace" font-size="20">generated from the repository itself</text>
+</svg>

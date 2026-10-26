@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REA 6.4.0 — every answer arrives with its evidence</title>
+<meta name="description" content="A generated field guide to rea-agents 6.4.0: 193 MCP tools, 144 CLI commands, 57 documents and two Evidence workflows you can inspect node by node.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#08090b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="REA Workbench">
+<meta property="og:title" content="REA 6.4.0 — every answer arrives with its evidence">
+<meta property="og:description" content="A generated field guide to rea-agents 6.4.0: 193 MCP tools, 144 CLI commands, 57 documents and two Evidence workflows you can inspect node by node.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem("rea-site-theme");var d=window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches;document.documentElement.dataset.theme=t||(d?"light":"dark");}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/" aria-label="REA Workbench, home">
+      <span style="color:var(--accent);display:flex"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square">
+    <path d="M5 11V5h6M21 5h6v6M27 21v6h-6M11 27H5v-6"/>
+    <path d="M12 22V10h5.2a3.6 3.6 0 0 1 0 7.2H12"/>
+    <path d="M18.4 17.2 22 22"/>
+  </g>
+</svg></span>
+      <span>REA Workbench<small>repository field guide</small></span>
+    </a>
+    <button class="iconbtn navtoggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+    </button>
+    <nav class="nav" data-nav aria-label="Primary" hidden>
+      <a href="/workflows/">Workflows</a>
+      <a href="/explore/">Explorer</a>
+      <a href="/reference/tools/">Tools</a>
+      <a href="/reference/cli/">Commands</a>
+      <a href="/reference/docs/">Documents</a>
+      <a href="/about/">About</a>
+      <span class="nav__group">
+        <a href="https://github.com/b25bs3421-cpu/rea" rel="noreferrer">GitHub</a>
+        <a href="http://localhost:5180" rel="noreferrer" title="The local console, when it is running">Console ↗</a>
+      </span>
+    </nav>
+    <button class="iconbtn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+      <svg data-theme-icon="sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.2 3.2l1.4 1.4M11.4 11.4l1.4 1.4M12.8 3.2l-1.4 1.4M4.6 11.4l-1.4 1.4"/></svg>
+      <svg data-theme-icon="moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true" hidden><path d="M13 9.5A5.5 5.5 0 0 1 6.5 3a5.5 5.5 0 1 0 6.5 6.5Z"/></svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero__inner">
+      <div>
+        <p class="kicker">REA 6.4.0 · 193 tools · 144 commands</p>
+        <h1>Every answer arrives with its <em>evidence</em>.</h1>
+        <p class="lede">
+          REA gives a coding agent one contract for inspecting binaries, applications
+          and browser behaviour. It returns a canonical Evidence record — observations,
+          locations, confidence, coverage and limitations — instead of a confident
+          summary. This site is generated from the repository itself, including two
+          analyses you can open and read node by node.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="/explore/">Open the evidence explorer</a>
+          <a class="btn" href="/workflows/">See the two workflows</a>
+        </div>
+        <div class="hero__meta">
+          <span class="tag">MCP server</span>
+          <span class="tag">CLI</span>
+          <span class="tag">57 documents</span>
+          <span class="tag">40 providers</span>
+          <span class="tag">static site · no backend</span>
+        </div>
+      </div>
+      <aside class="record" aria-label="A real Evidence record from this site's sample run">
+        <div class="record__head">
+          <span>evidence · artifact inventory</span>
+          <span class="tag tag--ok">captured</span>
+        </div>
+        <dl>
+          <dt>Evidence</dt><dd><span class="truncate" style="max-width:26ch">ev_6192b4ffa6079b2a684fb175e988153ec4bf1f91a438ee993fa3a5f52f42a349</span></dd>
+          <dt>Subject</dt><dd>notes-electron.zip</dd>
+          <dt>Confidence</dt><dd>observed</dd>
+          <dt>Coverage</dt><dd>complete-within-substeps</dd>
+          <dt>Artifacts</dt><dd>7 graded · 7 occurrences</dd>
+          <dt>Contradictions</dt><dd>0</dd>
+        </dl>
+        <div class="record__foot">
+          <a class="btn btn--ghost small" href="/explore/?dataset=artifact">Inspect the graph</a>
+          <a class="btn btn--ghost small" href="/evidence/artifact.json" download>Raw JSON</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="hairline-grid">
+  <div><strong>193</strong><span>MCP tools</span></div>
+  <div><strong>144</strong><span>CLI commands</span></div>
+  <div><strong>40</strong><span>providers</span></div>
+  <div><strong>57</strong><span>documents</span></div>
+  <div><strong>24</strong><span>MCP clients</span></div>
+  <div><strong>268,702</strong><span>lines of product code</span></div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">01 · what runs here</p>
+        <h2>Two workflows, one record shape</h2>
+      </div>
+      <p>Both run against a bundled sample in this checkout and both return the same
+      Evidence contract. Neither executes the target.</p>
+    </div>
+    <div class="grid grid--2">
+      <a class="card card--link" href="/workflows/#application">
+        <span class="card__eyebrow">analyze-javascript-application</span>
+        <h3>Reconstruct an Electron or web application</h3>
+        <p class="muted small">
+          Files, module references, context-bridge APIs, IPC channels with both
+          sides, resolved main / preload / renderer roles, 45 relationship edges and
+          the unknowns the static analysis refuses to guess.
+        </p>
+        <dl class="definition" style="margin-top:.5rem">
+          <dt>Sample</dt><dd>website/public/examples/notes-electron</dd>
+          <dt>Captured</dt><dd>6 files · 10 roles · 45 edges</dd>
+          <dt>Coverage</dt><dd>complete</dd>
+        </dl>
+        <span class="card__arrow">Read the workflow →</span>
+      </a>
+      <a class="card card--link" href="/workflows/#artifact">
+        <span class="card__eyebrow">inspect-artifact</span>
+        <h3>Inventory a package without an engine</h3>
+        <p class="muted small">
+          Any ZIP, ASAR, APK, DMG, app bundle or binary the artifact graph provider
+          recognizes. You get graded artifacts deduplicated by digest, the
+          containment tree, per-occurrence hash status and coverage.
+        </p>
+        <dl class="definition" style="margin-top:.5rem">
+          <dt>Sample</dt><dd>notes-electron.zip · 2,587 bytes</dd>
+          <dt>Captured</dt><dd>7 artifacts · 6 edges · 7 occurrences</dd>
+          <dt>Coverage</dt><dd>complete-within-substeps</dd>
+        </dl>
+        <span class="card__arrow">Read the workflow →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">02 · the contract</p>
+        <h2>One record, six honest facets</h2>
+      </div>
+      <p>An agent can act on this without trusting prose. Every field below appears
+      in the JSON, including the uncomfortable ones.</p>
+    </div>
+    <div class="grid grid--2" style="align-items:start;gap:1.5rem">
+      <div class="facets">
+        <article>
+          <h3>Observations <span>01</span></h3>
+          <p>What was read, and from where. Nodes, occurrences, edges and source ranges — never a paraphrase of them.</p>
+        </article>
+        <article>
+          <h3>Locations <span>02</span></h3>
+          <p>Every claim points at a file, an artifact path or a source range, so a reviewer can reopen the exact bytes.</p>
+        </article>
+        <article>
+          <h3>Confidence <span>03</span></h3>
+          <p>Observed, derived or inferred, plus the authority that produced it — bytes, a parser or a static inference rule.</p>
+        </article>
+        <article>
+          <h3>Coverage <span>04</span></h3>
+          <p>Complete, complete-within-substeps or bounded, with omitted counts when a limit was reached. Silence is never implied success.</p>
+        </article>
+        <article>
+          <h3>Limitations <span>05</span></h3>
+          <p>What the provider could not do on this host, stated in the record instead of being left for the reader to guess.</p>
+        </article>
+        <article>
+          <h3>Unknowns <span>06</span></h3>
+          <p>Residual questions stay in the graph as labelled unknowns with a reason — ambiguity is data, not noise to drop.</p>
+        </article>
+      </div>
+      <div class="stack">
+        
+<div class="term">
+  <div class="term__head">
+    <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot term__dot--live"></span>
+    <span style="margin-left:.35rem">evidence · inspect-artifact · trimmed</span>
+    <button class="copy" type="button" data-copy="" style="margin-left:auto">Copy</button>
+  </div>
+  <pre><code class="language-json">{
+  &quot;evidence_id&quot;: &quot;ev_6192b4ffa6079b2a684…&quot;,
+  &quot;predicate_type&quot;: &quot;rea.analysis&quot;,
+  &quot;operation&quot;: &quot;inspect_artifact&quot;,
+  &quot;subject&quot;: {
+    &quot;name&quot;: &quot;notes-electron.zip&quot;,
+    &quot;format&quot;: &quot;zip&quot;,
+    &quot;sha256&quot;: &quot;4775e11db985f3b5…&quot;
+  },
+  &quot;confidence&quot;: &quot;observed&quot;,
+  &quot;authority&quot;: &quot;shipped-artifact&quot;,
+  &quot;coverage&quot;: {
+    &quot;status&quot;: &quot;complete-within-substeps&quot;,
+    &quot;substeps&quot;: 1,
+    &quot;observations&quot;: 1,
+    &quot;omitted&quot;: 0
+  },
+  &quot;limitations&quot;: [
+    &quot;Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.&quot;
+  ]
+}</code></pre>
+</div>
+        <p class="small muted" style="margin:0">
+          Trimmed for display. The complete document is
+          <a href="/evidence/artifact.json" download>17 KiB of JSON</a>
+          and the explorer reads exactly the same capture.
+        </p>
+        <div class="note">
+          <span>▸</span>
+          <span><strong>Confidence is graded, not implied.</strong> Observed means the
+          bytes said so; derived means a parser or rule produced it; inferred means a
+          static relationship with an authority named in the record.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">03 · targets</p>
+        <h2>What you can point it at</h2>
+      </div>
+      <p>Straight from the repository's capability matrix: what each format
+      returns, and what has to be on the host first.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="data">
+        <caption>Capability matrix · 22 rows</caption>
+        <thead>
+          <tr><th scope="col">Target</th><th scope="col">What REA returns</th><th scope="col">Requirements</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Native binaries</td>
+            <td>Pseudocode, assembly, strings, symbols, calls and references</td>
+            <td class="small">Hopper, Ghidra or IDA; native analysis <span class="tag">native analysis</span></td>
+          </tr>
+          <tr>
+            <td>Offline ELF layout</td>
+            <td>Sections, segments, original symbols/relocations and static mitigation candidates</td>
+            <td class="small">Caller-supplied pwntools on Linux x64; binary diagnostics <span class="tag">binary diagnostics</span></td>
+          </tr>
+          <tr>
+            <td>Go binaries</td>
+            <td>Embedded compiler version, modules, replacements and build settings</td>
+            <td class="small">Built-in static ELF/PE/thin Mach-O inspection; no Go installation required</td>
+          </tr>
+          <tr>
+            <td>WASM artifact</td>
+            <td>Validation, sections, exact import/export WAT forms and decoded WAT</td>
+            <td class="small">Caller-supplied WABT 1.0.42; inspectwasmartifact</td>
+          </tr>
+          <tr>
+            <td>EVM bytecode</td>
+            <td>Dispatch selectors, byte offsets, inferred arguments and mutability</td>
+            <td class="small">Local raw/hex carrier on Linux x64; offline EVM guide <span class="tag">offline EVM guide</span></td>
+          </tr>
+          <tr>
+            <td>SQLite databases</td>
+            <td>Tables, columns, indexes, views, triggers and selected ordinary-table rows</td>
+            <td class="small">Local database/WAL snapshot; Node.js 24.x &gt;=24.15 or 26+ with native SQLite limits</td>
+          </tr>
+          <tr>
+            <td>Recorded Linux crashes</td>
+            <td>Raw notes, every recorded thread&#39;s registers/signals and optional mapping candidates</td>
+            <td class="small">Caller-supplied pwntools on Linux x64; optional GDB/pwndbg; recorded crashes <span class="tag">recorded crashes</span></td>
+          </tr>
+          <tr>
+            <td>JavaScript / Electron</td>
+            <td>Modules, imports, source maps, routes, IPC and native add-on relationships</td>
+            <td class="small">Node.js and npm; application analysis <span class="tag">application analysis</span></td>
+          </tr>
+          <tr>
+            <td>Websites</td>
+            <td>Page structure, scripts, network observations and requested screenshots</td>
+            <td class="small">A Chrome-family browser; browser analysis <span class="tag">browser analysis</span></td>
+          </tr>
+          <tr>
+            <td>Saved network captures</td>
+            <td>Requests, responses, exposed payloads and source locations</td>
+            <td class="small">HAR or Fiddler Everywhere SAZ; mitmdump on Linux for native mitmproxy; capture guide <span class="tag">capture guide</span></td>
+          </tr>
+          <tr>
+            <td>.NET assemblies</td>
+            <td>Metadata, CIL instructions, declared native dependencies and build comparisons</td>
+            <td class="small">None (static only); managed-code guide <span class="tag">managed-code guide</span></td>
+          </tr>
+          <tr>
+            <td>Android APKs</td>
+            <td>Manifest declarations, classes, decompiled methods and references</td>
+            <td class="small">Headless JADX and a full JDK on Linux/macOS/Windows x64; Android guide <span class="tag">Android guide</span></td>
+          </tr>
+          <tr>
+            <td>Android devices</td>
+            <td>Devices, packages, processes, logs, dumps, screen captures, and APK/file transfers</td>
+            <td class="small">Caller-supplied adb (emulator or hardware); ADB guide <span class="tag">ADB guide</span></td>
+          </tr>
+          <tr>
+            <td>JEB projects</td>
+            <td>Engine-backed project units, artifact digests and type/method pseudo-code</td>
+            <td class="small">A caller-started JEB client serving MCP, selected with REAJEBMCP_URL; JEB guide <span class="tag">JEB guide</span></td>
+          </tr>
+          <tr>
+            <td>Android resources</td>
+            <td>Decoded manifest, string tables, locales and version facts</td>
+            <td class="small">Caller-supplied Apktool launcher; resource guide <span class="tag">resource guide</span></td>
+          </tr>
+          <tr>
+            <td>Flutter apps</td>
+            <td>Dart snapshot hash, per-ABI library digests and engine build provenance</td>
+            <td class="small">None (static APK parsing); Flutter guide <span class="tag">Flutter guide</span></td>
+          </tr>
+          <tr>
+            <td>Firmware</td>
+            <td>Regions, extraction results and native-analysis handoffs</td>
+            <td class="small">Binwalk / Unblob on Linux; firmware guide <span class="tag">firmware guide</span></td>
+          </tr>
+          <tr>
+            <td>Recorded packets</td>
+            <td>Selected fields, repeated values, filters and decode-as rules</td>
+            <td class="small">Linux: TShark 4.x + prlimit; capture guide <span class="tag">capture guide</span></td>
+          </tr>
+          <tr>
+            <td>Packet summaries</td>
+            <td>Endpoints, DNS, TLS SNI, protocol distribution and HTTP requests</td>
+            <td class="small">Caller-supplied tshark and capinfos (Linux-verified); pcap guide <span class="tag">pcap guide</span></td>
+          </tr>
+          <tr>
+            <td>Recorded logic signals</td>
+            <td>Decoder annotations, sample ranges and diagnostics</td>
+            <td class="small">Linux: sigrok-cli 0.7.2 + prlimit; signal recordings <span class="tag">signal recordings</span></td>
+          </tr>
+          <tr>
+            <td>Packages and resources</td>
+            <td>File inventories, digests, plists, Apple bundle anatomy and extracted resources</td>
+            <td class="small">Artifact and JavaScript guide, Apple applications <span class="tag">Artifact and JavaScript guide</span></td>
+          </tr>
+          <tr>
+            <td>Process behavior</td>
+            <td>Terminal output, interactions, exit and filesystem observations, and run comparisons</td>
+            <td class="small">Linux/macOS with a native PTY; process capture <span class="tag">process capture</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">04 · index</p>
+        <h2>Every surface, one click away</h2>
+      </div>
+      <p>These indexes are generated from the same catalogs the MCP server and the
+      CLI publish, so they cannot drift from the build.</p>
+    </div>
+    <div class="grid grid--4">
+      <a class="card card--link" href="/reference/tools/">
+        <span class="card__eyebrow">MCP</span>
+        <h3>193 tools</h3>
+        <p class="small muted">6 read-only · 24 with destructive effects · 25 session-bound.</p>
+        <span class="card__arrow">Browse →</span>
+      </a>
+      <a class="card card--link" href="/reference/cli/">
+        <span class="card__eyebrow">CLI</span>
+        <h3>144 commands</h3>
+        <p class="small muted">The same workflows from a terminal, with aliases kept for compatibility.</p>
+        <span class="card__arrow">Browse →</span>
+      </a>
+      <a class="card card--link" href="/reference/docs/">
+        <span class="card__eyebrow">Docs</span>
+        <h3>57 documents</h3>
+        <p class="small muted">107,839 words across six areas, from installation to provider internals.</p>
+        <span class="card__arrow">Browse →</span>
+      </a>
+      <a class="card card--link" href="/about/">
+        <span class="card__eyebrow">Provenance</span>
+        <h3>40 providers</h3>
+        <p class="small muted">24 MCP clients, and the exact digests behind every number on this site.</p>
+        <span class="card__arrow">Read →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">05 · run it</p>
+        <h2>Three commands from here</h2>
+      </div>
+      <p>The site is static. The analyses are not: run them from a checkout, or
+      open the local console for the same workflows with a UI.</p>
+    </div>
+    <div class="grid grid--2" style="align-items:start">
+      <div class="stack">
+        
+<div class="term">
+  <div class="term__head">
+    <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot term__dot--live"></span>
+    <span style="margin-left:.35rem">install and inspect</span>
+    <button class="copy" type="button" data-copy="" style="margin-left:auto">Copy</button>
+  </div>
+  <pre><code># install once, then connect your agent
+npm install -g rea-agents
+rea setup
+
+# inventory any package, no engine required
+rea inspect-artifact ./app.zip --json
+
+# reconstruct a JavaScript application
+rea analyze-javascript-application ./extracted-app --json</code></pre>
+</div>
+        <p class="small muted" style="margin:0">
+          Every command in this site is listed in the
+          <a href="/reference/cli/">command reference</a> and every tool in the
+          <a href="/reference/tools/">tool catalog</a>.
+        </p>
+      </div>
+      <div class="stack">
+        
+<div class="term">
+  <div class="term__head">
+    <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot term__dot--live"></span>
+    <span style="margin-left:.35rem">MCP client configuration</span>
+    <button class="copy" type="button" data-copy="" style="margin-left:auto">Copy</button>
+  </div>
+  <pre><code>{
+  &quot;mcpServers&quot;: {
+    &quot;rea&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;rea-agents@latest&quot;]
+    }
+  }
+}</code></pre>
+</div>
+        <div class="note">
+          <span>▸</span>
+          <span><strong>Want the UI?</strong> The Workbench console runs the same
+          workflows against a local checkout, with uploads, path mode and evidence
+          downloads: <code>npm run workbench</code> then
+          <a href="http://localhost:5180" rel="noreferrer">localhost:5180</a>.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">06 · limits</p>
+        <h2>What this site will not pretend</h2>
+      </div>
+      <p>Static pages cannot run an analysis. They also should not hide what the
+      host could not do.</p>
+    </div>
+    <div class="grid grid--3">
+      <article class="card">
+        <span class="card__eyebrow">Static by design</span>
+        <h3>Captured, not live</h3>
+        <p class="small muted">The two datasets were captured on 2026-10-26 from
+        arena/5cca6736-rea@8fef2aa. They do not update when you read the page.</p>
+      </article>
+      <article class="card">
+        <span class="card__eyebrow">Engines</span>
+        <h3>No native engine here</h3>
+        <p class="small muted">Hopper, Ghidra and IDA are not installed in this build,
+        so the site demonstrates the engine-free workflows only. The record says so
+        rather than implying deeper analysis.</p>
+      </article>
+      <article class="card">
+        <span class="card__eyebrow">Sources</span>
+        <h3>Summaries, with links</h3>
+        <p class="small muted">Documents are indexed by title, summary and section
+        headings; the prose stays in the repository so there is one source of truth.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="/"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square">
+    <path d="M5 11V5h6M21 5h6v6M27 21v6h-6M11 27H5v-6"/>
+    <path d="M12 22V10h5.2a3.6 3.6 0 0 1 0 7.2H12"/>
+    <path d="M18.4 17.2 22 22"/>
+  </g>
+</svg><span>REA Workbench</span></a>
+        <p class="small muted" style="margin:.8rem 0 0;max-width:34ch">
+          A static site generated from the rea-agents checkout:
+          its catalogs, its documents and two captured Evidence records.
+        </p>
+        <p class="small" style="margin:.9rem 0 0">
+          <span class="tag tag--accent">6.4.0</span>
+          <span class="tag">8fef2aa</span>
+        </p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/workflows/">Two workflows</a></li>
+          <li><a href="/explore/">Evidence explorer</a></li>
+          <li><a href="/reference/tools/">Tool catalog</a></li>
+          <li><a href="/reference/cli/">Command reference</a></li>
+          <li><a href="/reference/docs/">Documents</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="https://github.com/b25bs3421-cpu/rea" rel="noreferrer">Source on GitHub</a></li>
+          <li><a href="https://rea.tools" rel="noreferrer">rea.tools</a></li>
+          <li><a href="https://github.com/b25bs3421-cpu/rea/tree/main/docs" rel="noreferrer">docs/</a></li>
+          <li><a href="https://github.com/b25bs3421-cpu/rea/blob/main/README.md" rel="noreferrer">README</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>This site</h4>
+        <ul>
+          <li><a href="/about/">Provenance</a></li>
+          <li><a href="/sitemap.xml">Sitemap</a></li>
+          <li><a href="/api/meta.json">Build metadata</a></li>
+          <li><a href="/explore/?dataset=artifact">Sample artifact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Generated 2026-10-26 from arena/5cca6736-rea@8fef2aa · 193 tools · 144 commands · 57 documents</span>
+      <span>No trackers · no cookies · static files only</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+{
+  "kind": "artifact",
+  "capturedAt": "2026-10-26",
+  "command": "node scripts/rea.mjs inspect-artifact notes-electron.zip --json",
+  "durationMs": 1465,
+  "target": "notes-electron.zip",
+  "bytes": 2587,
+  "projection": {
+    "workflow": "artifact",
+    "target": {
+      "name": "notes-electron.zip",
+      "kind": "sample"
+    },
+    "command": "node scripts/rea.mjs inspect-artifact notes-electron.zip --json",
+    "durationMs": 1465,
+    "evidence": {
+      "id": "ev_6192b4ffa6079b2a684fb175e988153ec4bf1f91a438ee993fa3a5f52f42a349",
+      "predicate": "rea.analysis",
+      "operation": "inspect_artifact",
+      "provider": {
+        "id": "rea-artifact-graph",
+        "name": "REA safe artifact graph provider",
+        "version": "1"
+      },
+      "confidence": "observed",
+      "authority": "shipped-artifact",
+      "subject": {
+        "name": "notes-electron.zip",
+        "format": "zip",
+        "sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b"
+      },
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "limitations": [
+        "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+        "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+      ],
+      "locations": []
+    },
+    "artifact": {
+      "manifest": {
+        "id": "agm_b8945e4ebe50e2b7160ce1b7ed9674b4469792390012e0d85baed8f292ff8e61",
+        "rootArtifactId": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+        "rootSha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b",
+        "rootFormat": "zip",
+        "graphSha256": "c0accb292d12c0dc2d44b89a166f2a2ffb203256d3acac4058c8bd0d9bb320d7",
+        "nodes": 7,
+        "edges": 6,
+        "occurrences": 7
+      },
+      "coverage": {
+        "status": "complete-within-substeps",
+        "substeps": 1,
+        "observations": 1,
+        "omitted": 0
+      },
+      "contradictions": 0,
+      "substeps": [
+        {
+          "operation": "inventory_artifact",
+          "status": "completed",
+          "evidenceId": "ev_85272a0e538cb7402cf5b38e50158f6ec3411933a03b7952cf9cd458c4dc5ce5"
+        }
+      ],
+      "formats": [
+        {
+          "format": "file",
+          "count": 6
+        },
+        {
+          "format": "zip",
+          "count": 1
+        }
+      ],
+      "hypotheses": [],
+      "probes": [],
+      "nodes": [
+        {
+          "id": "art_21862e0ac4b1c4e27a98d42a509f81ef70929e8427ba824cb2c824d11226b68d",
+          "format": "file",
+          "size": 495,
+          "state": "embedded",
+          "sha256": "457b22543aa956fe2cd005fc6bda42d2798eb05040b75c4cb4957e3b66d0ea09",
+          "limitations": []
+        },
+        {
+          "id": "art_2c0634a6f673251abd1e10f228091c1e78da340ef233d4f8cc151ea22cea0f78",
+          "format": "file",
+          "size": 96,
+          "state": "embedded",
+          "sha256": "bfef2a7cba39a989715f56e304ca2578807159f28bdb040b75893bb341caaee7",
+          "limitations": []
+        },
+        {
+          "id": "art_68662b7a9fe7a8a3ebe56736d6d7ee939c07f8a37136eb10a181b1a714c192d1",
+          "format": "file",
+          "size": 209,
+          "state": "embedded",
+          "sha256": "b24aa22ed969c0849dd9da1102935a6b36b96bae46870234bdea10039dd9a5a0",
+          "limitations": []
+        },
+        {
+          "id": "art_73e7c67e3ee849c0fcd895d0d4cceacf9a2497d6bb8fce9a94dc0f77e6fb439e",
+          "format": "file",
+          "size": 255,
+          "state": "embedded",
+          "sha256": "6875aeecc1d3e6c1ff5b888a199c26b377d812d5b10e5fb4025e192a206b0018",
+          "limitations": []
+        },
+        {
+          "id": "art_9387002c12b6a3fd34f4c44dd477b1dc0722ccc427f5b635e6dfbbe533ac8b20",
+          "format": "file",
+          "size": 599,
+          "state": "embedded",
+          "sha256": "cc5b00911bfe428754d94ca40e8c0f354cfaae86f716873423aa5a62b9e0379a",
+          "limitations": []
+        },
+        {
+          "id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+          "format": "zip",
+          "size": 2587,
+          "state": "materialized",
+          "sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b",
+          "limitations": []
+        },
+        {
+          "id": "art_dc65bfccfd5d228b4a9d68b4a117668ee9be4831fa0e6100bdadf25cf3f2aff6",
+          "format": "file",
+          "size": 163,
+          "state": "embedded",
+          "sha256": "3cb814f2a0822c2fef437ba722374a2eabf6c6795905f41656d9c33fe8d5d9c4",
+          "limitations": []
+        }
+      ]
+    },
+    "files": [
+      {
+        "path": ".",
+        "kind": "file",
+        "format": "zip",
+        "size": 2587,
+        "hashStatus": "verified",
+        "executable": false,
+        "encrypted": false,
+        "sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b"
+      },
+      {
+        "path": "notes-electron/csv.js",
+        "kind": "file",
+        "format": "file",
+        "size": 255,
+        "hashStatus": "verified",
+        "executable": false,
+        "encrypted": false,
+        "sha256": "6875aeecc1d3e6c1ff5b888a199c26b377d812d5b10e5fb4025e192a206b0018"
+      },
+      {
+        "path": "notes-electron/index.html",
+        "kind": "file",
+        "format": "file",
+        "size": 495,
+        "hashStatus": "verified",
+        "executable": false,
+        "encrypted": false,
+        "sha256": "457b22543aa956fe2cd005fc6bda42d2798eb05040b75c4cb4957e3b66d0ea09"
+      },
+      {
+        "path": "notes-electron/main.js",
+        "kind": "file",
+        "format": "file",
+        "size": 599,
+        "hashStatus": "verified",
+        "executable": false,
+        "encrypted": false,
+        "sha256": "cc5b00911bfe428754d94ca40e8c0f354cfaae86f716873423aa5a62b9e0379a"
+      },
+      {
+        "path": "notes-electron/package.json",
+        "kind": "file",
+        "format": "file",
+        "size": 96,
+        "hashStatus": "verified",
+        "executable": false,
+        "encrypted": false,
+        "sha256": "bfef2a7cba39a989715f56e304ca2578807159f28bdb040b75893bb341caaee7"
+      },
+      {
+        "path": "notes-electron/preload.js",
+        "kind": "file",
+        "format": "file",
+        "size": 163,
+        "hashStatus": "verified",
+        "executable": false,
+        "encrypted": false,
+        "sha256": "3cb814f2a0822c2fef437ba722374a2eabf6c6795905f41656d9c33fe8d5d9c4"
+      },
+      {
+        "path": "notes-electron/renderer.js",
+        "kind": "file",
+        "format": "file",
+        "size": 209,
+        "hashStatus": "verified",
+        "executable": false,
+        "encrypted": false,
+        "sha256": "b24aa22ed969c0849dd9da1102935a6b36b96bae46870234bdea10039dd9a5a0"
+      }
+    ],
+    "limitations": [
+      "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+      "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+    ],
+    "insights": [
+      "7 graded artifacts and 6 containment edges across 7 file occurrences.",
+      "Root format zip; zip ×1, file ×6.",
+      "7 of 7 occurrences verified by digest; 0 integrity contradictions.",
+      "Substeps: inventory_artifact (completed)."
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "site": "REA Workbench",
+  "package": {
+    "name": "rea-agents",
+    "version": "6.4.0"
+  },
+  "checkout": {
+    "branch": "arena/5cca6736-rea",
+    "commit": "8fef2aa",
+    "remote": "https://github.com/b25bs3421-cpu/rea.git",
+    "repository": "https://github.com/b25bs3421-cpu/rea"
+  },
+  "generatedAt": "2026-10-26T05:07:20.430Z",
+  "buildTime": "2026-10-26T05:39:06.177Z",
+  "counts": {
+    "tools": 193,
+    "kinds": 17,
+    "families": 18,
+    "commands": 144,
+    "aliases": 1,
+    "documents": 57,
+    "docWords": 107839,
+    "providers": 40,
+    "clients": 24,
+    "prompts": 6,
+    "productionLines": 268702,
+    "productionFiles": 1326,
+    "testLines": 188023,
+    "modules": 36,
+    "readonly": 6,
+    "destructive": 24,
+    "sessionTools": 25,
+    "toolKinds": 17
+  },
+  "captures": {
+    "application": {
+      "target": "website/public/examples/notes-electron",
+      "capturedAt": "2026-10-26",
+      "durationMs": 1942,
+      "evidenceId": "ev_7b6182e4daa5087341bceff2e6b7277c2cf12fbf9a9fec668a3a7cc01a1d930b"
+    },
+    "artifact": {
+      "target": "notes-electron.zip",
+      "capturedAt": "2026-10-26",
+      "durationMs": 1465,
+      "evidenceId": "ev_6192b4ffa6079b2a684fb175e988153ec4bf1f91a438ee993fa3a5f52f42a349"
+    }
+  },
+  "datasets": {
+    "tools.json": {
+      "bytes": 328449,
+      "sha256": "014eaa643ccc1137"
+    },
+    "cli.json": {
+      "bytes": 23017,
+      "sha256": "75605b503496c5c0"
+    },
+    "product.json": {
+      "bytes": 28948,
+      "sha256": "1ffb29a6dbed74cb"
+    },
+    "docs.json": {
+      "bytes": 53612,
+      "sha256": "e1a5bdb976f1f8dd"
+    },
+    "repo.json": {
+      "bytes": 31753,
+      "sha256": "0fc11eccb0e6c42e"
+    },
+    "prompts.json": {
+      "bytes": 941,
+      "sha256": "c8c3b7121ea38b15"
+    }
+  }
+}

@@ -1,0 +1,1344 @@
+{
+  "kind": "application",
+  "capturedAt": "2026-10-26",
+  "command": "node scripts/rea.mjs analyze-javascript-application website/public/examples/notes-electron --json",
+  "durationMs": 1942,
+  "target": "website/public/examples/notes-electron",
+  "projection": {
+    "workflow": "application",
+    "target": {
+      "name": "notes-electron",
+      "kind": "sample"
+    },
+    "command": "node scripts/rea.mjs analyze-javascript-application website/public/examples/notes-electron --json",
+    "durationMs": 1942,
+    "evidence": {
+      "id": "ev_7b6182e4daa5087341bceff2e6b7277c2cf12fbf9a9fec668a3a7cc01a1d930b",
+      "predicate": "rea.javascript-application-analysis",
+      "operation": "analyze_javascript_application",
+      "provider": {
+        "id": "rea-javascript-application",
+        "name": "REA JavaScript application analyzer",
+        "version": "1"
+      },
+      "confidence": "derived",
+      "authority": "shipped-artifact",
+      "subject": {
+        "name": "notes-electron",
+        "format": "directory",
+        "sha256": "0ee325d4eaf7f94b62b2962044995fe1efe9f1d31411eb035118b19b1f56f7bb"
+      },
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "limitations": [
+        "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+        "Electron API identity follows proven lexical module aliases and structurally verified module-namespace interop. Other reassignments, dynamic selections, and visibly overwritten namespace members are unresolved; missing findings do not establish absence. Arbitrary call side effects and runtime registration are not evaluated.",
+        "Electron relationships are derived from inert syntax; runtime registration, reachability, defaults, and enforcement remain unproven.",
+        "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+        "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+        "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+        "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+      ],
+      "locations": ["artifact-root"]
+    },
+    "digests": {
+      "rootArtifact": "0ee325d4eaf7f94b62b2962044995fe1efe9f1d31411eb035118b19b1f56f7bb",
+      "inventoryManifest": "agm_02e7176dfcc96e83de4ab86e57a7e79dbf922a38c88de405a178a268337c8af4",
+      "inventoryGraph": "02c5f216526d46486b2e675616510a9221730775679194cc93460b4b43830db1",
+      "integrityContradictions": 0
+    },
+    "summary": {
+      "browser_windows": 1,
+      "explicit_web_preferences": 1,
+      "preload_entrypoints": 1,
+      "context_bridge_apis": 1,
+      "exposed_api_members": 1,
+      "ipc": {
+        "operations": 2,
+        "literal_channels": 1,
+        "dynamic_channel_operations": 0,
+        "renderer_transmissions": 1,
+        "renderer_listeners": 0,
+        "main_handlers": 1,
+        "paired_renderer_transmissions": 1,
+        "ambiguous_renderer_transmissions": 0,
+        "unpaired_literal_renderer_transmissions": 0
+      },
+      "sender_validation_observations": 0,
+      "utility_processes": 0,
+      "resolved_utility_entrypoints": 0,
+      "native_addon_bindings": 0,
+      "resolved_native_addon_bindings": 0
+    },
+    "statistics": {
+      "relevant_files": 6,
+      "nested_asar_containers": 0,
+      "text_bytes_read": 1817,
+      "invalid_utf8_files": 0,
+      "parsed_javascript_files": 4,
+      "visited_ast_nodes": 241,
+      "findings": 21,
+      "modules": 0,
+      "parse_failures": 0
+    },
+    "files": [
+      {
+        "path": "csv.js",
+        "bytes": 255,
+        "kind": "javascript",
+        "parseStatus": "complete",
+        "textStatus": "included",
+        "sha256": "art_73e7c67e3ee849c0fcd895d0d4cceacf9a2497d6bb8fce9a94dc0f77e6fb439e"
+      },
+      {
+        "path": "index.html",
+        "bytes": 495,
+        "kind": "html",
+        "parseStatus": null,
+        "textStatus": "included",
+        "sha256": "art_21862e0ac4b1c4e27a98d42a509f81ef70929e8427ba824cb2c824d11226b68d"
+      },
+      {
+        "path": "main.js",
+        "bytes": 599,
+        "kind": "javascript",
+        "parseStatus": "complete",
+        "textStatus": "included",
+        "sha256": "art_9387002c12b6a3fd34f4c44dd477b1dc0722ccc427f5b635e6dfbbe533ac8b20"
+      },
+      {
+        "path": "package.json",
+        "bytes": 96,
+        "kind": "package-json",
+        "parseStatus": null,
+        "textStatus": "included",
+        "sha256": "art_2c0634a6f673251abd1e10f228091c1e78da340ef233d4f8cc151ea22cea0f78"
+      },
+      {
+        "path": "preload.js",
+        "bytes": 163,
+        "kind": "javascript",
+        "parseStatus": "complete",
+        "textStatus": "included",
+        "sha256": "art_dc65bfccfd5d228b4a9d68b4a117668ee9be4831fa0e6100bdadf25cf3f2aff6"
+      },
+      {
+        "path": "renderer.js",
+        "bytes": 209,
+        "kind": "javascript",
+        "parseStatus": "complete",
+        "textStatus": "included",
+        "sha256": "art_68662b7a9fe7a8a3ebe56736d6d7ee939c07f8a37136eb10a181b1a714c192d1"
+      }
+    ],
+    "modules": [
+      {
+        "label": "node:path",
+        "specifier": "node:path",
+        "role": "module-reference",
+        "resolution": "external"
+      },
+      {
+        "label": "electron",
+        "specifier": "electron",
+        "role": "module-reference",
+        "resolution": "external"
+      },
+      {
+        "label": "main.js",
+        "specifier": null,
+        "role": "source-module",
+        "resolution": null
+      },
+      {
+        "label": "node:fs",
+        "specifier": "node:fs",
+        "role": "module-reference",
+        "resolution": "external"
+      },
+      {
+        "label": "electron",
+        "specifier": null,
+        "role": null,
+        "resolution": "external"
+      },
+      {
+        "label": "node:fs",
+        "specifier": null,
+        "role": null,
+        "resolution": "external"
+      },
+      {
+        "label": "preload.js",
+        "specifier": null,
+        "role": "source-module",
+        "resolution": null
+      },
+      {
+        "label": "node:path",
+        "specifier": null,
+        "role": null,
+        "resolution": "external"
+      },
+      {
+        "label": "electron",
+        "specifier": null,
+        "role": null,
+        "resolution": "external"
+      },
+      {
+        "label": "csv.js:default",
+        "specifier": null,
+        "role": "export-binding",
+        "resolution": null
+      },
+      {
+        "label": "electron",
+        "specifier": "electron",
+        "role": "module-reference",
+        "resolution": "external"
+      },
+      {
+        "label": "csv.js",
+        "specifier": null,
+        "role": "source-module",
+        "resolution": null
+      },
+      {
+        "label": "renderer.js",
+        "specifier": null,
+        "role": "source-module",
+        "resolution": null
+      }
+    ],
+    "roles": [
+      {
+        "kind": "artifact",
+        "label": "artifact root",
+        "location": "artifact-root",
+        "facts": ["manifest agm_02e7176dfc…"]
+      },
+      {
+        "kind": "browser-window",
+        "label": "BrowserWindow@15:17-17:4",
+        "location": "main.js:15",
+        "facts": ["preload preload.js"]
+      },
+      {
+        "kind": "context-bridge-api",
+        "label": "notes",
+        "location": "preload.js:3",
+        "facts": ["window.notes → exportCsv"]
+      },
+      {
+        "kind": "electron-main",
+        "label": "main.js",
+        "location": "package.json",
+        "facts": ["package.json:main"]
+      },
+      {
+        "kind": "electron-preload",
+        "label": "preload.js",
+        "location": "main.js:15",
+        "facts": ["BrowserWindow:webPreferences.preload", "property:preload"]
+      },
+      {
+        "kind": "electron-renderer",
+        "label": "index.html",
+        "location": "index.html",
+        "facts": ["html-script-entrypoint"]
+      },
+      {
+        "kind": "electron-renderer",
+        "label": "index.html",
+        "location": "main.js:18",
+        "facts": ["call:window.loadFile"]
+      },
+      {
+        "kind": "ipc-channel",
+        "label": "notes:export",
+        "location": "preload.js:4",
+        "facts": ["renderer invoke", "channel notes:export", "main handle"]
+      },
+      {
+        "kind": "ipc-handler",
+        "label": "notes:export",
+        "location": "main.js:8",
+        "facts": ["main handle", "channel notes:export"]
+      },
+      {
+        "kind": "package",
+        "label": "rea-notes-example",
+        "location": "package.json",
+        "facts": ["rea-notes-example@1.0.0", "main main.js"]
+      }
+    ],
+    "ipcChannels": [
+      {
+        "channel": "notes:export",
+        "sides": [
+          {
+            "side": "renderer",
+            "operation": "invoke",
+            "resolution": "literal",
+            "location": "preload.js:4"
+          },
+          {
+            "side": "main",
+            "operation": "handle",
+            "resolution": "literal",
+            "location": "main.js:8"
+          }
+        ]
+      }
+    ],
+    "ipcEdges": [
+      {
+        "relation": "invokes",
+        "channel": "notes:export",
+        "operation": "invoke",
+        "side": "renderer",
+        "resolution": "literal",
+        "confidence": "high",
+        "location": "preload.js:4",
+        "from": "preload.js",
+        "to": "notes:export"
+      },
+      {
+        "relation": "invokes",
+        "channel": "notes:export",
+        "operation": null,
+        "side": null,
+        "resolution": null,
+        "confidence": "high",
+        "location": "preload.js:4",
+        "from": "preload.js",
+        "to": "notes:export"
+      },
+      {
+        "relation": "handles",
+        "channel": "notes:export",
+        "operation": null,
+        "side": null,
+        "resolution": "literal",
+        "confidence": "high",
+        "location": "main.js:8",
+        "from": "notes:export",
+        "to": "notes:export"
+      }
+    ],
+    "relationCounts": [
+      {
+        "relation": "contains",
+        "count": 15
+      },
+      {
+        "relation": "imports",
+        "count": 13
+      },
+      {
+        "relation": "maps_to",
+        "count": 6
+      },
+      {
+        "relation": "loads",
+        "count": 5
+      },
+      {
+        "relation": "invokes",
+        "count": 2
+      },
+      {
+        "relation": "exposes",
+        "count": 2
+      },
+      {
+        "relation": "calls",
+        "count": 1
+      },
+      {
+        "relation": "handles",
+        "count": 1
+      }
+    ],
+    "edges": [
+      {
+        "relation": "calls",
+        "from": "closure",
+        "to": "electron.ipcRenderer.invoke",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:4",
+        "detail": "notes:export · resolution: candidate"
+      },
+      {
+        "relation": "contains",
+        "from": "artifact root",
+        "to": "preload.js",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "artifact-bytes",
+        "location": "artifact-path",
+        "detail": "preload.js"
+      },
+      {
+        "relation": "contains",
+        "from": "artifact root",
+        "to": "renderer.js",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "artifact-bytes",
+        "location": "artifact-path",
+        "detail": "renderer.js"
+      },
+      {
+        "relation": "contains",
+        "from": "artifact root",
+        "to": "csv.js",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "artifact-bytes",
+        "location": "artifact-path",
+        "detail": "csv.js"
+      },
+      {
+        "relation": "contains",
+        "from": "artifact root",
+        "to": "package.json",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "artifact-bytes",
+        "location": "artifact-path",
+        "detail": "package.json"
+      },
+      {
+        "relation": "contains",
+        "from": "artifact root",
+        "to": "index.html",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "artifact-bytes",
+        "location": "artifact-path",
+        "detail": "index.html"
+      },
+      {
+        "relation": "contains",
+        "from": "artifact root",
+        "to": "main.js",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "artifact-bytes",
+        "location": "artifact-path",
+        "detail": "main.js"
+      },
+      {
+        "relation": "contains",
+        "from": "artifact root",
+        "to": "index.html",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "artifact-bytes",
+        "location": "artifact-path",
+        "detail": "index.html"
+      },
+      {
+        "relation": "contains",
+        "from": "csv.js",
+        "to": "csv.js",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "ast-static-analysis",
+        "location": "csv.js:1",
+        "detail": ""
+      },
+      {
+        "relation": "contains",
+        "from": "main.js",
+        "to": "main.js",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "ast-static-analysis",
+        "location": "main.js:1",
+        "detail": ""
+      },
+      {
+        "relation": "contains",
+        "from": "main.js",
+        "to": "notes:export",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "ast-static-analysis",
+        "location": "main.js:8",
+        "detail": "handle · side: main"
+      },
+      {
+        "relation": "contains",
+        "from": "main.js",
+        "to": "BrowserWindow@15:17-17:4",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "ast-static-analysis",
+        "location": "main.js:15",
+        "detail": ""
+      },
+      {
+        "relation": "contains",
+        "from": "preload.js",
+        "to": "notes.exportCsv",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:3",
+        "detail": "notes.exportCsv · resolution: candidate"
+      },
+      {
+        "relation": "contains",
+        "from": "preload.js",
+        "to": "preload.js",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "ast-static-analysis",
+        "location": "preload.js:1",
+        "detail": ""
+      },
+      {
+        "relation": "contains",
+        "from": "rea-notes-example",
+        "to": "artifact root",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "artifact-path",
+        "detail": ""
+      },
+      {
+        "relation": "contains",
+        "from": "renderer.js",
+        "to": "renderer.js",
+        "confidence": "exact",
+        "state": "observed",
+        "authority": "ast-static-analysis",
+        "location": "renderer.js:1",
+        "detail": ""
+      },
+      {
+        "relation": "exposes",
+        "from": "csv.js",
+        "to": "csv.js:default",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "csv.js:11",
+        "detail": ""
+      },
+      {
+        "relation": "exposes",
+        "from": "preload.js",
+        "to": "notes",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:3",
+        "detail": "resolution: literal"
+      },
+      {
+        "relation": "handles",
+        "from": "notes:export",
+        "to": "notes:export",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:8",
+        "detail": "notes:export · resolution: literal"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "node:path",
+        "confidence": "medium",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:3",
+        "detail": "node:path"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "node:fs",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:2",
+        "detail": "node:fs"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "electron",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:1",
+        "detail": "electron"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "csv.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:4",
+        "detail": "./csv.js"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "node:fs",
+        "confidence": "medium",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:2",
+        "detail": "node:fs"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "electron",
+        "confidence": "medium",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:1",
+        "detail": "electron"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "electron",
+        "confidence": "medium",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:1",
+        "detail": "electron"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "electron",
+        "confidence": "medium",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:1",
+        "detail": "electron"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "csv.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:4",
+        "detail": "./csv.js"
+      },
+      {
+        "relation": "imports",
+        "from": "main.js",
+        "to": "node:path",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:3",
+        "detail": "node:path"
+      },
+      {
+        "relation": "imports",
+        "from": "preload.js",
+        "to": "electron",
+        "confidence": "medium",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:1",
+        "detail": "electron"
+      },
+      {
+        "relation": "imports",
+        "from": "preload.js",
+        "to": "electron",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:1",
+        "detail": "electron"
+      },
+      {
+        "relation": "imports",
+        "from": "preload.js",
+        "to": "electron",
+        "confidence": "medium",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:1",
+        "detail": "electron"
+      },
+      {
+        "relation": "invokes",
+        "from": "preload.js",
+        "to": "notes:export",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:4",
+        "detail": "notes:export · invoke · resolution: literal · side: renderer"
+      },
+      {
+        "relation": "invokes",
+        "from": "preload.js",
+        "to": "notes:export",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:4",
+        "detail": "notes:export"
+      },
+      {
+        "relation": "loads",
+        "from": "BrowserWindow@15:17-17:4",
+        "to": "preload.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:15",
+        "detail": ""
+      },
+      {
+        "relation": "loads",
+        "from": "index.html",
+        "to": "renderer.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "index.html:11",
+        "detail": ""
+      },
+      {
+        "relation": "loads",
+        "from": "main.js",
+        "to": "index.html",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:18",
+        "detail": ""
+      },
+      {
+        "relation": "loads",
+        "from": "main.js",
+        "to": "preload.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:16",
+        "detail": ""
+      },
+      {
+        "relation": "loads",
+        "from": "rea-notes-example",
+        "to": "main.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "artifact-path",
+        "detail": ""
+      },
+      {
+        "relation": "maps_to",
+        "from": "index.html",
+        "to": "index.html",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "artifact-path",
+        "detail": ""
+      },
+      {
+        "relation": "maps_to",
+        "from": "index.html",
+        "to": "index.html",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:18",
+        "detail": ""
+      },
+      {
+        "relation": "maps_to",
+        "from": "main.js",
+        "to": "main.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "artifact-path",
+        "detail": ""
+      },
+      {
+        "relation": "maps_to",
+        "from": "notes.exportCsv",
+        "to": "closure",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "preload.js:4",
+        "detail": "notes:export · resolution: candidate"
+      },
+      {
+        "relation": "maps_to",
+        "from": "preload.js",
+        "to": "preload.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:16",
+        "detail": ""
+      },
+      {
+        "relation": "maps_to",
+        "from": "preload.js",
+        "to": "preload.js",
+        "confidence": "high",
+        "state": "inferred",
+        "authority": "static-relationship-inference",
+        "location": "main.js:15",
+        "detail": ""
+      }
+    ],
+    "edgeTotal": 45,
+    "unknowns": {
+      "total": 71,
+      "families": [
+        {
+          "family": "object-flow",
+          "count": 27
+        },
+        {
+          "family": "call-flow",
+          "count": 25
+        },
+        {
+          "family": "data-flow",
+          "count": 17
+        },
+        {
+          "family": "promise-ownership",
+          "count": 2
+        }
+      ],
+      "items": [
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /getPath has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "main.js:9"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /map has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "csv.js:6"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "This object reference may have been mutated by a call. Unknown value at binding.",
+          "location": "main.js:6"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Own property ipcMain is unknown-coverage. Unknown value at binding.",
+          "location": "main.js:1"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unresolved call target require.",
+          "location": "main.js:4"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Binding value has no constant initializer. Unknown value at binding.",
+          "location": "csv.js:2"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /join has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "main.js:9"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static destructure property /BrowserWindow has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "main.js:1"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Own property BrowserWindow is unknown-coverage. Unknown value at binding.",
+          "location": "main.js:1"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static destructure property /ipcMain has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "main.js:1"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "csv.js:2"
+        },
+        {
+          "family": "promise-ownership",
+          "reason": "ambiguous-target",
+          "detail": "Static then source resolution was unresolved.",
+          "location": "main.js:14"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static destructure property /writeFileSync has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "main.js:2"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /id has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "csv.js:6"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static destructure property /toCsv has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "main.js:4"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "main.js:14"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "main.js:14"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static destructure property /app has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "main.js:1"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static write property /textContent has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "renderer.js:3"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Call target toCsv has ambiguous or unsupported assignments.",
+          "location": "main.js:10"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "main.js:16"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "preload.js:4"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Own property contextBridge is unknown-coverage. Unknown value at binding.",
+          "location": "preload.js:1"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /whenReady has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "main.js:14"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /exposeInMainWorld has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "preload.js:3"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Own property toCsv is unknown-coverage. Unknown value at binding.",
+          "location": "main.js:4"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "main.js:9"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "main.js:9"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Own property ipcRenderer is unknown-coverage. Unknown value at binding.",
+          "location": "preload.js:1"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static destructure property /contextBridge has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "preload.js:1"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "csv.js:6"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unresolved call target require.",
+          "location": "preload.js:1"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unresolved call target require.",
+          "location": "main.js:3"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Own property app is unknown-coverage. Unknown value at binding.",
+          "location": "main.js:1"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /replaceAll has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "csv.js:2"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /join has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "main.js:16"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unresolved call target require.",
+          "location": "main.js:1"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Unsupported FunctionDeclaration value. Unknown value at binding.",
+          "location": "csv.js:1"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "preload.js:3"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Unsupported AwaitExpression value. Unknown value at binding.",
+          "location": "renderer.js:2"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "renderer.js:1"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Binding notes has no constant initializer. Unknown value at binding.",
+          "location": "csv.js:1"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Unsupported CallExpression value. Unknown value at binding.",
+          "location": "main.js:3"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /loadFile has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "main.js:18"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /join has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "csv.js:4"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Unsupported NewExpression value. Unknown value at binding.",
+          "location": "main.js:15"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /invoke has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "preload.js:4"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Own property writeFileSync is unknown-coverage. Unknown value at binding.",
+          "location": "main.js:2"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Binding note has no constant initializer. Unknown value at binding.",
+          "location": "csv.js:6"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Call target writeFileSync has ambiguous or unsupported assignments.",
+          "location": "main.js:10"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unresolved call target require.",
+          "location": "main.js:2"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /querySelector has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "renderer.js:3"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "renderer.js:3"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "main.js:8"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /then has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "main.js:14"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /title has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "csv.js:6"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /addEventListener has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "renderer.js:1"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /querySelector has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "renderer.js:1"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Call target BrowserWindow has ambiguous or unsupported assignments.",
+          "location": "main.js:15"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Unsupported CallExpression value. Unknown value at binding.",
+          "location": "main.js:9"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /notes/exportCsv has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "renderer.js:2"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static write property /exports has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "csv.js:11"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unresolved call target String.",
+          "location": "csv.js:2"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "renderer.js:2"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static destructure property /ipcRenderer has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is partial.",
+          "location": "preload.js:1"
+        },
+        {
+          "family": "promise-ownership",
+          "reason": "ambiguous-target",
+          "detail": "Static await source resolution was unresolved.",
+          "location": "renderer.js:2"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "renderer.js:1"
+        },
+        {
+          "family": "object-flow",
+          "reason": "ambiguous-target",
+          "detail": "Static read property /handle has unknown-coverage presence; its receiver is unresolved or not a retained container; object identity is complete.",
+          "location": "main.js:8"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "csv.js:4"
+        },
+        {
+          "family": "data-flow",
+          "reason": "unknown-value",
+          "detail": "Unsupported ArrowFunctionExpression value. Unknown value at binding.",
+          "location": "csv.js:2"
+        },
+        {
+          "family": "call-flow",
+          "reason": "dynamic-call",
+          "detail": "Unsupported MemberExpression call target.",
+          "location": "main.js:18"
+        }
+      ]
+    },
+    "semantic": {
+      "nodes": 183,
+      "relations": 110,
+      "fingerprints": 7,
+      "relationKinds": [
+        {
+          "relation": "aliases",
+          "count": 44
+        },
+        {
+          "relation": "reads",
+          "count": 21
+        },
+        {
+          "relation": "defines",
+          "count": 17
+        },
+        {
+          "relation": "reads-property",
+          "count": 11
+        },
+        {
+          "relation": "captures",
+          "count": 9
+        },
+        {
+          "relation": "calls",
+          "count": 2
+        },
+        {
+          "relation": "returns-to-call",
+          "count": 1
+        },
+        {
+          "relation": "creates-promise",
+          "count": 1
+        },
+        {
+          "relation": "awaits",
+          "count": 1
+        },
+        {
+          "relation": "detaches-task",
+          "count": 1
+        },
+        {
+          "relation": "argument-to-parameter",
+          "count": 1
+        },
+        {
+          "relation": "coerces",
+          "count": 1
+        }
+      ]
+    },
+    "limitations": [
+      "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+      "Electron API identity follows proven lexical module aliases and structurally verified module-namespace interop. Other reassignments, dynamic selections, and visibly overwritten namespace members are unresolved; missing findings do not establish absence. Arbitrary call side effects and runtime registration are not evaluated.",
+      "Electron relationships are derived from inert syntax; runtime registration, reachability, defaults, and enforcement remain unproven.",
+      "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+      "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+      "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+      "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+    ],
+    "coverage": {
+      "status": "complete",
+      "truncated": false,
+      "omitted_count": 0,
+      "limits": []
+    },
+    "insights": [
+      "6 relevant files, 4 parsed as JavaScript, 241 AST nodes visited.",
+      "IPC: 2 operations across 1 literal channels, 1 paired renderer transmissions, 1 main handlers.",
+      "Context bridge exposes window.notes → exportCsv.",
+      "Preload entry resolved from main.js:15.",
+      "71 residual unknowns were retained rather than guessed (object-flow, data-flow, call-flow)."
+    ]
+  }
+}

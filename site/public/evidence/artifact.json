@@ -1,0 +1,377 @@
+{
+  "evidence_id": "ev_6192b4ffa6079b2a684fb175e988153ec4bf1f91a438ee993fa3a5f52f42a349",
+  "subject": {
+    "name": "notes-electron.zip",
+    "digest": {
+      "sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b"
+    },
+    "local_path": "/home/user/rea/site/data/notes-electron.zip",
+    "format": "zip",
+    "architecture": null
+  },
+  "provider": {
+    "id": "rea-artifact-graph",
+    "name": "REA safe artifact graph provider",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis",
+  "operation": "inspect_artifact",
+  "parameters": { "integrity_policy": "fail" },
+  "raw_result": null,
+  "normalized_result": {
+    "inspection_id": "ai_26801e93c9a5ad98656a2a114c0d53d82279f87ca8a3d1ea738342f7ed7e8bfc",
+    "subject": {
+      "manifest_id": "agm_b8945e4ebe50e2b7160ce1b7ed9674b4469792390012e0d85baed8f292ff8e61",
+      "root_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+      "root_sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b",
+      "root_format": "zip"
+    },
+    "substeps": [
+      {
+        "substep_id": "ais_60cf396c6c234d7c71f1d35f13c01016eab08289ba86225345deb83ef684159f",
+        "operation": "inventory_artifact",
+        "status": "completed",
+        "evidence_id": "ev_85272a0e538cb7402cf5b38e50158f6ec3411933a03b7952cf9cd458c4dc5ce5",
+        "evidence": {
+          "evidence_id": "ev_85272a0e538cb7402cf5b38e50158f6ec3411933a03b7952cf9cd458c4dc5ce5",
+          "subject": {
+            "name": "notes-electron.zip",
+            "digest": {
+              "sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b"
+            },
+            "local_path": "/home/user/rea/site/data/notes-electron.zip",
+            "format": "zip",
+            "architecture": null
+          },
+          "provider": {
+            "id": "rea-artifact-graph",
+            "name": "REA safe artifact graph provider",
+            "version": "1"
+          },
+          "analysis_profile": null,
+          "predicate_type": "rea.analysis",
+          "operation": "inventory_artifact",
+          "parameters": { "integrity_policy": "fail" },
+          "raw_result": null,
+          "normalized_result": {
+            "manifest": {
+              "manifest_id": "agm_b8945e4ebe50e2b7160ce1b7ed9674b4469792390012e0d85baed8f292ff8e61",
+              "root_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+              "root_sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b",
+              "root_format": "zip",
+              "graph_sha256": "c0accb292d12c0dc2d44b89a166f2a2ffb203256d3acac4058c8bd0d9bb320d7",
+              "node_count": 7,
+              "occurrence_count": 7,
+              "edge_count": 6
+            },
+            "nodes": [
+              {
+                "artifact_id": "art_21862e0ac4b1c4e27a98d42a509f81ef70929e8427ba824cb2c824d11226b68d",
+                "format": "file",
+                "sha256": "457b22543aa956fe2cd005fc6bda42d2798eb05040b75c4cb4957e3b66d0ea09",
+                "size": 495,
+                "media_type": null,
+                "architecture": null,
+                "content_state": "embedded",
+                "limitations": []
+              },
+              {
+                "artifact_id": "art_2c0634a6f673251abd1e10f228091c1e78da340ef233d4f8cc151ea22cea0f78",
+                "format": "file",
+                "sha256": "bfef2a7cba39a989715f56e304ca2578807159f28bdb040b75893bb341caaee7",
+                "size": 96,
+                "media_type": null,
+                "architecture": null,
+                "content_state": "embedded",
+                "limitations": []
+              },
+              {
+                "artifact_id": "art_68662b7a9fe7a8a3ebe56736d6d7ee939c07f8a37136eb10a181b1a714c192d1",
+                "format": "file",
+                "sha256": "b24aa22ed969c0849dd9da1102935a6b36b96bae46870234bdea10039dd9a5a0",
+                "size": 209,
+                "media_type": null,
+                "architecture": null,
+                "content_state": "embedded",
+                "limitations": []
+              },
+              {
+                "artifact_id": "art_73e7c67e3ee849c0fcd895d0d4cceacf9a2497d6bb8fce9a94dc0f77e6fb439e",
+                "format": "file",
+                "sha256": "6875aeecc1d3e6c1ff5b888a199c26b377d812d5b10e5fb4025e192a206b0018",
+                "size": 255,
+                "media_type": null,
+                "architecture": null,
+                "content_state": "embedded",
+                "limitations": []
+              },
+              {
+                "artifact_id": "art_9387002c12b6a3fd34f4c44dd477b1dc0722ccc427f5b635e6dfbbe533ac8b20",
+                "format": "file",
+                "sha256": "cc5b00911bfe428754d94ca40e8c0f354cfaae86f716873423aa5a62b9e0379a",
+                "size": 599,
+                "media_type": null,
+                "architecture": null,
+                "content_state": "embedded",
+                "limitations": []
+              },
+              {
+                "artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+                "format": "zip",
+                "sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b",
+                "size": 2587,
+                "media_type": null,
+                "architecture": null,
+                "content_state": "materialized",
+                "limitations": []
+              },
+              {
+                "artifact_id": "art_dc65bfccfd5d228b4a9d68b4a117668ee9be4831fa0e6100bdadf25cf3f2aff6",
+                "format": "file",
+                "sha256": "3cb814f2a0822c2fef437ba722374a2eabf6c6795905f41656d9c33fe8d5d9c4",
+                "size": 163,
+                "media_type": null,
+                "architecture": null,
+                "content_state": "embedded",
+                "limitations": []
+              }
+            ],
+            "occurrences": [
+              {
+                "occurrence_id": "occ_1eddb9935e522b477f869f60f2591ae7900dadbb2f9ae64d871e30d4b8497fdb",
+                "artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+                "parent_occurrence_id": null,
+                "logical_path": ".",
+                "entry_kind": "file",
+                "artifact_kind": "container",
+                "artifact_format": "zip",
+                "declared_size": 2587,
+                "compressed_size": null,
+                "executable": false,
+                "encrypted": false,
+                "hash_status": "verified",
+                "source_location": null,
+                "limitations": []
+              },
+              {
+                "occurrence_id": "occ_d7fff6d544002c629f1160876edf85cbce8847481a686cba1bc46c4a47c4f0d0",
+                "artifact_id": "art_73e7c67e3ee849c0fcd895d0d4cceacf9a2497d6bb8fce9a94dc0f77e6fb439e",
+                "parent_occurrence_id": "occ_1eddb9935e522b477f869f60f2591ae7900dadbb2f9ae64d871e30d4b8497fdb",
+                "logical_path": "notes-electron/csv.js",
+                "entry_kind": "file",
+                "artifact_kind": "javascript",
+                "artifact_format": "javascript-bundle",
+                "declared_size": 255,
+                "compressed_size": 255,
+                "executable": false,
+                "encrypted": false,
+                "hash_status": "verified",
+                "source_location": null,
+                "limitations": []
+              },
+              {
+                "occurrence_id": "occ_67132ad924da1c032f7210f19cc4bc6dc39a5835f77f41fc5a3dc6f1bf3ae2ee",
+                "artifact_id": "art_21862e0ac4b1c4e27a98d42a509f81ef70929e8427ba824cb2c824d11226b68d",
+                "parent_occurrence_id": "occ_1eddb9935e522b477f869f60f2591ae7900dadbb2f9ae64d871e30d4b8497fdb",
+                "logical_path": "notes-electron/index.html",
+                "entry_kind": "file",
+                "artifact_kind": "resource",
+                "artifact_format": "file",
+                "declared_size": 495,
+                "compressed_size": 495,
+                "executable": false,
+                "encrypted": false,
+                "hash_status": "verified",
+                "source_location": null,
+                "limitations": []
+              },
+              {
+                "occurrence_id": "occ_601824982ebb7b40a268b2c3acb1d1d053bc11e4a5f3f47d879f79ade058e255",
+                "artifact_id": "art_9387002c12b6a3fd34f4c44dd477b1dc0722ccc427f5b635e6dfbbe533ac8b20",
+                "parent_occurrence_id": "occ_1eddb9935e522b477f869f60f2591ae7900dadbb2f9ae64d871e30d4b8497fdb",
+                "logical_path": "notes-electron/main.js",
+                "entry_kind": "file",
+                "artifact_kind": "javascript",
+                "artifact_format": "javascript-bundle",
+                "declared_size": 599,
+                "compressed_size": 599,
+                "executable": false,
+                "encrypted": false,
+                "hash_status": "verified",
+                "source_location": null,
+                "limitations": []
+              },
+              {
+                "occurrence_id": "occ_8653cd14443fe0824245b613f6a0f61800e97e5489b1ae820fb8fef5c5a7f94e",
+                "artifact_id": "art_2c0634a6f673251abd1e10f228091c1e78da340ef233d4f8cc151ea22cea0f78",
+                "parent_occurrence_id": "occ_1eddb9935e522b477f869f60f2591ae7900dadbb2f9ae64d871e30d4b8497fdb",
+                "logical_path": "notes-electron/package.json",
+                "entry_kind": "file",
+                "artifact_kind": "resource",
+                "artifact_format": "file",
+                "declared_size": 96,
+                "compressed_size": 96,
+                "executable": false,
+                "encrypted": false,
+                "hash_status": "verified",
+                "source_location": null,
+                "limitations": []
+              },
+              {
+                "occurrence_id": "occ_9aad8f2f20fcba750463409191f97e8ade474059e74f8ec34512a0cf4ad664c9",
+                "artifact_id": "art_dc65bfccfd5d228b4a9d68b4a117668ee9be4831fa0e6100bdadf25cf3f2aff6",
+                "parent_occurrence_id": "occ_1eddb9935e522b477f869f60f2591ae7900dadbb2f9ae64d871e30d4b8497fdb",
+                "logical_path": "notes-electron/preload.js",
+                "entry_kind": "file",
+                "artifact_kind": "javascript",
+                "artifact_format": "javascript-bundle",
+                "declared_size": 163,
+                "compressed_size": 163,
+                "executable": false,
+                "encrypted": false,
+                "hash_status": "verified",
+                "source_location": null,
+                "limitations": []
+              },
+              {
+                "occurrence_id": "occ_5518a46484e4644b8a65ef2c665e0f2a7c8962958b65857933cf43225c4420f7",
+                "artifact_id": "art_68662b7a9fe7a8a3ebe56736d6d7ee939c07f8a37136eb10a181b1a714c192d1",
+                "parent_occurrence_id": "occ_1eddb9935e522b477f869f60f2591ae7900dadbb2f9ae64d871e30d4b8497fdb",
+                "logical_path": "notes-electron/renderer.js",
+                "entry_kind": "file",
+                "artifact_kind": "javascript",
+                "artifact_format": "javascript-bundle",
+                "declared_size": 209,
+                "compressed_size": 209,
+                "executable": false,
+                "encrypted": false,
+                "hash_status": "verified",
+                "source_location": null,
+                "limitations": []
+              }
+            ],
+            "edges": [
+              {
+                "edge_id": "edge_03fe5e884baef6cd26f086e0012ec98eddc7eecf2cfafe994cb72922c2109e09",
+                "ordinal": 0,
+                "parent_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+                "relation": "contains",
+                "occurrence_id": "occ_d7fff6d544002c629f1160876edf85cbce8847481a686cba1bc46c4a47c4f0d0",
+                "producer": null
+              },
+              {
+                "edge_id": "edge_7704732b0685e40ecd5fb363870eec1e02c7752f9e62f3bf305c60e44724d86a",
+                "ordinal": 1,
+                "parent_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+                "relation": "contains",
+                "occurrence_id": "occ_9aad8f2f20fcba750463409191f97e8ade474059e74f8ec34512a0cf4ad664c9",
+                "producer": null
+              },
+              {
+                "edge_id": "edge_abcd9217c4541a33e860fbca061dc8af3c2f49faaa8fd9cb7b2032253e5d28ee",
+                "ordinal": 2,
+                "parent_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+                "relation": "contains",
+                "occurrence_id": "occ_601824982ebb7b40a268b2c3acb1d1d053bc11e4a5f3f47d879f79ade058e255",
+                "producer": null
+              },
+              {
+                "edge_id": "edge_cd4550764d7d3b35deac48b23a083da827f17d85783f610fa5df1913fa2b71e0",
+                "ordinal": 3,
+                "parent_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+                "relation": "contains",
+                "occurrence_id": "occ_67132ad924da1c032f7210f19cc4bc6dc39a5835f77f41fc5a3dc6f1bf3ae2ee",
+                "producer": null
+              },
+              {
+                "edge_id": "edge_dab325365eaabd9cf29ad2a02871b65b32688519ba379eb22f6997f9ab666fe1",
+                "ordinal": 4,
+                "parent_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+                "relation": "contains",
+                "occurrence_id": "occ_8653cd14443fe0824245b613f6a0f61800e97e5489b1ae820fb8fef5c5a7f94e",
+                "producer": null
+              },
+              {
+                "edge_id": "edge_e6522bed5d6a266d08a94d10dfdbef383084b870cbdd463e1049fba10f886be9",
+                "ordinal": 5,
+                "parent_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+                "relation": "contains",
+                "occurrence_id": "occ_5518a46484e4644b8a65ef2c665e0f2a7c8962958b65857933cf43225c4420f7",
+                "producer": null
+              }
+            ],
+            "provenance": [],
+            "integrity_contradictions": [],
+            "limitations": [
+              "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+            ],
+            "coverage_status": "complete"
+          },
+          "confidence": "observed",
+          "authority": "shipped-artifact",
+          "environment": null,
+          "limitations": [
+            "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+          ],
+          "relationship_coverage": null,
+          "locations": [],
+          "evidence_links": []
+        }
+      }
+    ],
+    "observations": [
+      {
+        "observation_id": "aio_2e8334f93dab616bfb8f4fe753dd0723212380239b23f7eb92ffd489b7db8a41",
+        "kind": "root-manifest",
+        "subject": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+        "value": {
+          "manifest_id": "agm_b8945e4ebe50e2b7160ce1b7ed9674b4469792390012e0d85baed8f292ff8e61",
+          "root_artifact_id": "art_b03b44e1b62e0e46dfc06459b03c55bb8f624bc1bb7f34294e5f146aeff794d1",
+          "root_sha256": "4775e11db985f3b50d6f416193964f646025353da89356c5f02f60cf8904f10b",
+          "root_format": "zip",
+          "graph_sha256": "c0accb292d12c0dc2d44b89a166f2a2ffb203256d3acac4058c8bd0d9bb320d7",
+          "node_count": 7,
+          "occurrence_count": 7,
+          "edge_count": 6
+        },
+        "evidence_id": "ev_85272a0e538cb7402cf5b38e50158f6ec3411933a03b7952cf9cd458c4dc5ce5"
+      }
+    ],
+    "hypotheses": [],
+    "contradictions": [],
+    "unexplored_branches": [],
+    "next_probes": [],
+    "coverage": {
+      "status": "complete-within-substeps",
+      "substeps_completed": 1,
+      "observations_retained": 1,
+      "observations_omitted": 0,
+      "hypotheses_retained": 0,
+      "hypotheses_omitted": 0,
+      "unexplored_branches_retained": 0,
+      "unexplored_branches_omitted": 0,
+      "next_probes_retained": 0,
+      "next_probes_omitted": 0
+    },
+    "evidence_links": [
+      "ev_85272a0e538cb7402cf5b38e50158f6ec3411933a03b7952cf9cd458c4dc5ce5"
+    ],
+    "limitations": [
+      "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+      "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+    "ZIP inventory lists central-directory entries only. Bytes after the central directory, including an APK Signing Block or a ZIP comment, are not occurrences."
+  ],
+  "relationship_coverage": null,
+  "locations": [],
+  "evidence_links": [
+    "ev_85272a0e538cb7402cf5b38e50158f6ec3411933a03b7952cf9cd458c4dc5ce5"
+  ]
+}

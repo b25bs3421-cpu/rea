@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The two engine-free workflows · REA Workbench</title>
+<meta name="description" content="App reconstruction and artifact inventory, explained with the real captures from this checkout: files, roles, IPC channels, artifact graphs and digests.">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#08090b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="REA Workbench">
+<meta property="og:title" content="The two engine-free workflows · REA Workbench">
+<meta property="og:description" content="App reconstruction and artifact inventory, explained with the real captures from this checkout: files, roles, IPC channels, artifact graphs and digests.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<script>(function(){try{var t=localStorage.getItem("rea-site-theme");var d=window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches;document.documentElement.dataset.theme=t||(d?"light":"dark");}catch(e){document.documentElement.dataset.theme="dark";}})();</script>
+
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/" aria-label="REA Workbench, home">
+      <span style="color:var(--accent);display:flex"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square">
+    <path d="M5 11V5h6M21 5h6v6M27 21v6h-6M11 27H5v-6"/>
+    <path d="M12 22V10h5.2a3.6 3.6 0 0 1 0 7.2H12"/>
+    <path d="M18.4 17.2 22 22"/>
+  </g>
+</svg></span>
+      <span>REA Workbench<small>repository field guide</small></span>
+    </a>
+    <button class="iconbtn navtoggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle navigation">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+    </button>
+    <nav class="nav" data-nav aria-label="Primary" hidden>
+      <a href="/workflows/" aria-current="page">Workflows</a>
+      <a href="/explore/">Explorer</a>
+      <a href="/reference/tools/">Tools</a>
+      <a href="/reference/cli/">Commands</a>
+      <a href="/reference/docs/">Documents</a>
+      <a href="/about/">About</a>
+      <span class="nav__group">
+        <a href="https://github.com/b25bs3421-cpu/rea" rel="noreferrer">GitHub</a>
+        <a href="http://localhost:5180" rel="noreferrer" title="The local console, when it is running">Console ↗</a>
+      </span>
+    </nav>
+    <button class="iconbtn theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+      <svg data-theme-icon="sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.2 3.2l1.4 1.4M11.4 11.4l1.4 1.4M12.8 3.2l-1.4 1.4M4.6 11.4l-1.4 1.4"/></svg>
+      <svg data-theme-icon="moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true" hidden><path d="M13 9.5A5.5 5.5 0 0 1 6.5 3a5.5 5.5 0 1 0 6.5 6.5Z"/></svg>
+    </button>
+  </div>
+</header>
+<main id="main">
+
+
+<section class="pagehead">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/workflows/">Workflows</a></nav>
+    <p class="kicker">Workflows</p>
+    <h1>The two things you can run without an engine</h1>
+    <p class="lede">REA ships 193 tools, but the shortest path to understanding it is two workflows that need nothing installed but Node. Both samples below were captured from this checkout — every number is a real result.</p>
+    <div class="hero__actions"><a class="btn btn--primary" href="/explore/?dataset=application">Explore the app graph</a><a class="btn" href="/explore/?dataset=artifact">Explore the artifact tree</a></div>
+  </div>
+</section>
+
+<section class="section section--flush" id="application">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">01 · app reconstruction</p>
+        <h2>analyze-javascript-application</h2>
+      </div>
+      <p>Point it at an extracted Electron or web app. It reads syntax and files,
+      never runs them.</p>
+    </div>
+
+    <div class="grid grid--2" style="align-items:start;margin-bottom:1.5rem">
+      <div class="card">
+        <span class="card__eyebrow">Input</span>
+        <ul class="list-clean">
+          <li>A directory, an <code>.asar</code>, or a single <code>.js</code> / <code>.json</code> file.</li>
+          <li>Sample used here: <code>website/public/examples/notes-electron</code> — a small notes app with one IPC channel.</li>
+          <li>Resolution happens inside the inventoried container; nothing outside it is read.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card__eyebrow">What the record contains</span>
+        <ul class="list-clean">
+          <li>File inventory with digests, parse status and text inclusion.</li>
+          <li>Electron roles: main, preload, renderer, windows, package, bridges.</li>
+          <li>IPC channels with both sides and source locations.</li>
+          <li>45 relationship edges plus the semantic graph.</li>
+          <li>71 retained unknowns across 4 families.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid--2" style="align-items:start;gap:1.5rem">
+      <div class="stack">
+        <div class="panel">
+          <div class="panel__head"><span>Capture</span><span>1,942 ms · 2026-10-26</span></div>
+          <div class="panel__body">
+            <dl class="definition">
+              <dt>Evidence</dt><dd class="mono">ev_7b6182e4daa5087341bceff2e6b7277c2cf12fbf9a9fec668a3a7cc01a1d930b</dd>
+              <dt>Predicate</dt><dd class="mono">rea.javascript-application-analysis</dd>
+              <dt>Confidence</dt><dd>derived · shipped-artifact</dd>
+              <dt>Coverage</dt><dd>complete · 0 omitted</dd>
+              <dt>Root digest</dt><dd class="mono">0ee325d4eaf7f94b…f7bb</dd>
+            </dl>
+          </div>
+        </div>
+        
+<div class="term">
+  <div class="term__head">
+    <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot term__dot--live"></span>
+    <span style="margin-left:.35rem">run it yourself</span>
+    <button class="copy" type="button" data-copy="" style="margin-left:auto">Copy</button>
+  </div>
+  <pre><code>node scripts/rea.mjs analyze-javascript-application \
+  website/public/examples/notes-electron --json</code></pre>
+</div>
+        <div class="row">
+          <a class="btn small" href="/explore/?dataset=application">Open the graph</a>
+          <a class="btn small" href="/evidence/application.json" download>Raw Evidence (610 KiB)</a>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="facets">
+          <article>
+            <h3 style="font-size:1.5rem">6</h3>
+            <p><span class="tiny faint">Files</span><br>in the inventory</p>
+          </article>
+          <article>
+            <h3 style="font-size:1.5rem">4</h3>
+            <p><span class="tiny faint">Parsed JS</span><br>syntax recovered</p>
+          </article>
+          <article>
+            <h3 style="font-size:1.5rem">241</h3>
+            <p><span class="tiny faint">AST nodes</span><br>visited</p>
+          </article>
+          <article>
+            <h3 style="font-size:1.5rem">10</h3>
+            <p><span class="tiny faint">Roles</span><br>resolved</p>
+          </article>
+          <article>
+            <h3 style="font-size:1.5rem">45</h3>
+            <p><span class="tiny faint">Edges</span><br>relationship claims</p>
+          </article>
+          <article>
+            <h3 style="font-size:1.5rem">71</h3>
+            <p><span class="tiny faint">Unknowns</span><br>kept, not guessed</p>
+          </article>
+        </div>
+        <div class="panel">
+          <div class="panel__head"><span>Top relations</span><span>45 total</span></div>
+          <div class="panel__body">
+            <div class="bars">
+              <div class="bar">
+                <span class="bar__label">contains</span>
+                <span class="bar__track"><span class="bar__fill" style="width:100%"></span></span>
+                <span class="bar__value">15</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">imports</span>
+                <span class="bar__track"><span class="bar__fill" style="width:87%"></span></span>
+                <span class="bar__value">13</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">maps_to</span>
+                <span class="bar__track"><span class="bar__fill" style="width:40%"></span></span>
+                <span class="bar__value">6</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">loads</span>
+                <span class="bar__track"><span class="bar__fill" style="width:33%"></span></span>
+                <span class="bar__value">5</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">invokes</span>
+                <span class="bar__track"><span class="bar__fill" style="width:13%"></span></span>
+                <span class="bar__value">2</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">exposes</span>
+                <span class="bar__track"><span class="bar__fill" style="width:13%"></span></span>
+                <span class="bar__value">2</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">calls</span>
+                <span class="bar__track"><span class="bar__fill" style="width:7%"></span></span>
+                <span class="bar__value">1</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">handles</span>
+                <span class="bar__track"><span class="bar__fill" style="width:7%"></span></span>
+                <span class="bar__value">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin:2.5rem 0 1rem">The capture, in full</h3>
+    <div class="stack">
+      
+      <div class="table-scroll">
+        <table class="data">
+          <caption>IPC channels observed</caption>
+          <thead><tr><th scope="col">Channel</th><th scope="col">Side</th><th scope="col">Operation</th><th scope="col">Resolution</th><th scope="col">Location</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>notes:export</td>
+              <td>renderer</td>
+              <td>invoke</td>
+              <td>literal</td>
+              <td class="mono">preload.js:4</td>
+            </tr>
+            <tr>
+              <td>notes:export</td>
+              <td>main</td>
+              <td>handle</td>
+              <td>literal</td>
+              <td class="mono">main.js:8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="grid grid--2" style="align-items:start">
+        <div class="table-scroll">
+          <table class="data">
+            <caption>Resolved roles · 10</caption>
+            <thead><tr><th scope="col">Role</th><th scope="col">Label</th><th scope="col">Location</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>artifact</td>
+                <td class="mono">artifact root</td>
+                <td class="mono faint">artifact-root</td>
+              </tr>
+              <tr>
+                <td>browser-window</td>
+                <td class="mono">BrowserWindow@15:17-17:4</td>
+                <td class="mono faint">main.js:15</td>
+              </tr>
+              <tr>
+                <td>context-bridge-api</td>
+                <td class="mono">notes</td>
+                <td class="mono faint">preload.js:3</td>
+              </tr>
+              <tr>
+                <td>electron-main</td>
+                <td class="mono">main.js</td>
+                <td class="mono faint">package.json</td>
+              </tr>
+              <tr>
+                <td>electron-preload</td>
+                <td class="mono">preload.js</td>
+                <td class="mono faint">main.js:15</td>
+              </tr>
+              <tr>
+                <td>electron-renderer</td>
+                <td class="mono">index.html</td>
+                <td class="mono faint">index.html</td>
+              </tr>
+              <tr>
+                <td>electron-renderer</td>
+                <td class="mono">index.html</td>
+                <td class="mono faint">main.js:18</td>
+              </tr>
+              <tr>
+                <td>ipc-channel</td>
+                <td class="mono">notes:export</td>
+                <td class="mono faint">preload.js:4</td>
+              </tr>
+              <tr>
+                <td>ipc-handler</td>
+                <td class="mono">notes:export</td>
+                <td class="mono faint">main.js:8</td>
+              </tr>
+              <tr>
+                <td>package</td>
+                <td class="mono">rea-notes-example</td>
+                <td class="mono faint">package.json</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <div class="panel__head"><span>Electron summary</span><span>2 IPC operations</span></div>
+          <div class="panel__body">
+            <div class="bars">
+              <div class="bar">
+                <span class="bar__label">browser_windows</span>
+                <span class="bar__track"><span class="bar__fill" style="width:22%"></span></span>
+                <span class="bar__value">1</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">explicit_web_preferences</span>
+                <span class="bar__track"><span class="bar__fill" style="width:22%"></span></span>
+                <span class="bar__value">1</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">preload_entrypoints</span>
+                <span class="bar__track"><span class="bar__fill" style="width:22%"></span></span>
+                <span class="bar__value">1</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">context_bridge_apis</span>
+                <span class="bar__track"><span class="bar__fill" style="width:22%"></span></span>
+                <span class="bar__value">1</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">exposed_api_members</span>
+                <span class="bar__track"><span class="bar__fill" style="width:22%"></span></span>
+                <span class="bar__value">1</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">sender_validation_observations</span>
+                <span class="bar__track"><span class="bar__fill" style="width:0%"></span></span>
+                <span class="bar__value">0</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">utility_processes</span>
+                <span class="bar__track"><span class="bar__fill" style="width:0%"></span></span>
+                <span class="bar__value">0</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">resolved_utility_entrypoints</span>
+                <span class="bar__track"><span class="bar__fill" style="width:0%"></span></span>
+                <span class="bar__value">0</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">native_addon_bindings</span>
+                <span class="bar__track"><span class="bar__fill" style="width:0%"></span></span>
+                <span class="bar__value">0</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">resolved_native_addon_bindings</span>
+                <span class="bar__track"><span class="bar__fill" style="width:0%"></span></span>
+                <span class="bar__value">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="table-scroll">
+        <table class="data">
+          <caption>File inventory · 6 files</caption>
+          <thead><tr><th scope="col">Path</th><th scope="col">Kind</th><th scope="col" class="num">Bytes</th><th scope="col">Parse</th><th scope="col">SHA-256</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="mono">csv.js</td>
+              <td>javascript</td>
+              <td class="num">255</td>
+              <td>complete</td>
+              <td class="mono faint">art_73e7…439e</td>
+            </tr>
+            <tr>
+              <td class="mono">index.html</td>
+              <td>html</td>
+              <td class="num">495</td>
+              <td></td>
+              <td class="mono faint">art_2186…b68d</td>
+            </tr>
+            <tr>
+              <td class="mono">main.js</td>
+              <td>javascript</td>
+              <td class="num">599</td>
+              <td>complete</td>
+              <td class="mono faint">art_9387…8b20</td>
+            </tr>
+            <tr>
+              <td class="mono">package.json</td>
+              <td>package-json</td>
+              <td class="num">96</td>
+              <td></td>
+              <td class="mono faint">art_2c06…0f78</td>
+            </tr>
+            <tr>
+              <td class="mono">preload.js</td>
+              <td>javascript</td>
+              <td class="num">163</td>
+              <td>complete</td>
+              <td class="mono faint">art_dc65…aff6</td>
+            </tr>
+            <tr>
+              <td class="mono">renderer.js</td>
+              <td>javascript</td>
+              <td class="num">209</td>
+              <td>complete</td>
+              <td class="mono faint">art_6866…92d1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:1.25rem">
+      <span>▸</span>
+      <span><strong>Read the unknowns as the honest part.</strong> 71
+      questions stayed in the record — mostly object-flow (27), call-flow (25), data-flow (17), promise-ownership (2).
+      A different tool would have resolved them by guessing.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="artifact">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">02 · artifact inventory</p>
+        <h2>inspect-artifact</h2>
+      </div>
+      <p>Give it a package. It returns a graded artifact graph with digests,
+      containment edges and coverage — no engine involved.</p>
+    </div>
+
+    <div class="grid grid--2" style="align-items:start;margin-bottom:1.5rem">
+      <div class="card">
+        <span class="card__eyebrow">Input</span>
+        <ul class="list-clean">
+          <li>ZIP, ASAR, APK, DMG, <code>.app</code>, a raw binary, or any package file the provider recognizes.</li>
+          <li>Sample used here: <code>notes-electron.zip</code> — 2,587 bytes, packed from the notes example.</li>
+          <li>Directories are rejected with a remediation, because this workflow reads a file.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="card__eyebrow">What the record contains</span>
+        <ul class="list-clean">
+          <li>Artifacts deduplicated by digest, each graded by how completely it is materialized.</li>
+          <li>Every occurrence: logical path, entry kind, hash status, executable and encrypted flags.</li>
+          <li>Containment edges, integrity contradictions, hypotheses and next probes.</li>
+          <li>Coverage across substeps, with omitted counts when a bound is hit.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid--2" style="align-items:start;gap:1.5rem">
+      <div class="stack">
+        <div class="panel">
+          <div class="panel__head"><span>Manifest</span><span>1,465 ms · 2026-10-26</span></div>
+          <div class="panel__body">
+            <dl class="definition">
+              <dt>Manifest</dt><dd class="mono">agm_b8945e4ebe50e2…8e61</dd>
+              <dt>Root</dt><dd class="mono">zip · 4775e11db985f3b5…f10b</dd>
+              <dt>Graph</dt><dd class="mono">c0accb292d12c0dc…20d7</dd>
+              <dt>Counts</dt><dd>7 artifacts · 6 edges · 7 occurrences</dd>
+              <dt>Coverage</dt><dd>complete-within-substeps · 1 substep</dd>
+              <dt>Contradictions</dt><dd>0</dd>
+            </dl>
+          </div>
+        </div>
+        
+<div class="term">
+  <div class="term__head">
+    <span class="term__dot"></span><span class="term__dot"></span><span class="term__dot term__dot--live"></span>
+    <span style="margin-left:.35rem">run it yourself</span>
+    <button class="copy" type="button" data-copy="" style="margin-left:auto">Copy</button>
+  </div>
+  <pre><code>node scripts/rea.mjs inspect-artifact ./notes-electron.zip --json</code></pre>
+</div>
+        <div class="row">
+          <a class="btn small" href="/explore/?dataset=artifact">Open the tree</a>
+          <a class="btn small" href="/evidence/artifact.json" download>Raw Evidence</a>
+          <a class="btn small" href="/data/notes-electron.zip" download>Sample ZIP</a>
+        </div>
+      </div>
+      <div class="stack">
+        <div class="panel">
+          <div class="panel__head"><span>Formats</span><span>2 distinct</span></div>
+          <div class="panel__body">
+            <div class="bars">
+              <div class="bar">
+                <span class="bar__label">file</span>
+                <span class="bar__track"><span class="bar__fill" style="width:100%"></span></span>
+                <span class="bar__value">6</span>
+              </div>
+              <div class="bar">
+                <span class="bar__label">zip</span>
+                <span class="bar__track"><span class="bar__fill" style="width:17%"></span></span>
+                <span class="bar__value">1</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel__head"><span>Substeps</span><span>1</span></div>
+          <div class="panel__body">
+            <div class="stack" style="gap:.5rem">
+              <div class="between" style="gap:.5rem">
+                <span class="mono small">inventory_artifact</span>
+                <span class="tag tag--ok">completed</span>
+              </div>
+              <p class="small faint" style="margin:.5rem 0 0">
+                Hypotheses: 0 · probes: 0
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin:2.5rem 0 1rem">The capture, in full</h3>
+    
+      <div class="table-scroll">
+        <table class="data">
+          <caption>Occurrences · 7 entries</caption>
+          <thead><tr><th scope="col">Logical path</th><th scope="col">Format</th><th scope="col" class="num">Bytes</th><th scope="col">Hash</th><th scope="col">SHA-256</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="mono">.</td>
+              <td>zip</td>
+              <td class="num">2,587</td>
+              <td><span class="tag tag--ok">verified</span></td>
+              <td class="mono faint">4775e11d…f10b</td>
+            </tr>
+            <tr>
+              <td class="mono">notes-electron/csv.js</td>
+              <td>file</td>
+              <td class="num">255</td>
+              <td><span class="tag tag--ok">verified</span></td>
+              <td class="mono faint">6875aeec…0018</td>
+            </tr>
+            <tr>
+              <td class="mono">notes-electron/index.html</td>
+              <td>file</td>
+              <td class="num">495</td>
+              <td><span class="tag tag--ok">verified</span></td>
+              <td class="mono faint">457b2254…ea09</td>
+            </tr>
+            <tr>
+              <td class="mono">notes-electron/main.js</td>
+              <td>file</td>
+              <td class="num">599</td>
+              <td><span class="tag tag--ok">verified</span></td>
+              <td class="mono faint">cc5b0091…379a</td>
+            </tr>
+            <tr>
+              <td class="mono">notes-electron/package.json</td>
+              <td>file</td>
+              <td class="num">96</td>
+              <td><span class="tag tag--ok">verified</span></td>
+              <td class="mono faint">bfef2a7c…aee7</td>
+            </tr>
+            <tr>
+              <td class="mono">notes-electron/preload.js</td>
+              <td>file</td>
+              <td class="num">163</td>
+              <td><span class="tag tag--ok">verified</span></td>
+              <td class="mono faint">3cb814f2…d9c4</td>
+            </tr>
+            <tr>
+              <td class="mono">notes-electron/renderer.js</td>
+              <td>file</td>
+              <td class="num">209</td>
+              <td><span class="tag tag--ok">verified</span></td>
+              <td class="mono faint">b24aa22e…a5a0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <p class="kicker">03 · choosing</p>
+        <h2>Which one do I want?</h2>
+      </div>
+      <p>They compose: inventory the package first, then reconstruct the
+      JavaScript inside it.</p>
+    </div>
+    <div class="table-scroll">
+      <table class="data">
+        <thead><tr><th scope="col"></th><th scope="col">analyze-javascript-application</th><th scope="col">inspect-artifact</th></tr></thead>
+        <tbody>
+          <tr><td>Best for</td><td>Understanding behaviour: IPC, bridges, roles, imports.</td><td>Understanding contents: what is inside a package and whether it is intact.</td></tr>
+          <tr><td>Accepts</td><td>Directory, <code>.asar</code>, single <code>.js</code>/<code>.json</code></td><td>ZIP, ASAR, APK, DMG, <code>.app</code>, binary, package file</td></tr>
+          <tr><td>Needs</td><td>Node.js only</td><td>Node.js only</td></tr>
+          <tr><td>Executes the target</td><td>No</td><td>No</td></tr>
+          <tr><td>Typical output</td><td>Graph of roles, edges, IPC channels, unknowns</td><td>Graded artifact graph with digests and occurrences</td></tr>
+          <tr><td>Try it</td><td><a href="/explore/?dataset=application">Application graph</a></td><td><a href="/explore/?dataset=artifact">Artifact tree</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="/"><svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+  <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square">
+    <path d="M5 11V5h6M21 5h6v6M27 21v6h-6M11 27H5v-6"/>
+    <path d="M12 22V10h5.2a3.6 3.6 0 0 1 0 7.2H12"/>
+    <path d="M18.4 17.2 22 22"/>
+  </g>
+</svg><span>REA Workbench</span></a>
+        <p class="small muted" style="margin:.8rem 0 0;max-width:34ch">
+          A static site generated from the rea-agents checkout:
+          its catalogs, its documents and two captured Evidence records.
+        </p>
+        <p class="small" style="margin:.9rem 0 0">
+          <span class="tag tag--accent">6.4.0</span>
+          <span class="tag">8fef2aa</span>
+        </p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/workflows/">Two workflows</a></li>
+          <li><a href="/explore/">Evidence explorer</a></li>
+          <li><a href="/reference/tools/">Tool catalog</a></li>
+          <li><a href="/reference/cli/">Command reference</a></li>
+          <li><a href="/reference/docs/">Documents</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="https://github.com/b25bs3421-cpu/rea" rel="noreferrer">Source on GitHub</a></li>
+          <li><a href="https://rea.tools" rel="noreferrer">rea.tools</a></li>
+          <li><a href="https://github.com/b25bs3421-cpu/rea/tree/main/docs" rel="noreferrer">docs/</a></li>
+          <li><a href="https://github.com/b25bs3421-cpu/rea/blob/main/README.md" rel="noreferrer">README</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>This site</h4>
+        <ul>
+          <li><a href="/about/">Provenance</a></li>
+          <li><a href="/sitemap.xml">Sitemap</a></li>
+          <li><a href="/api/meta.json">Build metadata</a></li>
+          <li><a href="/explore/?dataset=artifact">Sample artifact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>Generated 2026-10-26 from arena/5cca6736-rea@8fef2aa · 193 tools · 144 commands · 57 documents</span>
+      <span>No trackers · no cookies · static files only</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/site.js" defer></script>
+
+</body>
+</html>
