@@ -151,7 +151,6 @@ const meta = {
   package: data.manifest.package,
   checkout: data.manifest.checkout,
   generatedAt: data.manifest.generatedAt,
-  buildTime: new Date().toISOString(),
   counts: data.stats,
   captures: {
     application: {
