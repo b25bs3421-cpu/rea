@@ -1,0 +1,1255 @@
+{
+  "generatedFrom": "docs/*.md + README.md",
+  "counts": {
+    "documents": 57,
+    "words": 107839
+  },
+  "areas": [
+    {
+      "id": "start",
+      "title": "Start here",
+      "summary": "Installation, first commands and the shape of the product.",
+      "slugs": [
+        "installation",
+        "cli",
+        "roadmap",
+        "migration-6.2"
+      ],
+      "trailing": []
+    },
+    {
+      "id": "agent",
+      "title": "Agent and MCP",
+      "summary": "Contracts, guided prompts and client behaviour.",
+      "slugs": [
+        "mcp-contracts",
+        "mcp-prompts",
+        "client-configuration",
+        "client-verification",
+        "tool-design"
+      ],
+      "trailing": []
+    },
+    {
+      "id": "native",
+      "title": "Native binaries",
+      "summary": "Provider semantics, formats and native investigation flows.",
+      "slugs": [
+        "native-investigation",
+        "ghidra-provider",
+        "ida-provider",
+        "ghidra-dos",
+        "ghidra-mips",
+        "ghidra-psp",
+        "ghidra-riscv",
+        "ghidra-nativeaot",
+        "raw-binary",
+        "windows-ghidra-p0",
+        "binary-diagnostics",
+        "recorded-crashes",
+        "go-binaries"
+      ],
+      "trailing": []
+    },
+    {
+      "id": "javascript",
+      "title": "JavaScript, Electron and web",
+      "summary": "Static reconstruction, runtime attribution and captures.",
+      "slugs": [
+        "javascript-artifact-reconstruction",
+        "javascript-application-graph",
+        "javascript-application-workflows",
+        "javascript-recovery",
+        "javascript-runtime-observation",
+        "javascript-runtime-reconciliation",
+        "electron-observation",
+        "browser-observation",
+        "browser-scenario-contract",
+        "web-runtime",
+        "web-source-location",
+        "website-module-trace",
+        "website-script-export",
+        "web-network-captures",
+        "http3-capture-lab"
+      ],
+      "trailing": []
+    },
+    {
+      "id": "artifacts",
+      "title": "Packages and artifacts",
+      "summary": "Managed code, Android, Apple, firmware, WASM, EVM, SQLite and signals.",
+      "slugs": [
+        "managed-code-analysis",
+        "android-analysis",
+        "apktool-resource-analysis",
+        "adb-device-analysis",
+        "jeb-analysis",
+        "flutter-analysis",
+        "harmony-analysis",
+        "apple-application-analysis",
+        "firmware-analysis",
+        "wasm-artifacts",
+        "evm-bytecode",
+        "sqlite-databases",
+        "packet-captures",
+        "pcap-analysis",
+        "signal-recordings",
+        "process-capture",
+        "frida-instrumentation"
+      ],
+      "trailing": []
+    },
+    {
+      "id": "workflow",
+      "title": "Evidence workflow",
+      "summary": "Obligation ledgers, readiness and reconstruction checks.",
+      "slugs": [
+        "reconstruction-obligation-ledgers",
+        "reconstruction-readiness",
+        "testing"
+      ],
+      "trailing": []
+    }
+  ],
+  "docs": [
+    {
+      "slug": "adb-device-analysis",
+      "title": "ADB device inspection and acquisition",
+      "summary": "REA inspects connected Android devices, reads device state, and transfers files and packages through the caller's adb binary. Emulators, USB devices, and network devices participate alike: REA neither starts nor manages them and never installs platform tools.…",
+      "headings": [
+        "Supply tools",
+        "Answer an analyst question",
+        "Operations",
+        "Interpret the result",
+        "Resource and lifecycle limits",
+        "Related capability and follow-up lanes",
+        "Real verification"
+      ],
+      "words": 1465,
+      "path": "docs/adb-device-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/adb-device-analysis.md"
+    },
+    {
+      "slug": "android-analysis",
+      "title": "Static Android APK analysis",
+      "summary": "REA wraps an existing headless JADX engine through src/android/. Its source is kept as an unmodified, commit-pinned Git submodule; see upstream provenance. CLI and MCP use the same",
+      "headings": [
+        "Optional package delivery",
+        "Supply tools",
+        "Answer an analyst question",
+        "Interpret the result",
+        "Resource and lifecycle limits",
+        "Real verification"
+      ],
+      "words": 2299,
+      "path": "docs/android-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/android-analysis.md"
+    },
+    {
+      "slug": "apktool-resource-analysis",
+      "title": "Apktool resource decoding",
+      "summary": "REA decodes Android resource tables and the binary manifest through the caller's Apktool launcher. This completes the static triad for Android targets: Java/Kotlin sources through the JADX family, engine-grade decompilation through JEB, and resources through…",
+      "headings": [
+        "Supply tools",
+        "Answer an analyst question",
+        "Interpret the result",
+        "Resource and lifecycle limits",
+        "Real verification"
+      ],
+      "words": 648,
+      "path": "docs/apktool-resource-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/apktool-resource-analysis.md"
+    },
+    {
+      "slug": "apple-application-analysis",
+      "title": "Apple Application Inventory Projection",
+      "summary": "REA can project one or more authenticated inventory_artifact Evidence records for the same IPA, macOS .app directory, ZIP, or DMG into an Apple application inventory. The projection is execution-free: it reports exact paths, content",
+      "headings": [
+        "Application roots",
+        "macOS bundle anatomy",
+        "Dylib load resolution"
+      ],
+      "words": 1625,
+      "path": "docs/apple-application-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/apple-application-analysis.md"
+    },
+    {
+      "slug": "binary-diagnostics",
+      "title": "Offline binary diagnostics",
+      "summary": "inspectbinarylayout / inspect-binary-layout answers what an explicit file contains: section/segment layout, original symbols/relocations, static linkage names and mitigation indicators. It works without an active Hopper,",
+      "headings": [
+        "Bring your own engine",
+        "Interpreting results",
+        "Portable PE resources"
+      ],
+      "words": 1596,
+      "path": "docs/binary-diagnostics.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/binary-diagnostics.md"
+    },
+    {
+      "slug": "browser-observation",
+      "title": "Website observation with CDP",
+      "summary": "Captured Debugger sources can be exported for REA's existing static JavaScript analysis with exportwebscripts. See captured website scripts for the capture options, source mappings, and browser/local resolution limits.",
+      "headings": [
+        "Shipped surfaces",
+        "Screenshot comparison memory budget",
+        "Provider authorities",
+        "Start a browser",
+        "Request boundary",
+        "CLI workflow",
+        "MCP input",
+        "Data minimization",
+        "Completeness and limits",
+        "Non-goals and threat model"
+      ],
+      "words": 3115,
+      "path": "docs/browser-observation.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/browser-observation.md"
+    },
+    {
+      "slug": "browser-scenario-contract",
+      "title": "Browser scenario contract",
+      "summary": "capturebrowserscenario accepts the provider-neutral browserScenarioSchema through both MCP and the capture-browser-scenario INPUT_JSON CLI command. The request is declarative: it admits a fixed action vocabulary, explicit HTTP(S) targets, deterministic",
+      "headings": [
+        "Minimal launch example",
+        "Interaction example: capture the visible result",
+        "Network evidence",
+        "Scenario comparison"
+      ],
+      "words": 2208,
+      "path": "docs/browser-scenario-contract.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/browser-scenario-contract.md"
+    },
+    {
+      "slug": "cli",
+      "title": "CLI and Evidence",
+      "summary": "Use the CLI for a direct inspection or a script. It uses the same application workflows and evidence contracts as REA's MCP server. Each CLI invocation is a separate process; save results when you want to use them in a later command.",
+      "headings": [
+        "Run a command",
+        "Managed assemblies (.NET)",
+        "SQLite snapshots",
+        "Native analysis",
+        "Choose a provider",
+        "Save and reuse analysis snapshots",
+        "Import, export and compare Evidence",
+        "Import historical source",
+        "Capture runtime behavior",
+        "Output and exit status"
+      ],
+      "words": 1958,
+      "path": "docs/cli.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/cli.md"
+    },
+    {
+      "slug": "client-configuration",
+      "title": "Client configuration and troubleshooting",
+      "summary": "Use this reference when a client's configuration paths, profiles, trust settings, or schema limits affect REA. Start with installation and setup for the reviewed setup transaction and client IDs.",
+      "headings": [
+        "Fiddler Everywhere alongside REA",
+        "GitHub Copilot CLI",
+        "Claude Desktop",
+        "Claude Code",
+        "Kimi Code",
+        "Pi",
+        "Qwen Code",
+        "Antigravity",
+        "Gemini CLI",
+        "Codex and Devin",
+        "OMP",
+        "Hermes",
+        "Qoder CLI",
+        "Factory Droid",
+        "Trae",
+        "ZCode",
+        "DeepSeek Harness",
+        "Other client settings"
+      ],
+      "words": 2778,
+      "path": "docs/client-configuration.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/client-configuration.md"
+    },
+    {
+      "slug": "client-verification",
+      "title": "Client and agent verification",
+      "summary": "Use these optional lanes to verify an installed client or evaluate an agent's REA workflow. Testing REA provides the normal development commands and provider lanes. Each record below states its host, client version, model",
+      "headings": [
+        "End-to-end, integration and golden evidence",
+        "Agent evaluation and conformance records"
+      ],
+      "words": 4660,
+      "path": "docs/client-verification.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/client-verification.md"
+    },
+    {
+      "slug": "electron-observation",
+      "title": "Electron file-page observation",
+      "summary": "REA can attach to an Electron/Chromium CDP endpoint and inspect existing file:// renderer pages without evaluating JavaScript or invoking Electron APIs. The request supplies the endpoint directly; REA accepts only literal-port loopback HTTP endpoints. Selecti…",
+      "headings": [
+        "Target boundary",
+        "Workflow",
+        "Active Electron scenarios"
+      ],
+      "words": 952,
+      "path": "docs/electron-observation.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/electron-observation.md"
+    },
+    {
+      "slug": "evm-bytecode",
+      "title": "Offline EVM bytecode",
+      "summary": "inspectevminterface / inspect-evm-interface infers interface candidates from one explicitly selected local bytecode carrier. The capability is general: contract investigation, compatibility, audit and CTF showcases use the same",
+      "headings": [
+        "Evidence semantics",
+        "Selected interface delivery and retained views",
+        "Resource and lifecycle limits"
+      ],
+      "words": 1092,
+      "path": "docs/evm-bytecode.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/evm-bytecode.md"
+    },
+    {
+      "slug": "firmware-analysis",
+      "title": "Firmware analysis",
+      "summary": "REA accepts Binwalk 3.1.x for region inspection and Unblob 26.6.x for explicit extraction. The report parsers are verified with Binwalk 3.1.0 and Unblob 26.6.4. Another build on those lines is accepted, the observed version",
+      "headings": [
+        "Caller-supplied tools",
+        "CLI and MCP",
+        "Resource and lifecycle policy",
+        "Verification"
+      ],
+      "words": 1116,
+      "path": "docs/firmware-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/firmware-analysis.md"
+    },
+    {
+      "slug": "flutter-analysis",
+      "title": "Flutter build identification",
+      "summary": "REA identifies a Flutter app's build facts by pure parsing of its APK: the Dart VM snapshot hash, per-ABI library digests, the engine's GNU build-id, and any labeled version strings. No engine, no tool installation, no execution, and no external lookups — thi…",
+      "headings": [
+        "Answer an analyst question",
+        "Optional retained AOT delivery",
+        "What the AOT inspection returns",
+        "Interpret the result",
+        "Limits",
+        "Real verification"
+      ],
+      "words": 1579,
+      "path": "docs/flutter-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/flutter-analysis.md"
+    },
+    {
+      "slug": "frida-instrumentation",
+      "title": "Frida instrumentation",
+      "summary": "REA exposes Frida device and process discovery, attach or spawn sessions, and caller-authored JavaScript instrumentation through the CLI and MCP. The Node bindings are an optional package dependency and load only when a Frida operation runs. REA does not inst…",
+      "headings": [],
+      "words": 509,
+      "path": "docs/frida-instrumentation.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/frida-instrumentation.md"
+    },
+    {
+      "slug": "ghidra-dos",
+      "title": "DOS MZ and COM analysis with Ghidra",
+      "summary": "REA can analyze DOS MZ executables and explicitly selected COM images through the bring-your-own Ghidra adapter. The Linux x64 and macOS arm64 verification lanes exercise actual 16-bit disassembly and decompilation through the CLI and stdio MCP. Provider admi…",
+      "headings": [
+        "Open and inspect",
+        "Headerless COM images",
+        "Addresses and function extent",
+        "Loaded-image evidence",
+        "Coverage boundaries",
+        "Real verification",
+        "Function annotations"
+      ],
+      "words": 1331,
+      "path": "docs/ghidra-dos.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/ghidra-dos.md"
+    },
+    {
+      "slug": "ghidra-mips",
+      "title": "MIPS ELF analysis through Ghidra",
+      "summary": "This lane extends native ELF analysis; it does not execute MIPS code or rehost firmware. It advances the generic-MIPS portion of #718, not the whole firmware roadmap. PSP/Allegrex has a separate static-ELF profile tracked in",
+      "headings": [
+        "Admission boundary",
+        "Use",
+        "Verification"
+      ],
+      "words": 2226,
+      "path": "docs/ghidra-mips.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/ghidra-mips.md"
+    },
+    {
+      "slug": "ghidra-nativeaot",
+      "title": "Optional NativeAOT metadata recovery",
+      "summary": "REA has a built-in read-only snapshot parser for x64 PE targets with .NET 8 RTR 9.1 metadata. It parses the exact admitted Ghidra session snapshot and uses an in-memory overlay for rehydrated metadata; it does not define Ghidra DataTypes,",
+      "headings": [
+        "Build and configure",
+        "Use existing tools",
+        "Evidence boundaries",
+        "Verification"
+      ],
+      "words": 1170,
+      "path": "docs/ghidra-nativeaot.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/ghidra-nativeaot.md"
+    },
+    {
+      "slug": "ghidra-provider",
+      "title": "Ghidra provider semantics",
+      "summary": "REA imports one target into an ephemeral Ghidra database. Linux/macOS support read-only analysis and atomic function-name/entry-comment edits; Windows P0 is read-only. GUI controls and persistent database mutation are unavailable.",
+      "headings": [
+        "Admitted inventory semantics",
+        "PE debug-symbol coverage",
+        "Loaded addresses and file offsets",
+        "Admitted function-analysis semantics",
+        "Masked byte search"
+      ],
+      "words": 2319,
+      "path": "docs/ghidra-provider.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/ghidra-provider.md"
+    },
+    {
+      "slug": "ghidra-psp",
+      "title": "PSP static ELF analysis through Ghidra",
+      "summary": "This specialization builds on generic MIPS support for #1330. It reuses REA's existing CLI/MCP, Ghidra bridge, Evidence and snapshot workflows. Allegrex instructions,",
+      "headings": [
+        "Initial boundary",
+        "Bring your own compatible extension",
+        "Ordinary public interfaces",
+        "Verification"
+      ],
+      "words": 761,
+      "path": "docs/ghidra-psp.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/ghidra-psp.md"
+    },
+    {
+      "slug": "ghidra-riscv",
+      "title": "RISC-V ELF analysis through Ghidra",
+      "summary": "This lane extends native ELF analysis for EM_RISCV targets. It does not execute RISC-V code, emulate a boot sequence, or rehost firmware. It addresses #2063 and follows the same",
+      "headings": [
+        "Admission boundary",
+        "Why the language is pinned",
+        "Evidence",
+        "Verification and limits"
+      ],
+      "words": 739,
+      "path": "docs/ghidra-riscv.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/ghidra-riscv.md"
+    },
+    {
+      "slug": "go-binaries",
+      "title": "Go binary build metadata",
+      "summary": "inspectgobinary / inspect-go-binary answers which Go compiler version, modules, replacements and build settings are embedded in one selected local executable or library. It reads the file without running it and requires no",
+      "headings": [
+        "Observations",
+        "Supported boundary",
+        "Real producer verification"
+      ],
+      "words": 679,
+      "path": "docs/go-binaries.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/go-binaries.md"
+    },
+    {
+      "slug": "harmony-analysis",
+      "title": "Static HarmonyOS package inventory",
+      "summary": "REA inventories HarmonyOS application packages through the shared hardened ZIP artifact reader in src/artifacts/, then projects the authenticated inventory into an execution-free application graph. This is the first increment of the HarmonyOS roadmap (#1431):…",
+      "headings": [
+        "Usage",
+        "Verification lane"
+      ],
+      "words": 515,
+      "path": "docs/harmony-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/harmony-analysis.md"
+    },
+    {
+      "slug": "http3-capture-lab",
+      "title": "Verify real HTTP/3 MITM captures",
+      "summary": "This optional Linux laboratory checks native mitmproxy captures through REA's public CLI and MCP. It changes no runtime contracts or adapters and establishes only the specific producer, mode and clients exercised here.",
+      "headings": [
+        "Prepare a disposable guest",
+        "Run the narrow profile",
+        "Acceptance and evidence",
+        "Verifier regressions"
+      ],
+      "words": 1292,
+      "path": "docs/http3-capture-lab.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/http3-capture-lab.md"
+    },
+    {
+      "slug": "ida-provider",
+      "title": "IDA provider",
+      "summary": "REA adapts an existing IDA MCP server into its native analysis tools. Existing IDA Pro profiles use mrexodia/ida-pro-mcp; an optional native bridge for IDA Pro and IDA Free is described below. Install and configure your selected engine and upstream MCP using…",
+      "headings": [
+        "Supported upstream versions",
+        "Analyze an already-open GUI target",
+        "Optional native IDA MCP bridge",
+        "Give REA a target for headless analysis",
+        "Connect an agent once",
+        "Coverage and evidence",
+        "Verification"
+      ],
+      "words": 2607,
+      "path": "docs/ida-provider.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/ida-provider.md"
+    },
+    {
+      "slug": "installation",
+      "title": "Installation and setup",
+      "summary": "Run REA, connect your selected agents, and check the tools needed for your task. Setup previews configuration changes and asks for approval before applying them.",
+      "headings": [
+        "Start setup",
+        "Review setup changes",
+        "Check readiness for your task",
+        "Diagnose, update, and remove",
+        "Released package and main",
+        "Skill-only installation",
+        "Supported agents",
+        "Hopper",
+        "Ghidra",
+        "MCP Registry",
+        "Package runners and global installation"
+      ],
+      "words": 6639,
+      "path": "docs/installation.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/installation.md"
+    },
+    {
+      "slug": "javascript-application-graph",
+      "title": "JavaScript Application Graph",
+      "summary": "JavaScript Application Graph is REA's provider-neutral domain model for connecting shipped application bytes, JavaScript structure, Electron process boundaries, passive browser observations, and native add-ons. It is a durable,",
+      "headings": [
+        "Layer boundary",
+        "Stored record",
+        "Entities and relationships",
+        "Evidence and authority",
+        "Entity identity",
+        "Structure",
+        "Domain API"
+      ],
+      "words": 1337,
+      "path": "docs/javascript-application-graph.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/javascript-application-graph.md"
+    },
+    {
+      "slug": "javascript-application-workflows",
+      "title": "Cross-layer JavaScript application workflows",
+      "summary": "REA derives a complete reachable feature trace from one authenticated JavaScript Application Graph and compares two authenticated graph versions. The MCP tools are inspectanalysisview, traceapplicationfeature, tracejavascriptsemantics, compareapplicationversi…",
+      "headings": [
+        "Feature tracing",
+        "Semantic relation tracing",
+        "Version comparison",
+        "Historical source-to-bundle comparison",
+        "Export return-shape comparison",
+        "CLI and verification",
+        "Runtime evidence"
+      ],
+      "words": 2565,
+      "path": "docs/javascript-application-workflows.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/javascript-application-workflows.md"
+    },
+    {
+      "slug": "javascript-artifact-reconstruction",
+      "title": "JavaScript artifact reconstruction",
+      "summary": "Inspect a local Electron/JavaScript directory or ASAR without executing its code. analyzejavascriptapplication and the CLI routes below return an Evidence record with the application graph, static",
+      "headings": [
+        "Public workflow",
+        "Select sources before analysis",
+        "Read the analysis",
+        "ASAR integrity",
+        "Large results",
+        "Recover partial analysis",
+        "What is reconstructed",
+        "Authority and unknowns",
+        "Safety boundary",
+        "Bounds and coverage",
+        "Verification boundary"
+      ],
+      "words": 4726,
+      "path": "docs/javascript-artifact-reconstruction.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/javascript-artifact-reconstruction.md"
+    },
+    {
+      "slug": "javascript-recovery",
+      "title": "JavaScript source recovery",
+      "summary": "recoverjavascriptsources / recover-javascript-sources derives readable modules from explicitly selected UTF-8 JavaScript files or bundles. Use it on files returned by exportwebscripts or other local scripts. The operation",
+      "headings": [
+        "Caller-supplied engine",
+        "Recover and analyze",
+        "Transform choices and interpretation",
+        "Resource policy and verification"
+      ],
+      "words": 836,
+      "path": "docs/javascript-recovery.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/javascript-recovery.md"
+    },
+    {
+      "slug": "javascript-runtime-observation",
+      "title": "Passive Node and Electron runtime observation",
+      "summary": "REA can attach to an already-running Node.js or Electron V8 Inspector target and retain script-load and execution-context metadata. The listjavascriptruntimetargets and observejavascript_runtime MCP tools have equivalent rea list-javascript-runtime-targets and",
+      "headings": [
+        "Start a caller-owned Node target",
+        "Passive protocol boundary",
+        "Node and Electron roles",
+        "Capture and determinism",
+        "Static correlation"
+      ],
+      "words": 999,
+      "path": "docs/javascript-runtime-observation.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/javascript-runtime-observation.md"
+    },
+    {
+      "slug": "javascript-runtime-reconciliation",
+      "title": "JavaScript static/runtime reconciliation",
+      "summary": "REA can combine an existing static JavaScript Application Graph with one or more browser, Electron, or Node/Electron V8 Inspector observations while preserving their different authorities. The reconcilejavascriptruntime MCP tool and",
+      "headings": [
+        "Workflow",
+        "Matching rules",
+        "Loaded, resident, and not observed",
+        "Frames, workers, and source maps",
+        "Bounds and determinism",
+        "Non-goals"
+      ],
+      "words": 1045,
+      "path": "docs/javascript-runtime-reconciliation.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/javascript-runtime-reconciliation.md"
+    },
+    {
+      "slug": "jeb-analysis",
+      "title": "JEB instrumentation and analysis",
+      "summary": "REA exposes JEB-backed project, unit, and decompilation inspection through the CLI and MCP, served by JEB's own MCP interface. JEB is a bring-your-own engine: REA never installs it, launches it, or opens its project databases itself.",
+      "headings": [
+        "Bring-your-own engine",
+        "Operations",
+        "Semantics"
+      ],
+      "words": 483,
+      "path": "docs/jeb-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/jeb-analysis.md"
+    },
+    {
+      "slug": "managed-code-analysis",
+      "title": "Managed-code analysis",
+      "summary": "REA inspects .NET PE/CLI artifacts without loading or executing their code. It can identify an assembly, inspect metadata and CIL, compare members across builds, and connect declared native calls to supplied native-analysis evidence.",
+      "headings": [
+        "Inspect an assembly",
+        "Shipped scope",
+        "Analysis objective",
+        "Member comparison",
+        "NativeAOT metadata recovery",
+        "Managed/native boundary rules",
+        "Evidence record shape",
+        "Decoded-CIL fingerprint",
+        "Tool and packaging boundary",
+        "Conformance verification",
+        "Operator-local osu! benchmark",
+        "Runtime behavior boundary",
+        "Method metadata during build comparison"
+      ],
+      "words": 3397,
+      "path": "docs/managed-code-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/managed-code-analysis.md"
+    },
+    {
+      "slug": "mcp-contracts",
+      "title": "MCP runtime contracts",
+      "summary": "Use this reference to call REA tools and interpret their replies on one MCP connection. Start with tool results, retained Evidence, and session discovery. See cancellation",
+      "headings": [
+        "Tool results",
+        "Retained application Evidence inputs",
+        "Identity and discovery",
+        "Progress and cancellation",
+        "Request scope and local effects",
+        "Ghidra first-query deadlines and recovery",
+        "Aggregate native context",
+        "Integrity record-and-continue",
+        "Schema advertisement",
+        "Generated catalog"
+      ],
+      "words": 5795,
+      "path": "docs/mcp-contracts.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/mcp-contracts.md"
+    },
+    {
+      "slug": "mcp-prompts",
+      "title": "Guided MCP prompts and completion",
+      "summary": "REA exposes six provider-neutral investigation workflows through the MCP prompts capability. They complement the generated tool catalog; they do not add, remove, or invoke tools by themselves.",
+      "headings": [
+        "Prompt inventory",
+        "Session-aware completion",
+        "Lifecycle and safety"
+      ],
+      "words": 805,
+      "path": "docs/mcp-prompts.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/mcp-prompts.md"
+    },
+    {
+      "slug": "migration-6.2",
+      "title": "Upgrading from REA 6.1 to 6.2",
+      "summary": "REA 6.2 includes stability fixes and changes to public result and saved-data contracts. The repository uses always-bump-minor, including breaking releases; the minor version increment does not imply backward compatibility. Refresh cached",
+      "headings": [
+        "MCP results and Evidence",
+        "Saved snapshots and artifact inventories",
+        "Process captures and cleanup failures",
+        "JavaScript and function comparisons",
+        "Historical-source symlinks"
+      ],
+      "words": 1008,
+      "path": "docs/migration-6.2.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/migration-6.2.md"
+    },
+    {
+      "slug": "native-investigation",
+      "title": "Native binary investigation",
+      "summary": "Use a native provider to discover functions, inspect instructions and pseudocode, follow references, and examine database types. Static resources and runtime observation complement that analysis when they answer a specific question.",
+      "headings": [
+        "Start with a function",
+        "Exact CLI selectors",
+        "Native instruction, call and type primitives",
+        "Bounded static traces",
+        "Static inspection",
+        "Native desktop observation",
+        "Native call observation",
+        "Provider and verification boundaries",
+        "Interface Builder hierarchy coverage",
+        "Keyed archive integer precision",
+        "Locate a byte signature"
+      ],
+      "words": 4734,
+      "path": "docs/native-investigation.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/native-investigation.md"
+    },
+    {
+      "slug": "packet-captures",
+      "title": "Recorded packet capture inspection",
+      "summary": "inspectpacketcapture answers which selected protocol fields TShark observes in an existing capture. Network, USB or Bluetooth recordings can use the same field/filter interface when the installed TShark supports their encapsulation",
+      "headings": [
+        "Verification",
+        "Discover protocols and field names"
+      ],
+      "words": 1329,
+      "path": "docs/packet-captures.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/packet-captures.md"
+    },
+    {
+      "slug": "pcap-analysis",
+      "title": "Packet capture summaries",
+      "summary": "REA summarizes already saved pcap/pcapng files through caller-selected Wireshark 4.x tshark and capinfos. Use inspectpacketcapture for selected fields, filters and decode-as rules; use this family for address, DNS, SNI, protocol-stack",
+      "headings": [
+        "Supply tools",
+        "Inspect only the needed facts",
+        "Interpret provenance and coverage",
+        "Resources and lifecycle",
+        "Verification scope"
+      ],
+      "words": 810,
+      "path": "docs/pcap-analysis.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/pcap-analysis.md"
+    },
+    {
+      "slug": "process-capture",
+      "title": "Process capture",
+      "summary": "Process Capture runs one caller-selected command and records bounded evidence about its terminal behavior, scheduled interactions, process lifetime, and selected filesystem state. Use it to compare two direct runs of the same",
+      "headings": [
+        "Host support",
+        "Capture a command",
+        "Compare two captures",
+        "Hash a report independently of terminal output",
+        "Scenario and result details"
+      ],
+      "words": 3362,
+      "path": "docs/process-capture.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/process-capture.md"
+    },
+    {
+      "slug": "raw-binary",
+      "title": "Headerless raw-binary analysis with Ghidra",
+      "summary": "REA admits a headerless executable when the caller supplies the CPU family and the address where file offset 0 should be mapped. That interpretation is not inferred from a .bin suffix or from unrecognized bytes.",
+      "headings": [
+        "Open and inspect",
+        "NMOS 6502",
+        "Limitations"
+      ],
+      "words": 828,
+      "path": "docs/raw-binary.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/raw-binary.md"
+    },
+    {
+      "slug": "reconstruction-obligation-ledgers",
+      "title": "Reconstruction obligation ledgers",
+      "summary": "buildreconstructionobligation_ledger turns authenticated Evidence records into a deterministic list of reconstruction claims. The same workflow is available as:",
+      "headings": [
+        "Complete CLI request",
+        "Reviewed obligation examples",
+        "Manifest and closure"
+      ],
+      "words": 887,
+      "path": "docs/reconstruction-obligation-ledgers.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/reconstruction-obligation-ledgers.md"
+    },
+    {
+      "slug": "reconstruction-readiness",
+      "title": "Reconstruction readiness conformance",
+      "summary": "Run the source-owned native, JavaScript CLI, Electron, Evidence, comparison, obligation, replay, and cleanup conformance verifier from a clean checkout:",
+      "headings": [
+        "Project conformance contract",
+        "Required stages",
+        "Fail-closed rules",
+        "Fixtures"
+      ],
+      "words": 606,
+      "path": "docs/reconstruction-readiness.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/reconstruction-readiness.md"
+    },
+    {
+      "slug": "recorded-crashes",
+      "title": "Recorded crash evidence",
+      "summary": "inspectrecordedcrash / rea inspect-recorded-crash inspect a caller-selected Linux ELF64 little-endian core independently of an active binary target. Two architecture profiles are interpreted, x86-64 and AArch64; each binds registers",
+      "headings": [
+        "Recorded observations",
+        "Optional debugger mapping context",
+        "Bounds and verification"
+      ],
+      "words": 717,
+      "path": "docs/recorded-crashes.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/recorded-crashes.md"
+    },
+    {
+      "slug": "roadmap",
+      "title": "REA roadmap",
+      "summary": "The platform tracker, process/Hopper tracker, and browser tracker track capability and verification work. Available tools and setup are documented in the",
+      "headings": [
+        "Priorities",
+        "Admission criteria"
+      ],
+      "words": 185,
+      "path": "docs/roadmap.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/roadmap.md"
+    },
+    {
+      "slug": "signal-recordings",
+      "title": "Recorded signal decoding",
+      "summary": "decodesignalrecording answers what a selected protocol decoder observes in an existing recording. It uses caller-supplied sigrok-cli 0.7.2 with libsigrokdecode on Linux. util-linux prlimit is required (default",
+      "headings": [
+        "Verification",
+        "Discover decoders before choosing settings"
+      ],
+      "words": 1060,
+      "path": "docs/signal-recordings.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/signal-recordings.md"
+    },
+    {
+      "slug": "sqlite-databases",
+      "title": "SQLite database snapshots",
+      "summary": "inspectsqlitedatabase / inspect-sqlite-database inspects one explicitly selected local SQLite database snapshot without an active native analysis target. Use it to understand application storage, configuration or retained",
+      "headings": [
+        "Returned evidence",
+        "Source files and failures",
+        "Compatibility verification"
+      ],
+      "words": 1131,
+      "path": "docs/sqlite-databases.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/sqlite-databases.md"
+    },
+    {
+      "slug": "testing",
+      "title": "Testing REA",
+      "summary": "Use this guide when choosing coverage, pruning tests, or running a verification lane. Start with the commands below; use real-toolchain lanes for engine prerequisites and client verification for",
+      "headings": [
+        "Developer commands",
+        "Choose verification for the change",
+        "Test design and pruning",
+        "Behavioral depths",
+        "End-to-end, integration and golden evidence",
+        "Coverage and timing",
+        "Real-toolchain verification lanes",
+        "Android APK analysis",
+        "Apktool resource decoding",
+        "Flutter build identification",
+        "ADB device acquisition",
+        "Optional NativeAOT Ghidra analysis",
+        "IDA MCP adapter",
+        "DOS Ghidra analysis",
+        "Apple Interface Builder archives",
+        "Native platform baseline in CI",
+        "Packet capture analysis",
+        "Apple native metadata and UI",
+        "Agent evaluation and conformance records",
+        "Frida instrumentation"
+      ],
+      "words": 11153,
+      "path": "docs/testing.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/testing.md"
+    },
+    {
+      "slug": "tool-design",
+      "title": "MCP tool design",
+      "summary": "Design around the analyst question. Inspect the current canonical contracts, provider capabilities, and nearest existing tool before changing the surface. Extend a tool when intent and result contract match; add one for a distinct",
+      "headings": [
+        "Decide whether to add a tool",
+        "Choose the tool shape",
+        "Prefer primitives; compose workflows",
+        "Define the contract",
+        "Implement and evaluate"
+      ],
+      "words": 727,
+      "path": "docs/tool-design.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/tool-design.md"
+    },
+    {
+      "slug": "wasm-artifacts",
+      "title": "Offline WebAssembly artifacts",
+      "summary": "inspectwasmartifact / inspect-wasm-artifact inspects explicitly selected local WASM bytes using caller-supplied WABT 1.0.42. No active binary target is required. REA does not install tools or fetch artifacts and does not execute WASM.",
+      "headings": [
+        "Compare core-module interfaces"
+      ],
+      "words": 865,
+      "path": "docs/wasm-artifacts.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/wasm-artifacts.md"
+    },
+    {
+      "slug": "web-network-captures",
+      "title": "Historical web network captures",
+      "summary": "Use inspectwebnetwork_capture / inspect-web-network-capture to inspect retained producer evidence. This is an offline operation: recorded URLs are never fetched, and no browser or proxy listener is started.",
+      "headings": [
+        "Formats and upstream profiles",
+        "Reading Fiddler captures (`.saz`)",
+        "Fiddler Everywhere MCP and public skills",
+        "Reading the evidence",
+        "Derived API surface",
+        "Resource and lifecycle boundaries",
+        "Excluded coordinates and read failures",
+        "Retained aioquic qlog"
+      ],
+      "words": 3581,
+      "path": "docs/web-network-captures.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/web-network-captures.md"
+    },
+    {
+      "slug": "web-runtime",
+      "title": "Website runtime source attribution",
+      "summary": "REA integrates native Chrome DevTools Protocol inspection and precise V8 coverage through two composable tools. Supply an existing loopback CDP endpoint and a page target from listbrowsertargets. With omitted origins, REA selects the page's current HTTP(S) or…",
+      "headings": [
+        "Observe execution",
+        "Inspect a node's listeners",
+        "Bounds and verification"
+      ],
+      "words": 1305,
+      "path": "docs/web-runtime.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/web-runtime.md"
+    },
+    {
+      "slug": "web-source-location",
+      "title": "Captured website source locations",
+      "summary": "tracewebsourcelocation maps one selected position in a script retained by exportweb_scripts through one explicitly paired local source map. The shared CLI/MCP workflow verifies actual manifest, script and map byte identities and",
+      "headings": [
+        "Meaning of the evidence",
+        "Adapter and resource boundaries",
+        "Verification"
+      ],
+      "words": 981,
+      "path": "docs/web-source-location.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/web-source-location.md"
+    },
+    {
+      "slug": "website-module-trace",
+      "title": "Captured website module relationships",
+      "summary": "tracewebmodule_imports / rea trace-web-module-imports traces one script's outgoing native ES imports and re-exports from an exported capture. It verifies the selected source's SHA-256 and byte count, preserves browser URL identities, and returns every",
+      "headings": [
+        "Select the source and context",
+        "Interpret the evidence",
+        "Engine and lifecycle"
+      ],
+      "words": 555,
+      "path": "docs/website-module-trace.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/website-module-trace.md"
+    },
+    {
+      "slug": "website-script-export",
+      "title": "Captured website scripts and static JavaScript analysis",
+      "summary": "exportwebscripts bridges retained browser sources into the existing local JavaScript analyzer. Both CLI and MCP use the same workflow. It reads a saved inspectwebpage or capturebrowserscenario capture and writes scripts plus a",
+      "headings": [
+        "Capture and export",
+        "Sources and mappings",
+        "Interpretation and limits",
+        "Verification"
+      ],
+      "words": 688,
+      "path": "docs/website-script-export.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/website-script-export.md"
+    },
+    {
+      "slug": "windows-ghidra-p0",
+      "title": "Windows Ghidra P0",
+      "summary": "This guide describes repository main. npm 4.1.0 includes the Windows native bundle; check the release boundary before applying these instructions to an older published package.",
+      "headings": [
+        "Supported boundary",
+        "Configuration",
+        "Native authority and target identity",
+        "Private runtime, transport, and lifecycle",
+        "Verification"
+      ],
+      "words": 1461,
+      "path": "docs/windows-ghidra-p0.md",
+      "url": "https://github.com/b25bs3421-cpu/rea/blob/arena/5cca6736-rea/docs/windows-ghidra-p0.md"
+    }
+  ],
+  "targets": [
+    {
+      "target": "Native binaries",
+      "returns": "Pseudocode, assembly, strings, symbols, calls and references",
+      "requirements": "Hopper, Ghidra or IDA; native analysis",
+      "links": [
+        {
+          "label": "native analysis",
+          "href": "https://rea.tools/guides/native/"
+        }
+      ]
+    },
+    {
+      "target": "Offline ELF layout",
+      "returns": "Sections, segments, original symbols/relocations and static mitigation candidates",
+      "requirements": "Caller-supplied pwntools on Linux x64; binary diagnostics",
+      "links": [
+        {
+          "label": "binary diagnostics",
+          "href": "#/docs?doc=binary-diagnostics"
+        }
+      ]
+    },
+    {
+      "target": "Go binaries",
+      "returns": "Embedded compiler version, modules, replacements and build settings",
+      "requirements": "Built-in static ELF/PE/thin Mach-O inspection; no Go installation required",
+      "links": []
+    },
+    {
+      "target": "WASM artifact",
+      "returns": "Validation, sections, exact import/export WAT forms and decoded WAT",
+      "requirements": "Caller-supplied WABT 1.0.42; inspectwasmartifact",
+      "links": []
+    },
+    {
+      "target": "EVM bytecode",
+      "returns": "Dispatch selectors, byte offsets, inferred arguments and mutability",
+      "requirements": "Local raw/hex carrier on Linux x64; offline EVM guide",
+      "links": [
+        {
+          "label": "offline EVM guide",
+          "href": "#/docs?doc=evm-bytecode"
+        }
+      ]
+    },
+    {
+      "target": "SQLite databases",
+      "returns": "Tables, columns, indexes, views, triggers and selected ordinary-table rows",
+      "requirements": "Local database/WAL snapshot; Node.js 24.x >=24.15 or 26+ with native SQLite limits",
+      "links": []
+    },
+    {
+      "target": "Recorded Linux crashes",
+      "returns": "Raw notes, every recorded thread's registers/signals and optional mapping candidates",
+      "requirements": "Caller-supplied pwntools on Linux x64; optional GDB/pwndbg; recorded crashes",
+      "links": [
+        {
+          "label": "recorded crashes",
+          "href": "#/docs?doc=recorded-crashes"
+        }
+      ]
+    },
+    {
+      "target": "JavaScript / Electron",
+      "returns": "Modules, imports, source maps, routes, IPC and native add-on relationships",
+      "requirements": "Node.js and npm; application analysis",
+      "links": [
+        {
+          "label": "application analysis",
+          "href": "https://rea.tools/guides/javascript/"
+        }
+      ]
+    },
+    {
+      "target": "Websites",
+      "returns": "Page structure, scripts, network observations and requested screenshots",
+      "requirements": "A Chrome-family browser; browser analysis",
+      "links": [
+        {
+          "label": "browser analysis",
+          "href": "https://rea.tools/guides/browser/"
+        }
+      ]
+    },
+    {
+      "target": "Saved network captures",
+      "returns": "Requests, responses, exposed payloads and source locations",
+      "requirements": "HAR or Fiddler Everywhere SAZ; mitmdump on Linux for native mitmproxy; capture guide",
+      "links": [
+        {
+          "label": "capture guide",
+          "href": "#/docs?doc=web-network-captures"
+        }
+      ]
+    },
+    {
+      "target": ".NET assemblies",
+      "returns": "Metadata, CIL instructions, declared native dependencies and build comparisons",
+      "requirements": "None (static only); managed-code guide",
+      "links": [
+        {
+          "label": "managed-code guide",
+          "href": "#/docs?doc=managed-code-analysis"
+        }
+      ]
+    },
+    {
+      "target": "Android APKs",
+      "returns": "Manifest declarations, classes, decompiled methods and references",
+      "requirements": "Headless JADX and a full JDK on Linux/macOS/Windows x64; Android guide",
+      "links": [
+        {
+          "label": "Android guide",
+          "href": "#/docs?doc=android-analysis"
+        }
+      ]
+    },
+    {
+      "target": "Android devices",
+      "returns": "Devices, packages, processes, logs, dumps, screen captures, and APK/file transfers",
+      "requirements": "Caller-supplied adb (emulator or hardware); ADB guide",
+      "links": [
+        {
+          "label": "ADB guide",
+          "href": "#/docs?doc=adb-device-analysis"
+        }
+      ]
+    },
+    {
+      "target": "JEB projects",
+      "returns": "Engine-backed project units, artifact digests and type/method pseudo-code",
+      "requirements": "A caller-started JEB client serving MCP, selected with REAJEBMCP_URL; JEB guide",
+      "links": [
+        {
+          "label": "JEB guide",
+          "href": "#/docs?doc=jeb-analysis"
+        }
+      ]
+    },
+    {
+      "target": "Android resources",
+      "returns": "Decoded manifest, string tables, locales and version facts",
+      "requirements": "Caller-supplied Apktool launcher; resource guide",
+      "links": [
+        {
+          "label": "resource guide",
+          "href": "#/docs?doc=apktool-resource-analysis"
+        }
+      ]
+    },
+    {
+      "target": "Flutter apps",
+      "returns": "Dart snapshot hash, per-ABI library digests and engine build provenance",
+      "requirements": "None (static APK parsing); Flutter guide",
+      "links": [
+        {
+          "label": "Flutter guide",
+          "href": "#/docs?doc=flutter-analysis"
+        }
+      ]
+    },
+    {
+      "target": "Firmware",
+      "returns": "Regions, extraction results and native-analysis handoffs",
+      "requirements": "Binwalk / Unblob on Linux; firmware guide",
+      "links": [
+        {
+          "label": "firmware guide",
+          "href": "#/docs?doc=firmware-analysis"
+        }
+      ]
+    },
+    {
+      "target": "Recorded packets",
+      "returns": "Selected fields, repeated values, filters and decode-as rules",
+      "requirements": "Linux: TShark 4.x + prlimit; capture guide",
+      "links": [
+        {
+          "label": "capture guide",
+          "href": "#/docs?doc=packet-captures"
+        }
+      ]
+    },
+    {
+      "target": "Packet summaries",
+      "returns": "Endpoints, DNS, TLS SNI, protocol distribution and HTTP requests",
+      "requirements": "Caller-supplied tshark and capinfos (Linux-verified); pcap guide",
+      "links": [
+        {
+          "label": "pcap guide",
+          "href": "#/docs?doc=pcap-analysis"
+        }
+      ]
+    },
+    {
+      "target": "Recorded logic signals",
+      "returns": "Decoder annotations, sample ranges and diagnostics",
+      "requirements": "Linux: sigrok-cli 0.7.2 + prlimit; signal recordings",
+      "links": [
+        {
+          "label": "signal recordings",
+          "href": "#/docs?doc=signal-recordings"
+        }
+      ]
+    },
+    {
+      "target": "Packages and resources",
+      "returns": "File inventories, digests, plists, Apple bundle anatomy and extracted resources",
+      "requirements": "Artifact and JavaScript guide, Apple applications",
+      "links": [
+        {
+          "label": "Artifact and JavaScript guide",
+          "href": "#/docs?doc=javascript-artifact-reconstruction"
+        },
+        {
+          "label": "Apple applications",
+          "href": "#/docs?doc=apple-application-analysis"
+        }
+      ]
+    },
+    {
+      "target": "Process behavior",
+      "returns": "Terminal output, interactions, exit and filesystem observations, and run comparisons",
+      "requirements": "Linux/macOS with a native PTY; process capture",
+      "links": [
+        {
+          "label": "process capture",
+          "href": "#/docs?doc=process-capture"
+        }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Which agents can use REA?",
+      "answer": "Any agent that supports local MCP servers. Setup configures the supported agents; other clients can use manual MCP registration."
+    },
+    {
+      "question": "Do I need Hopper, Ghidra or IDA?",
+      "answer": "Deep native analysis uses one of them. Static JavaScript and .NET inspection work without a native analysis engine. Setup can install Hopper after approval; Ghidra and IDA use your existing installations. See provider setup."
+    },
+    {
+      "question": "Do I need to start Hopper first?",
+      "answer": "REA starts Hopper when an operation needs it. On macOS, a first-run dialog may ask you to choose demo mode or activate your license. Complete that prompt in the same user session before your first CLI/MCP operation or unattended job. Open Hopper manually if needed. See Hopper startup and troubleshooting."
+    },
+    {
+      "question": "What does installing the skill from skills.sh do?",
+      "answer": "The skill supplies investigation instructions for your agent. Use npx rea-agents setup to register REA's MCP server and install the matching instructions, then restart your agent. See skill-only installation."
+    },
+    {
+      "question": "What code does REA return?",
+      "answer": "Native analysis returns pseudocode and assembly. JavaScript/Electron analysis recovers modules and their relationships. Your agent uses these findings to write and test an implementation; the showcases give worked examples."
+    },
+    {
+      "question": "Does REA upload my app?",
+      "answer": "REA analyzes targets locally. Your agent receives the tool results, and its model provider has its own data policy."
+    },
+    {
+      "question": "What should I do if I hit a bug?",
+      "answer": "Update first; a recent release may already fix it. For a CLI installed with npm install --global or bun add --global: ``bash rea update ` For agent setup through npx: `bash npx rea-agents@latest setup `` If you're using an agent, complete the setup refresh and restart it. Retry the same task. If the problem persists, open an issue with your REA version, target type, steps to reproduce and error output."
+    }
+  ]
+}

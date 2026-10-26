@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>REA Workbench — local console for a REA checkout</title>
+    <meta
+      name="description"
+      content="Run real REA analyses, browse the MCP tool and CLI surface, and check host readiness from a local console over this checkout."
+    />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <a class="brand" href="#/overview" aria-label="REA Workbench overview">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="presentation">
+            <path d="M5 11V5h6M21 5h6v6M27 21v6h-6M11 27H5v-6" />
+            <path
+              class="brand__glyph"
+              d="M12 22V10h5.2a3.6 3.6 0 0 1 0 7.2H12m6.4 0L22 22"
+            />
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong>REA Workbench</strong>
+          <span class="brand__meta" id="brandMeta">local console</span>
+        </span>
+      </a>
+
+      <div class="topbar__actions">
+        <span class="status" id="hostStatus" title="Workbench server status">
+          <span class="status__dot" aria-hidden="true"></span>
+          <span class="status__label">connecting</span>
+        </span>
+        <button
+          class="btn btn--ghost btn--icon"
+          id="paletteButton"
+          type="button"
+          aria-label="Search the workbench (Ctrl K)"
+        >
+          <svg viewBox="0 0 16 16" aria-hidden="true">
+            <circle cx="7" cy="7" r="4.5" />
+            <path d="m10.5 10.5 3 3" />
+          </svg>
+          <span class="btn__hint" aria-hidden="true">⌘K</span>
+        </button>
+        <button
+          class="btn btn--ghost btn--icon"
+          id="themeButton"
+          type="button"
+          aria-label="Switch color theme"
+        >
+          <svg
+            viewBox="0 0 16 16"
+            aria-hidden="true"
+            class="theme-icon theme-icon--sun"
+          >
+            <circle cx="8" cy="8" r="3.2" />
+            <path
+              d="M8 1v2M8 13v2M1 8h2M13 8h2M3.2 3.2l1.4 1.4M11.4 11.4l1.4 1.4M12.8 3.2l-1.4 1.4M4.6 11.4 3.2 12.8"
+            />
+          </svg>
+          <svg
+            viewBox="0 0 16 16"
+            aria-hidden="true"
+            class="theme-icon theme-icon--moon"
+          >
+            <path d="M13 9.6A5.6 5.6 0 0 1 6.4 3a5.6 5.6 0 1 0 6.6 6.6Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="shell">
+      <nav class="rail" aria-label="Sections">
+        <ol class="rail__list" id="rail"></ol>
+        <div class="rail__foot">
+          <p class="rail__note">
+            Everything here runs against this checkout. No account, no upload to
+            a third party.
+          </p>
+          <a
+            class="rail__link rail__link--external"
+            href="https://github.com/morluto/rea"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            github.com/morluto/rea
+          </a>
+        </div>
+      </nav>
+
+      <main id="main" class="main" tabindex="-1">
+        <div class="view" id="view" aria-live="polite"></div>
+        <footer class="footer" id="footer">
+          <span>
+            Catalog generated from this checkout. REA is MIT licensed by
+            <a
+              href="https://github.com/morluto/rea"
+              target="_blank"
+              rel="noreferrer noopener"
+              >morluto</a
+            >.
+          </span>
+          <span class="footer__meta" id="footerMeta"></span>
+        </footer>
+      </main>
+    </div>
+
+    <dialog class="palette" id="palette" aria-label="Search the workbench">
+      <div class="palette__input">
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <circle cx="7" cy="7" r="4.5" />
+          <path d="m10.5 10.5 3 3" />
+        </svg>
+        <input
+          id="paletteInput"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search tools, commands, documents, sections…"
+          aria-label="Search"
+        />
+        <kbd>esc</kbd>
+      </div>
+      <div
+        class="palette__results"
+        id="paletteResults"
+        role="listbox"
+        aria-label="Results"
+      ></div>
+      <div class="palette__foot">
+        <span><kbd>↑</kbd><kbd>↓</kbd> move</span>
+        <span><kbd>↵</kbd> open</span>
+        <span id="paletteCount"></span>
+      </div>
+    </dialog>
+
+    <div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+    <template id="loadingTemplate">
+      <div class="loading">
+        <span class="loading__bar"></span>
+        <p>Reading the checkout…</p>
+      </div>
+    </template>
+
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>

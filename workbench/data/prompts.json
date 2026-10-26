@@ -1,0 +1,29 @@
+{
+  "generatedFrom": "docs/mcp-prompts.md",
+  "prompts": [
+    {
+      "name": "investigate_feature",
+      "purpose": "Trace a feature from discovery into relevant function evidence."
+    },
+    {
+      "name": "compare_application_versions",
+      "purpose": "Compare two shipped artifacts, with optional static and runtime follow-up."
+    },
+    {
+      "name": "verify_reconstruction",
+      "purpose": "Evaluate a finite reconstruction specification against retained comparison Evidence."
+    },
+    {
+      "name": "trace_crash",
+      "purpose": "Correlate a crash symptom with static paths and optional process capture evidence."
+    },
+    {
+      "name": "audit_residual_unknowns",
+      "purpose": "Audit current residual-unknown heads and evidence-qualified resolution."
+    },
+    {
+      "name": "prepare_bounded_process_capture",
+      "purpose": "Design a bounded controlled process experiment before execution."
+    }
+  ]
+}

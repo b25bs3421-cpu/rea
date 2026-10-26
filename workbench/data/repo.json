@@ -1,0 +1,1121 @@
+{
+  "generatedFrom": "src/ tests/ scripts/ bridge/ docs/ package.json",
+  "package": {
+    "name": "rea-agents",
+    "version": "6.4.0",
+    "license": "MIT",
+    "engines": {
+      "node": "^22.19.0 || ^24.11.0 || >=26.0.0"
+    },
+    "bin": {
+      "rea": "scripts/rea.mjs",
+      "rea-agents": "scripts/rea.mjs"
+    }
+  },
+  "checkout": {
+    "branch": "arena/5cca6736-rea",
+    "commit": "8fef2aa",
+    "remote": "https://github.com/b25bs3421-cpu/rea.git",
+    "repository": "https://github.com/b25bs3421-cpu/rea"
+  },
+  "totals": {
+    "modules": 36,
+    "productionFiles": 1326,
+    "productionLines": 268702,
+    "testFiles": 790,
+    "testLines": 188023,
+    "scripts": 300,
+    "bridgeSources": 30,
+    "documents": 85
+  },
+  "modules": [
+    {
+      "name": "domain",
+      "files": 394,
+      "tests": 151,
+      "loc": 85499,
+      "testLoc": 37580
+    },
+    {
+      "name": "application",
+      "files": 240,
+      "tests": 70,
+      "loc": 45762,
+      "testLoc": 19119
+    },
+    {
+      "name": "browser",
+      "files": 92,
+      "tests": 30,
+      "loc": 19734,
+      "testLoc": 8150
+    },
+    {
+      "name": "artifacts",
+      "files": 46,
+      "tests": 14,
+      "loc": 11826,
+      "testLoc": 2789
+    },
+    {
+      "name": "native",
+      "files": 45,
+      "tests": 15,
+      "loc": 11494,
+      "testLoc": 3815
+    },
+    {
+      "name": "ghidra",
+      "files": 42,
+      "tests": 21,
+      "loc": 10405,
+      "testLoc": 8029
+    },
+    {
+      "name": "contracts",
+      "files": 71,
+      "tests": 11,
+      "loc": 10055,
+      "testLoc": 1807
+    },
+    {
+      "name": "process",
+      "files": 41,
+      "tests": 25,
+      "loc": 8986,
+      "testLoc": 6394
+    },
+    {
+      "name": "server",
+      "files": 82,
+      "tests": 2,
+      "loc": 8396,
+      "testLoc": 256
+    },
+    {
+      "name": "dotnet",
+      "files": 25,
+      "tests": 11,
+      "loc": 8032,
+      "testLoc": 3878
+    },
+    {
+      "name": "cli",
+      "files": 47,
+      "tests": 0,
+      "loc": 6748,
+      "testLoc": 0
+    },
+    {
+      "name": "hopper",
+      "files": 21,
+      "tests": 8,
+      "loc": 5022,
+      "testLoc": 1076
+    },
+    {
+      "name": "javascript",
+      "files": 20,
+      "tests": 3,
+      "loc": 4973,
+      "testLoc": 501
+    },
+    {
+      "name": "adb",
+      "files": 6,
+      "tests": 5,
+      "loc": 3346,
+      "testLoc": 1861
+    },
+    {
+      "name": "ida",
+      "files": 13,
+      "tests": 15,
+      "loc": 3220,
+      "testLoc": 4904
+    },
+    {
+      "name": "flutter",
+      "files": 6,
+      "tests": 2,
+      "loc": 2547,
+      "testLoc": 561
+    },
+    {
+      "name": "android",
+      "files": 9,
+      "tests": 0,
+      "loc": 2454,
+      "testLoc": 0
+    },
+    {
+      "name": "firmware",
+      "files": 7,
+      "tests": 3,
+      "loc": 1840,
+      "testLoc": 596
+    },
+    {
+      "name": "sqlite",
+      "files": 7,
+      "tests": 0,
+      "loc": 1669,
+      "testLoc": 0
+    },
+    {
+      "name": "go",
+      "files": 7,
+      "tests": 0,
+      "loc": 1578,
+      "testLoc": 0
+    },
+    {
+      "name": "pcap",
+      "files": 6,
+      "tests": 2,
+      "loc": 1537,
+      "testLoc": 339
+    },
+    {
+      "name": "frida",
+      "files": 2,
+      "tests": 0,
+      "loc": 1361,
+      "testLoc": 0
+    },
+    {
+      "name": "evaluation",
+      "files": 4,
+      "tests": 0,
+      "loc": 1324,
+      "testLoc": 0
+    },
+    {
+      "name": "wasm",
+      "files": 9,
+      "tests": 3,
+      "loc": 1320,
+      "testLoc": 796
+    },
+    {
+      "name": "apktool",
+      "files": 3,
+      "tests": 3,
+      "loc": 1305,
+      "testLoc": 1118
+    },
+    {
+      "name": "evm",
+      "files": 8,
+      "tests": 4,
+      "loc": 1240,
+      "testLoc": 262
+    },
+    {
+      "name": "reference",
+      "files": 7,
+      "tests": 1,
+      "loc": 1127,
+      "testLoc": 71
+    },
+    {
+      "name": "inspector",
+      "files": 5,
+      "tests": 3,
+      "loc": 1083,
+      "testLoc": 635
+    },
+    {
+      "name": "windows",
+      "files": 3,
+      "tests": 2,
+      "loc": 720,
+      "testLoc": 384
+    },
+    {
+      "name": "jeb",
+      "files": 3,
+      "tests": 3,
+      "loc": 716,
+      "testLoc": 469
+    },
+    {
+      "name": "captures",
+      "files": 3,
+      "tests": 0,
+      "loc": 696,
+      "testLoc": 0
+    },
+    {
+      "name": "composition",
+      "files": 29,
+      "tests": 0,
+      "loc": 695,
+      "testLoc": 0
+    },
+    {
+      "name": "signals",
+      "files": 2,
+      "tests": 0,
+      "loc": 613,
+      "testLoc": 0
+    },
+    {
+      "name": "filesystem",
+      "files": 6,
+      "tests": 0,
+      "loc": 520,
+      "testLoc": 0
+    },
+    {
+      "name": "config",
+      "files": 10,
+      "tests": 0,
+      "loc": 490,
+      "testLoc": 0
+    },
+    {
+      "name": "main",
+      "files": 5,
+      "tests": 0,
+      "loc": 369,
+      "testLoc": 0
+    }
+  ],
+  "entryPoints": [
+    {
+      "path": "scripts/rea.mjs",
+      "role": "Published bin entry (`rea`, `rea-agents`)"
+    },
+    {
+      "path": "src/main.ts",
+      "role": "CLI and MCP mode dispatch"
+    },
+    {
+      "path": "src/server/createServer.ts",
+      "role": "MCP stdio server wiring"
+    },
+    {
+      "path": "src/contracts/toolContracts.ts",
+      "role": "Ordered MCP tool inventory"
+    },
+    {
+      "path": "src/domain/evidence.ts",
+      "role": "Canonical Evidence record"
+    },
+    {
+      "path": "scripts/lib/product-catalog.mjs",
+      "role": "Generated product catalog used here"
+    },
+    {
+      "path": "website/public/index.html",
+      "role": "Public website (separate from this console)"
+    },
+    {
+      "path": "docs/.vitepress/config.ts",
+      "role": "VitePress documentation site"
+    }
+  ],
+  "scripts": [
+    {
+      "name": "artifacts:error-schema",
+      "command": "node scripts/generate-error-schema.mjs"
+    },
+    {
+      "name": "artifacts:managed-evidence",
+      "command": "node scripts/generate-completion-ledger.mjs"
+    },
+    {
+      "name": "artifacts:mcp-catalog",
+      "command": "node scripts/generate-mcp-tool-catalog.mjs"
+    },
+    {
+      "name": "artifacts:product-catalog",
+      "command": "node scripts/generate-product-catalog.mjs"
+    },
+    {
+      "name": "artifacts:skills",
+      "command": "node scripts/generate-skill-metadata.mjs"
+    },
+    {
+      "name": "build",
+      "command": "node scripts/run-exclusive.mjs artifacts turbo run artifacts:skills --force"
+    },
+    {
+      "name": "build:cached",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run artifacts:skills"
+    },
+    {
+      "name": "build:fixtures",
+      "command": "node scripts/build-conformance-fixtures.mjs"
+    },
+    {
+      "name": "build:fixtures:nativeaot",
+      "command": "node scripts/generate-nativeaot-fixtures.mjs"
+    },
+    {
+      "name": "build:ghidra-windows-fixture",
+      "command": "node scripts/create-ghidra-windows-fixture.mjs"
+    },
+    {
+      "name": "build:ghidra:nativeaot",
+      "command": "node scripts/build-ghidra-nativeaot.mjs"
+    },
+    {
+      "name": "build:termux",
+      "command": "node scripts/run-exclusive.mjs artifacts npm run build:termux:run"
+    },
+    {
+      "name": "build:termux:run",
+      "command": "npm run compile:termux && npm run artifacts:skills"
+    },
+    {
+      "name": "build:windows-native",
+      "command": "node scripts/build-windows-native.mjs"
+    },
+    {
+      "name": "check",
+      "command": "node scripts/run-exclusive.mjs artifacts turbo run typecheck lint:built format:check knip metadata:check && npm run verify:architecture-guards"
+    },
+    {
+      "name": "check:changed",
+      "command": "npm run check:fast && npm run test:changed"
+    },
+    {
+      "name": "check:ci",
+      "command": "node scripts/run-exclusive.mjs artifacts turbo run typecheck lint:built format:check knip metadata:check jscpd scan:todos && npm run verify:architecture-guards"
+    },
+    {
+      "name": "check:fast",
+      "command": "turbo run typecheck lint --output-logs=errors-only"
+    },
+    {
+      "name": "check:pr",
+      "command": "node scripts/run-exclusive.mjs artifacts turbo run typecheck lint:built format:check knip metadata:check test:run && npm run test:python && npm run docs:check && npm run jscpd && npm run scan:todos"
+    },
+    {
+      "name": "check:test",
+      "command": "node scripts/run-exclusive.mjs artifacts turbo run typecheck lint:built format:check knip metadata:check test:run"
+    },
+    {
+      "name": "compile",
+      "command": "node scripts/clean-build-output.mjs && tsc -p tsconfig.build.json && node scripts/bundle-runtime.mjs"
+    },
+    {
+      "name": "compile:termux",
+      "command": "node scripts/clean-build-output.mjs && node --max-old-space-size=3072 node_modules/typescript-termux/lib/tsc.js -p tsconfig.build.json && node scripts/bundle-runtime.mjs"
+    },
+    {
+      "name": "config:print",
+      "command": "node scripts/print-mcp-config.mjs"
+    },
+    {
+      "name": "deps:check",
+      "command": "node scripts/check-dependency-install.mjs"
+    },
+    {
+      "name": "docs:build",
+      "command": "vitepress build docs"
+    },
+    {
+      "name": "docs:check",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run docs:check:built && npm run test:local -- tests/conformance/readmeConsistency.test.ts"
+    },
+    {
+      "name": "docs:check:built",
+      "command": "node scripts/generate-package-metadata.mjs --check && node scripts/generate-skill-metadata.mjs --check && node scripts/generate-product-catalog.mjs --check && node scripts/generate-completion-ledger.mjs --check && node scripts/check-doc-facts.mjs && node scripts/generate-error-schema.mjs --check && npm run licenses:check"
+    },
+    {
+      "name": "docs:dev",
+      "command": "vitepress dev docs"
+    },
+    {
+      "name": "docs:error-schema",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run artifacts:error-schema"
+    },
+    {
+      "name": "docs:generate",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts npm run docs:prepare"
+    },
+    {
+      "name": "docs:prepare",
+      "command": "node scripts/generate-package-metadata.mjs && turbo run artifacts:product-catalog artifacts:managed-evidence artifacts:error-schema"
+    },
+    {
+      "name": "docs:preview",
+      "command": "vitepress preview docs"
+    },
+    {
+      "name": "evidence:check",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run evidence:check:built"
+    },
+    {
+      "name": "evidence:check:built",
+      "command": "node scripts/generate-completion-ledger.mjs --check"
+    },
+    {
+      "name": "evidence:generate",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run artifacts:managed-evidence"
+    },
+    {
+      "name": "fixtures:android",
+      "command": "node scripts/fixtures/android/fetch.mjs"
+    },
+    {
+      "name": "fixtures:firmware",
+      "command": "node scripts/fixtures/firmware/generate.mjs"
+    },
+    {
+      "name": "fixtures:harmony",
+      "command": "node scripts/fixtures/harmony/fetch.mjs"
+    },
+    {
+      "name": "format",
+      "command": "oxfmt ."
+    },
+    {
+      "name": "format:check",
+      "command": "oxfmt --check ."
+    },
+    {
+      "name": "jscpd",
+      "command": "node scripts/ci/static-check-report.mjs duplicates"
+    },
+    {
+      "name": "jscpd:details",
+      "command": "jscpd src/ tests/ --no-tips"
+    },
+    {
+      "name": "knip",
+      "command": "knip"
+    },
+    {
+      "name": "licenses:check",
+      "command": "node scripts/generate-third-party-inventory.mjs --check"
+    },
+    {
+      "name": "licenses:generate",
+      "command": "node scripts/generate-third-party-inventory.mjs"
+    },
+    {
+      "name": "lint",
+      "command": "node scripts/ci/static-check-report.mjs lint && npm run verify:module-boundaries"
+    },
+    {
+      "name": "lint:built",
+      "command": "npm run lint"
+    },
+    {
+      "name": "lint:details",
+      "command": "oxlint && npm run verify:module-boundaries"
+    },
+    {
+      "name": "lint:fix",
+      "command": "oxlint --fix && npm run verify:module-boundaries"
+    },
+    {
+      "name": "mcp-catalog:check",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run mcp-catalog:check:built"
+    },
+    {
+      "name": "mcp-catalog:check:built",
+      "command": "node scripts/generate-mcp-tool-catalog.mjs --check"
+    },
+    {
+      "name": "mcp-catalog:generate",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run artifacts:mcp-catalog"
+    },
+    {
+      "name": "mcp-registry:check",
+      "command": "node scripts/verify-mcp-registry-metadata.mjs"
+    },
+    {
+      "name": "metadata:check",
+      "command": "node scripts/generate-package-metadata.mjs --check"
+    },
+    {
+      "name": "metadata:generate",
+      "command": "node scripts/run-exclusive.mjs artifacts node scripts/generate-package-metadata.mjs"
+    },
+    {
+      "name": "prebuild",
+      "command": "npm run deps:check"
+    },
+    {
+      "name": "precheck",
+      "command": "npm run deps:check"
+    },
+    {
+      "name": "precheck:changed",
+      "command": "npm run deps:check"
+    },
+    {
+      "name": "precheck:ci",
+      "command": "npm run deps:check"
+    },
+    {
+      "name": "precheck:fast",
+      "command": "npm run deps:check"
+    },
+    {
+      "name": "precheck:pr",
+      "command": "npm run deps:check"
+    },
+    {
+      "name": "precheck:test",
+      "command": "npm run deps:check"
+    },
+    {
+      "name": "predocs:build",
+      "command": "npm run docs:generate"
+    },
+    {
+      "name": "predocs:dev",
+      "command": "npm run docs:generate"
+    },
+    {
+      "name": "prepack",
+      "command": "node scripts/prepack.mjs"
+    },
+    {
+      "name": "prepare",
+      "command": "node scripts/prepare.mjs"
+    },
+    {
+      "name": "prepublishOnly",
+      "command": "npm run verify:windows-native:artifact"
+    },
+    {
+      "name": "pretest:acceptance",
+      "command": "npm run build:cached"
+    },
+    {
+      "name": "pretest:boundary",
+      "command": "npm run test:prepare"
+    },
+    {
+      "name": "pretest:ci:shard",
+      "command": "npm run test:prepare"
+    },
+    {
+      "name": "pretest:coverage",
+      "command": "npm run test:prepare"
+    },
+    {
+      "name": "pretest:integration",
+      "command": "npm run test:prepare"
+    },
+    {
+      "name": "pretest:mcp",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run artifacts:skills artifacts:mcp-catalog"
+    },
+    {
+      "name": "pretest:verbose",
+      "command": "npm run test:prepare"
+    },
+    {
+      "name": "pretest:watch:all",
+      "command": "npm run test:prepare"
+    },
+    {
+      "name": "probe:windows-capabilities",
+      "command": "npm run build:cached && node scripts/windows-capabilities.mjs"
+    },
+    {
+      "name": "release:notes",
+      "command": "node scripts/release-notes.mjs"
+    },
+    {
+      "name": "scan:todos",
+      "command": "node scripts/scan-todos.mjs"
+    },
+    {
+      "name": "start",
+      "command": "node scripts/rea.mjs mcp"
+    },
+    {
+      "name": "test",
+      "command": "npm run test:with-build"
+    },
+    {
+      "name": "test:acceptance",
+      "command": "vitest run --project acceptance"
+    },
+    {
+      "name": "test:boundary",
+      "command": "vitest run --project boundary --project cli-boundary --project process-boundary --project mcp-boundary --project process-global"
+    },
+    {
+      "name": "test:changed",
+      "command": "node scripts/run-development-tests.mjs changed"
+    },
+    {
+      "name": "test:ci",
+      "command": "npm run test:coverage -- --reporter=default --reporter=junit --outputFile.junit=test-results.xml"
+    },
+    {
+      "name": "test:ci:merge",
+      "command": "vitest --merge-reports --coverage.enabled --coverage.provider=v8"
+    },
+    {
+      "name": "test:ci:shard",
+      "command": "npm run test:ci:shard:run"
+    },
+    {
+      "name": "test:ci:shard:run",
+      "command": "vitest run --coverage.enabled --coverage.provider=v8 --coverage.thresholds.lines=0 --coverage.thresholds.functions=0 --coverage.thresholds.branches=0 --coverage.thresholds.statements=0 --reporter=default --reporter=blob"
+    },
+    {
+      "name": "test:coverage",
+      "command": "vitest run --coverage.enabled --coverage.provider=v8"
+    },
+    {
+      "name": "test:fast",
+      "command": "vitest run --project domain --project services --project adapters --project composition --project conformance --project evaluation"
+    },
+    {
+      "name": "test:focused",
+      "command": "node scripts/run-development-tests.mjs focused"
+    },
+    {
+      "name": "test:integration",
+      "command": "vitest run --project boundary --project cli-boundary --project process-boundary --project mcp-boundary --project process-global --project acceptance"
+    },
+    {
+      "name": "test:local",
+      "command": "node scripts/run-development-tests.mjs local"
+    },
+    {
+      "name": "test:mcp",
+      "command": "vitest run --project mcp-boundary"
+    },
+    {
+      "name": "test:prepare",
+      "command": "node scripts/check-dependency-install.mjs && node scripts/run-exclusive.mjs artifacts turbo run artifacts:mcp-catalog artifacts:product-catalog artifacts:managed-evidence"
+    },
+    {
+      "name": "test:python",
+      "command": "python3 -m unittest bridge/native/test_rea_lldb_tracer.py -v && python3 -m unittest discover -s experiments/analysis-efficiency -p 'test_*.py' -v"
+    },
+    {
+      "name": "test:run",
+      "command": "vitest run"
+    },
+    {
+      "name": "test:sqlite",
+      "command": "npm run test:prepare && npm run test:sqlite:run"
+    },
+    {
+      "name": "test:sqlite:run",
+      "command": "vitest run src/application/sqlite/ tests/boundary/sqlite/ tests/acceptance/sqliteDatabaseCli.test.ts tests/boundary/mcp/serverLifecycleMcp.test.ts"
+    },
+    {
+      "name": "test:verbose",
+      "command": "vitest run --reporter=verbose"
+    },
+    {
+      "name": "test:watch",
+      "command": "vitest --project domain --project services --project adapters --project composition --project conformance --project evaluation --changed"
+    },
+    {
+      "name": "test:watch:all",
+      "command": "vitest --changed"
+    },
+    {
+      "name": "test:with-build",
+      "command": "npm run test:prepare && vitest run"
+    },
+    {
+      "name": "typecheck",
+      "command": "tsc --noEmit"
+    },
+    {
+      "name": "verify:adb",
+      "command": "npm run build:cached && node scripts/verify-adb.mjs"
+    },
+    {
+      "name": "verify:agent",
+      "command": "npm run build:cached && node scripts/verify-agent-experience.mjs"
+    },
+    {
+      "name": "verify:android",
+      "command": "npm run build:cached && node scripts/verify/android/analysis.mjs"
+    },
+    {
+      "name": "verify:apktool",
+      "command": "npm run build:cached && node scripts/verify-apktool.mjs"
+    },
+    {
+      "name": "verify:apple-dispatch",
+      "command": "npm run build:cached && node scripts/verify/apple/dispatch.mjs"
+    },
+    {
+      "name": "verify:application-workflows",
+      "command": "npm run build:cached && node scripts/verify/javascript/application-workflows.mjs"
+    },
+    {
+      "name": "verify:architecture-guards",
+      "command": "node scripts/verify/architecture-guards.mjs"
+    },
+    {
+      "name": "verify:asset-catalog",
+      "command": "npm run build:cached && node scripts/verify/apple/asset-catalog.mjs"
+    },
+    {
+      "name": "verify:binary:layout",
+      "command": "npm run build:cached && node scripts/verify-binary-layout.mjs"
+    },
+    {
+      "name": "verify:browser",
+      "command": "npm run build:cached && node scripts/verify-real-browser.mjs"
+    },
+    {
+      "name": "verify:browser:dom",
+      "command": "node scripts/verify-browser-dom-destinations.mjs"
+    },
+    {
+      "name": "verify:browser:modules",
+      "command": "npm run build:cached && node scripts/verify-browser-modules.mjs"
+    },
+    {
+      "name": "verify:browser:network",
+      "command": "npm run build:cached && node scripts/verify-browser-network.mjs"
+    },
+    {
+      "name": "verify:browser:runtime",
+      "command": "npm run build:cached && node scripts/verify-browser-runtime.mjs"
+    },
+    {
+      "name": "verify:browser:scripts",
+      "command": "npm run build:cached && node scripts/verify-browser-scripts.mjs"
+    },
+    {
+      "name": "verify:browser:source-maps",
+      "command": "npm run build:cached && node scripts/verify-browser-source-maps.mjs"
+    },
+    {
+      "name": "verify:claude-client",
+      "command": "npm run build:cached && node scripts/verify-claude-client.mjs"
+    },
+    {
+      "name": "verify:commandcode-client",
+      "command": "npm run build:cached && node scripts/verify-commandcode-client.mjs"
+    },
+    {
+      "name": "verify:copilot-client",
+      "command": "npm run build:cached && node scripts/verify-copilot-client.mjs"
+    },
+    {
+      "name": "verify:deepseek-client",
+      "command": "npm run build:cached && node scripts/verify-deepseek-client.mjs"
+    },
+    {
+      "name": "verify:electron",
+      "command": "npm run build:cached && node scripts/verify-real-electron.mjs"
+    },
+    {
+      "name": "verify:evm:interface",
+      "command": "npm run build:cached && node scripts/verify-evm-interface.mjs"
+    },
+    {
+      "name": "verify:firmware",
+      "command": "npm run build:cached && node scripts/verify/firmware/analysis.mjs"
+    },
+    {
+      "name": "verify:fixtures",
+      "command": "npm run build:fixtures && node scripts/verify-conformance-fixtures.mjs"
+    },
+    {
+      "name": "verify:flutter",
+      "command": "npm run build:cached && node scripts/verify-flutter.mjs"
+    },
+    {
+      "name": "verify:frida",
+      "command": "npm run build:cached && node scripts/verify-frida.mjs"
+    },
+    {
+      "name": "verify:frida:bindings",
+      "command": "tsc --noEmit -p tsconfig.frida-verification.json"
+    },
+    {
+      "name": "verify:gemini-client",
+      "command": "npm run build:cached && node scripts/verify-gemini-client.mjs"
+    },
+    {
+      "name": "verify:ghidra",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra.mjs"
+    },
+    {
+      "name": "verify:ghidra:6502",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-6502.mjs"
+    },
+    {
+      "name": "verify:ghidra:aarch64-jump-table",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra.mjs --aarch64-jump-table"
+    },
+    {
+      "name": "verify:ghidra:address-context",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-address-context.mjs"
+    },
+    {
+      "name": "verify:ghidra:com",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-com.mjs"
+    },
+    {
+      "name": "verify:ghidra:cross-format",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra.mjs --cross-format"
+    },
+    {
+      "name": "verify:ghidra:dos",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-dos.mjs"
+    },
+    {
+      "name": "verify:ghidra:mips",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-mips.mjs"
+    },
+    {
+      "name": "verify:ghidra:mips-relocatable",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-mips-relocatable.mjs"
+    },
+    {
+      "name": "verify:ghidra:mips-shared",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-mips-shared.mjs"
+    },
+    {
+      "name": "verify:ghidra:nativeaot",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-nativeaot.mjs"
+    },
+    {
+      "name": "verify:ghidra:raw",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-raw.mjs"
+    },
+    {
+      "name": "verify:ghidra:riscv",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-riscv.mjs"
+    },
+    {
+      "name": "verify:ghidra:seeds",
+      "command": "npm run build:cached && node scripts/verify/ghidra/seeds.mjs"
+    },
+    {
+      "name": "verify:ghidra:swift",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-swift.mjs"
+    },
+    {
+      "name": "verify:ghidra:switch",
+      "command": "npm run build:cached && node scripts/verify-real-ghidra-switch.mjs"
+    },
+    {
+      "name": "verify:ghidra:windows",
+      "command": "npm run build:cached && npm run build:ghidra-windows-fixture && node scripts/verify-real-ghidra-windows.mjs"
+    },
+    {
+      "name": "verify:ghidra:windows:package",
+      "command": "node scripts/verify-packaged-ghidra-windows.mjs"
+    },
+    {
+      "name": "verify:go:binary",
+      "command": "npm run build:cached && node scripts/verify-go-binary.mjs"
+    },
+    {
+      "name": "verify:grok-client",
+      "command": "npm run build:cached && node scripts/verify-grok-client.mjs"
+    },
+    {
+      "name": "verify:harmony",
+      "command": "npm run build:cached && node scripts/verify/harmony/analysis.mjs"
+    },
+    {
+      "name": "verify:hermes-client",
+      "command": "npm run build:cached && node scripts/verify-native-agent-client.mjs hermes"
+    },
+    {
+      "name": "verify:hopper",
+      "command": "npm run verify:fixtures && npm run build:cached && node scripts/verify-real-hopper.mjs"
+    },
+    {
+      "name": "verify:hopper:deadlines",
+      "command": "npm run verify:fixtures && npm run build:cached && node scripts/verify-real-hopper-deadlines.mjs"
+    },
+    {
+      "name": "verify:hopper:fat",
+      "command": "npm run build:cached && node scripts/verify-real-hopper-fat.mjs"
+    },
+    {
+      "name": "verify:hopper:fat64",
+      "command": "npm run build:cached && node scripts/verify-real-hopper-fat.mjs --fat64"
+    },
+    {
+      "name": "verify:hopper:linux",
+      "command": "npm run verify:fixtures && npm run build:cached && node scripts/verify-real-hopper-linux.mjs"
+    },
+    {
+      "name": "verify:ida",
+      "command": "npm run build:cached && node scripts/verify-real-ida.mjs"
+    },
+    {
+      "name": "verify:inspector",
+      "command": "npm run build:cached && node scripts/verify/inspector/runtime-observation.mjs"
+    },
+    {
+      "name": "verify:interface-builder",
+      "command": "npm run build:cached && node scripts/verify/apple/interface-builder.mjs"
+    },
+    {
+      "name": "verify:javascript-runtime",
+      "command": "npm run build:cached && node scripts/verify/javascript/runtime-observation.mjs"
+    },
+    {
+      "name": "verify:javascript:digests",
+      "command": "npm run build:cached && node scripts/verify/javascript/digests.mjs"
+    },
+    {
+      "name": "verify:javascript:output",
+      "command": "npm run build:cached && node scripts/verify/javascript/output.mjs"
+    },
+    {
+      "name": "verify:javascript:recovery",
+      "command": "node scripts/verify/javascript/recovery.mjs"
+    },
+    {
+      "name": "verify:jeb",
+      "command": "npm run build:cached && node scripts/verify-jeb.mjs"
+    },
+    {
+      "name": "verify:keyed-archive",
+      "command": "npm run build:cached && node scripts/verify/apple/keyed-archive.mjs"
+    },
+    {
+      "name": "verify:legacy-simulator",
+      "command": "npm run build:cached && node scripts/verify/apple/legacy-simulator.mjs"
+    },
+    {
+      "name": "verify:macos-bundle",
+      "command": "npm run build:cached && node scripts/verify/apple/macos-bundle.mjs"
+    },
+    {
+      "name": "verify:managed",
+      "command": "npm run build:cached && node scripts/verify/managed/conformance.mjs"
+    },
+    {
+      "name": "verify:module-boundaries",
+      "command": "node scripts/verify-module-boundaries.mjs"
+    },
+    {
+      "name": "verify:native-calls",
+      "command": "npm run build:cached && node scripts/verify-native-calls.mjs"
+    },
+    {
+      "name": "verify:native-ui",
+      "command": "npm run build:cached && node scripts/verify-native-ui.mjs"
+    },
+    {
+      "name": "verify:native-ui:permissions",
+      "command": "npm run build:cached && node scripts/verify-native-ui.mjs --allow-permission-denial"
+    },
+    {
+      "name": "verify:omp-client",
+      "command": "npm run build:cached && node scripts/verify-omp-client.mjs"
+    },
+    {
+      "name": "verify:opencode-client",
+      "command": "npm run build:cached && node scripts/verify-opencode-client.mjs"
+    },
+    {
+      "name": "verify:package",
+      "command": "npm run build:cached && node scripts/verify-package.mjs"
+    },
+    {
+      "name": "verify:package:windows",
+      "command": "npm run build:cached && node scripts/verify-windows-package.mjs"
+    },
+    {
+      "name": "verify:pcap",
+      "command": "npm run build:cached && node scripts/verify-pcap.mjs"
+    },
+    {
+      "name": "verify:pi-client",
+      "command": "npm run build:cached && node scripts/verify-native-agent-client.mjs pi"
+    },
+    {
+      "name": "verify:published",
+      "command": "node scripts/verify-published-package.mjs"
+    },
+    {
+      "name": "verify:qwen-client",
+      "command": "npm run build:cached && node scripts/verify-qwen-client.mjs"
+    },
+    {
+      "name": "verify:readiness",
+      "command": "npm run build:cached && npm run verify:fixtures && node scripts/verify-reconstruction-readiness.mjs"
+    },
+    {
+      "name": "verify:recorded:crash",
+      "command": "npm run build:cached && node scripts/verify-recorded-crash.mjs"
+    },
+    {
+      "name": "verify:setup:linux",
+      "command": "npm run verify:fixtures && npm run build:cached && node scripts/verify-linux-setup-e2e.mjs"
+    },
+    {
+      "name": "verify:solidity:metadata",
+      "command": "npm run build:cached && node scripts/verify-solidity-metadata.mjs"
+    },
+    {
+      "name": "verify:test-discovery",
+      "command": "node scripts/verify-test-discovery.mjs"
+    },
+    {
+      "name": "verify:test-temp-hygiene",
+      "command": "npm run test:prepare && node scripts/verify-test-temp-hygiene.mjs"
+    },
+    {
+      "name": "verify:wasm-interface-comparison",
+      "command": "npm run build:cached && node scripts/verify-wasm-interface-comparison.mjs"
+    },
+    {
+      "name": "verify:wasm:artifact",
+      "command": "npm run build:cached && node scripts/verify-wasm-artifact.mjs"
+    },
+    {
+      "name": "verify:wasm:package",
+      "command": "npm run build:cached && node scripts/verify-packaged-wasm-artifact.mjs"
+    },
+    {
+      "name": "verify:web:http3",
+      "command": "npm run build:cached && node scripts/verify-http3-network-captures.mjs"
+    },
+    {
+      "name": "verify:web:network-captures",
+      "command": "npm run build:cached && node scripts/verify-web-network-captures.mjs"
+    },
+    {
+      "name": "verify:web:qlog",
+      "command": "npm run build:cached && node scripts/verify-qlog-captures.mjs"
+    },
+    {
+      "name": "verify:windows-native",
+      "command": "node scripts/verify-windows-native.mjs"
+    },
+    {
+      "name": "verify:windows-native:artifact",
+      "command": "node scripts/verify-windows-native-artifact.mjs"
+    },
+    {
+      "name": "workbench",
+      "command": "node workbench/server.mjs"
+    },
+    {
+      "name": "workbench:check",
+      "command": "node workbench/scripts/generate-data.mjs --check"
+    },
+    {
+      "name": "workbench:data",
+      "command": "node workbench/scripts/generate-data.mjs"
+    },
+    {
+      "name": "workbench:test",
+      "command": "node --test workbench/test/workbench.test.mjs"
+    }
+  ]
+}

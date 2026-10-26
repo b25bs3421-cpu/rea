@@ -1,0 +1,734 @@
+{
+  "generatedFrom": "product-catalog.json + `rea --help`",
+  "primaryCount": 144,
+  "aliases": [
+    {
+      "name": "compare-bundles",
+      "target": "compare"
+    }
+  ],
+  "commands": [
+    {
+      "name": "address-to-file-offset",
+      "description": "Resolve an analysis address to its original file byte offset",
+      "aliases": []
+    },
+    {
+      "name": "analyze",
+      "description": "Get an overview of an app",
+      "aliases": []
+    },
+    {
+      "name": "analyze-javascript-application",
+      "description": "Statically reconstruct a local JavaScript/Electron application",
+      "aliases": []
+    },
+    {
+      "name": "analyze-web-bundle",
+      "description": "Capture and statically analyze a page bundle, defaulting to the selected target origin",
+      "aliases": []
+    },
+    {
+      "name": "annotate-native-function",
+      "description": "Edit function annotations and return refreshed analysis",
+      "aliases": []
+    },
+    {
+      "name": "build-reconstruction-obligation-ledger",
+      "description": "Generate a deterministic Evidence-backed reconstruction obligation ledger page",
+      "aliases": []
+    },
+    {
+      "name": "capabilities",
+      "description": "List provider capabilities and side effects",
+      "aliases": []
+    },
+    {
+      "name": "capture-adb-screen",
+      "description": "Capture one screen frame as a digested PNG",
+      "aliases": []
+    },
+    {
+      "name": "capture-browser-scenario",
+      "description": "Run one bounded Playwright browser scenario and return Evidence",
+      "aliases": []
+    },
+    {
+      "name": "capture-electron-scenario",
+      "description": "Run one owned Electron scenario with cancellable actions",
+      "aliases": []
+    },
+    {
+      "name": "capture-native-ui-scenario",
+      "description": "Run declarative AX actions or waits in one exact native application window",
+      "aliases": []
+    },
+    {
+      "name": "capture-process",
+      "description": "Capture one caller-selected process scenario",
+      "aliases": []
+    },
+    {
+      "name": "capture-web-screenshot",
+      "description": "Capture one visible page viewport within the supplied origin scope",
+      "aliases": []
+    },
+    {
+      "name": "collect-adb-bugreport",
+      "description": "Collect and digest one device-generated bugreport archive",
+      "aliases": []
+    },
+    {
+      "name": "compare",
+      "description": "Compare two canonical Evidence bundles",
+      "aliases": [
+        "compare-bundles"
+      ]
+    },
+    {
+      "name": "compare-application-versions",
+      "description": "Compare two authenticated JavaScript Application Graph versions",
+      "aliases": []
+    },
+    {
+      "name": "compare-javascript-export-shapes",
+      "description": "Compare exact static JavaScript export return shapes without execution",
+      "aliases": []
+    },
+    {
+      "name": "compare-managed-members",
+      "description": "Compare managed PE/CLI member inventories by exact declared type, name, and signature; names alone never form a match",
+      "aliases": []
+    },
+    {
+      "name": "compare-process-captures",
+      "description": "Compare two process capture Evidence JSON files",
+      "aliases": []
+    },
+    {
+      "name": "compare-source-to-bundle",
+      "description": "Compare committed historical source with authenticated application Evidence",
+      "aliases": []
+    },
+    {
+      "name": "compare-wasm-interfaces",
+      "description": "Compare core WASM interfaces from two exact inspection Evidence records",
+      "aliases": []
+    },
+    {
+      "name": "compare-web-captures",
+      "description": "Compare two normalized passive captures or recorded browser scenarios",
+      "aliases": []
+    },
+    {
+      "name": "compare-web-screenshots",
+      "description": "Compare two self-verifying PNG artifact JSON values",
+      "aliases": []
+    },
+    {
+      "name": "decode-android-resources",
+      "description": "Decode one APK's manifest, metadata, and string resources with apktool",
+      "aliases": []
+    },
+    {
+      "name": "decode-interface-builder",
+      "description": "Decode compiled storyboard and nib archives from an app bundle",
+      "aliases": []
+    },
+    {
+      "name": "decode-signal-recording",
+      "description": "Decode an existing signal recording with caller-supplied sigrok",
+      "aliases": []
+    },
+    {
+      "name": "decompile",
+      "description": "Read one part of an app as code",
+      "aliases": []
+    },
+    {
+      "name": "decompile-jeb-item",
+      "description": "Decompile one JEB type or method to engine pseudo-code",
+      "aliases": []
+    },
+    {
+      "name": "demangle-swift",
+      "description": "Demangle Swift symbols without Hopper",
+      "aliases": []
+    },
+    {
+      "name": "discover-webmcp-tools",
+      "description": "Passively discover page-declared WebMCP tools",
+      "aliases": []
+    },
+    {
+      "name": "doctor",
+      "description": "Check whether REA is ready",
+      "aliases": []
+    },
+    {
+      "name": "evaluate-reconstruction-coverage",
+      "description": "Evaluate inline fail-closed reconstruction coverage",
+      "aliases": []
+    },
+    {
+      "name": "evidence-export",
+      "description": "Validate and atomically export canonical Evidence JSON",
+      "aliases": []
+    },
+    {
+      "name": "evidence-import",
+      "description": "Validate and import a bounded local Evidence bundle",
+      "aliases": []
+    },
+    {
+      "name": "export-web-scripts",
+      "description": "Export retained website scripts into an absent directory for static JavaScript analysis",
+      "aliases": []
+    },
+    {
+      "name": "extract-artifact",
+      "description": "Extract all regular artifact contents safely",
+      "aliases": []
+    },
+    {
+      "name": "extract-firmware",
+      "description": "Extract selected firmware bytes and return verified files and provenance",
+      "aliases": []
+    },
+    {
+      "name": "function",
+      "description": "Analyze one complete function with evidence",
+      "aliases": []
+    },
+    {
+      "name": "identify-flutter-build",
+      "description": "Identify a Flutter build's Dart snapshot hash and engine facts by pure APK parsing",
+      "aliases": []
+    },
+    {
+      "name": "import-managed-reconstruction",
+      "description": "Import decompiler-produced managed reconstruction against exact static member evidence",
+      "aliases": []
+    },
+    {
+      "name": "import-reference-source",
+      "description": "Import a source tree as historical reference only",
+      "aliases": []
+    },
+    {
+      "name": "inspect",
+      "description": "Inspect an app overview with evidence",
+      "aliases": []
+    },
+    {
+      "name": "inspect-adb-client",
+      "description": "Inspect the caller-selected adb client without contacting devices",
+      "aliases": []
+    },
+    {
+      "name": "inspect-adb-device",
+      "description": "Inspect one device's build identity through a fixed getprop whitelist",
+      "aliases": []
+    },
+    {
+      "name": "inspect-adb-display",
+      "description": "Report the display's declared size and density",
+      "aliases": []
+    },
+    {
+      "name": "inspect-adb-package",
+      "description": "Inspect one installed package's version, installer, and flags through dumpsys",
+      "aliases": []
+    },
+    {
+      "name": "inspect-adb-window",
+      "description": "Report the window manager's current focus declarations",
+      "aliases": []
+    },
+    {
+      "name": "inspect-analysis-view",
+      "description": "Project a selected view of completed layout, JavaScript application or native function Evidence JSON",
+      "aliases": []
+    },
+    {
+      "name": "inspect-android-class",
+      "description": "Inspect one exact APK class's member inventory",
+      "aliases": []
+    },
+    {
+      "name": "inspect-android-method",
+      "description": "Decompile one APK method with explicit overload selection",
+      "aliases": []
+    },
+    {
+      "name": "inspect-android-package",
+      "description": "Inspect APK declarations and decoded manifest without executing it",
+      "aliases": []
+    },
+    {
+      "name": "inspect-apktool-client",
+      "description": "Inspect the caller-selected apktool launcher without decoding anything",
+      "aliases": []
+    },
+    {
+      "name": "inspect-artifact",
+      "description": "Inspect one artifact and return all available observations and next probes",
+      "aliases": []
+    },
+    {
+      "name": "inspect-asset-catalog",
+      "description": "Inspect compiled Apple asset catalog metadata",
+      "aliases": []
+    },
+    {
+      "name": "inspect-binary-layout",
+      "description": "Inspect binary file/linked layout without executing the selected object",
+      "aliases": []
+    },
+    {
+      "name": "inspect-dart-aot",
+      "description": "Inspect one ABI's Dart AOT snapshot: sections, headers, and the string pool",
+      "aliases": []
+    },
+    {
+      "name": "inspect-electron-page",
+      "description": "Passively inspect one Electron file page",
+      "aliases": []
+    },
+    {
+      "name": "inspect-evidence-bundle",
+      "description": "Inspect complete or selected discovery metadata from a local Evidence bundle",
+      "aliases": []
+    },
+    {
+      "name": "inspect-evm-interface",
+      "description": "Infer interface candidates from explicit local EVM bytecode",
+      "aliases": []
+    },
+    {
+      "name": "inspect-firmware-regions",
+      "description": "Inspect firmware signature candidates without extracting them",
+      "aliases": []
+    },
+    {
+      "name": "inspect-go-binary",
+      "description": "Inspect embedded Go compiler, modules and build settings without target execution",
+      "aliases": []
+    },
+    {
+      "name": "inspect-jeb-client",
+      "description": "Inspect the running JEB MCP client without opening a target",
+      "aliases": []
+    },
+    {
+      "name": "inspect-keyed-archive",
+      "description": "Inspect a Foundation keyed archive as an object-reference graph",
+      "aliases": []
+    },
+    {
+      "name": "inspect-macho",
+      "description": "Run inspect_macho without launching Hopper",
+      "aliases": []
+    },
+    {
+      "name": "inspect-managed-artifact",
+      "description": "Inspect PE/CLI identity without loading target code",
+      "aliases": []
+    },
+    {
+      "name": "inspect-managed-members",
+      "description": "Inspect PE/CLI metadata members, signatures, and CIL anchors without loading target code",
+      "aliases": []
+    },
+    {
+      "name": "inspect-managed-native-boundaries",
+      "description": "Inspect PE/CLI PInvoke and native implementation boundary declarations without loading target code",
+      "aliases": []
+    },
+    {
+      "name": "inspect-native-api",
+      "description": "Reconstruct one native function API boundary with evidence",
+      "aliases": []
+    },
+    {
+      "name": "inspect-native-data-type",
+      "description": "Inspect one recovered database type or typed data object",
+      "aliases": []
+    },
+    {
+      "name": "inspect-native-dispatch-metadata",
+      "description": "Inspect typed Objective-C and Swift dispatch metadata",
+      "aliases": []
+    },
+    {
+      "name": "inspect-native-instruction",
+      "description": "Inspect one native instruction with decoded operand facts",
+      "aliases": []
+    },
+    {
+      "name": "inspect-native-load-image",
+      "description": "Verify loaded native bytes, source mappings, relocations and entry",
+      "aliases": []
+    },
+    {
+      "name": "inspect-packet-capture",
+      "description": "Inspect an existing packet capture with caller-supplied TShark",
+      "aliases": []
+    },
+    {
+      "name": "inspect-packet-fields",
+      "description": "Search installed TShark protocol and field definitions",
+      "aliases": []
+    },
+    {
+      "name": "inspect-pcap-capture",
+      "description": "Inspect one pcap/pcapng capture: endpoints, DNS, TLS SNI, and protocol distribution",
+      "aliases": []
+    },
+    {
+      "name": "inspect-pcap-client",
+      "description": "Inspect the caller-selected tshark and capinfos binaries without reading a capture",
+      "aliases": []
+    },
+    {
+      "name": "inspect-pe-resources",
+      "description": "Inspect PE resource identities, payload ranges, hashes and icon-group relationships",
+      "aliases": []
+    },
+    {
+      "name": "inspect-plist",
+      "description": "Parse app plist metadata without launching Hopper",
+      "aliases": []
+    },
+    {
+      "name": "inspect-recorded-crash",
+      "description": "Inspect supplied core registers/signals and optional debugger mapping evidence",
+      "aliases": []
+    },
+    {
+      "name": "inspect-signal-decoders",
+      "description": "Search installed sigrok decoders or selected decoder help",
+      "aliases": []
+    },
+    {
+      "name": "inspect-signature",
+      "description": "Run inspect_signature without launching Hopper",
+      "aliases": []
+    },
+    {
+      "name": "inspect-sqlite-database",
+      "description": "Inspect SQLite schema and optional ordinary-table rows from a local snapshot",
+      "aliases": []
+    },
+    {
+      "name": "inspect-wasm-artifact",
+      "description": "Inspect an explicit local WASM artifact with WABT",
+      "aliases": []
+    },
+    {
+      "name": "inspect-web-event-listeners",
+      "description": "Inspect native listener source locations on the first main-document CSS match",
+      "aliases": []
+    },
+    {
+      "name": "inspect-web-network-capture",
+      "description": "Inspect retained HAR, native mitmproxy, Fiddler SAZ or aioquic qlog records without fetching recorded URLs",
+      "aliases": []
+    },
+    {
+      "name": "inspect-web-page",
+      "description": "Passively inspect one page through CDP, defaulting to its current origin",
+      "aliases": []
+    },
+    {
+      "name": "install-adb-package",
+      "description": "Install one local APK; --replace re-installs keeping the app's data",
+      "aliases": []
+    },
+    {
+      "name": "instructions",
+      "description": "Read every raw instruction without decompiling",
+      "aliases": []
+    },
+    {
+      "name": "instrument-with-frida",
+      "description": "Run one Frida script against a selected process and detach",
+      "aliases": []
+    },
+    {
+      "name": "list-adb-devices",
+      "description": "List attached devices with serial, state, transport, and inferred kind",
+      "aliases": []
+    },
+    {
+      "name": "list-adb-directory",
+      "description": "List one device directory with kinds, permissions, and sizes",
+      "aliases": []
+    },
+    {
+      "name": "list-adb-features",
+      "description": "List the device's declared hardware and software features",
+      "aliases": []
+    },
+    {
+      "name": "list-adb-packages",
+      "description": "List installed packages on one device with base APK device paths",
+      "aliases": []
+    },
+    {
+      "name": "list-adb-processes",
+      "description": "List running processes exactly as ps -A reports them",
+      "aliases": []
+    },
+    {
+      "name": "list-adb-services",
+      "description": "List the device's binder services and interfaces",
+      "aliases": []
+    },
+    {
+      "name": "list-architectures",
+      "description": "Run list_architectures without launching Hopper",
+      "aliases": []
+    },
+    {
+      "name": "list-browser-targets",
+      "description": "List page targets from a selected loopback CDP browser, optionally filtered by origin",
+      "aliases": []
+    },
+    {
+      "name": "list-electron-targets",
+      "description": "List local file pages exposed by the selected Electron CDP endpoint",
+      "aliases": []
+    },
+    {
+      "name": "list-frida-devices",
+      "description": "List local Frida devices and an optional remote endpoint",
+      "aliases": []
+    },
+    {
+      "name": "list-frida-processes",
+      "description": "List processes visible through a Frida device",
+      "aliases": []
+    },
+    {
+      "name": "list-javascript-runtime-targets",
+      "description": "List Node/Electron V8 Inspector targets",
+      "aliases": []
+    },
+    {
+      "name": "list-jeb-units",
+      "description": "List JEB project units by path and type with optional filter",
+      "aliases": []
+    },
+    {
+      "name": "observe-javascript-runtime",
+      "description": "Passively observe one exact Node/Electron Inspector target",
+      "aliases": []
+    },
+    {
+      "name": "observe-native-calls",
+      "description": "Launch a Mach-O under LLDB and record entries into selected functions or Objective-C methods",
+      "aliases": []
+    },
+    {
+      "name": "observe-native-ui",
+      "description": "Observe one already-running native application window by PID and window ID",
+      "aliases": []
+    },
+    {
+      "name": "observe-web-execution",
+      "description": "Observe precise page execution; resets counters and temporarily disables optimization",
+      "aliases": []
+    },
+    {
+      "name": "observe-web-session",
+      "description": "Observe user-driven page navigation during a chosen window",
+      "aliases": []
+    },
+    {
+      "name": "open-jeb-project",
+      "description": "Open or create a JEB project from an artifact or .jdb2 database",
+      "aliases": []
+    },
+    {
+      "name": "project-android-application-graph",
+      "description": "Project authenticated APK inventory Evidence into an Android application graph",
+      "aliases": []
+    },
+    {
+      "name": "project-apple-application-graph",
+      "description": "Project authenticated IPA or macOS app inventory Evidence into an Apple application graph",
+      "aliases": []
+    },
+    {
+      "name": "project-harmony-application-graph",
+      "description": "Project authenticated HarmonyOS HAP, HSP, or App Pack inventory Evidence into an application graph",
+      "aliases": []
+    },
+    {
+      "name": "project-managed-application-graph",
+      "description": "Project authenticated managed static Evidence into an application graph",
+      "aliases": []
+    },
+    {
+      "name": "providers",
+      "description": "List configured analysis providers",
+      "aliases": []
+    },
+    {
+      "name": "pull-adb-file",
+      "description": "Pull one device file to a local copy with a SHA-256 digest",
+      "aliases": []
+    },
+    {
+      "name": "pull-adb-package",
+      "description": "Pull one installed package's complete APK set with SHA-256 digests",
+      "aliases": []
+    },
+    {
+      "name": "push-adb-file",
+      "description": "Push one local file to the device; refuses existing targets without --overwrite",
+      "aliases": []
+    },
+    {
+      "name": "read-adb-logcat",
+      "description": "Read a bounded dump of the device log for one buffer",
+      "aliases": []
+    },
+    {
+      "name": "read-adb-setting",
+      "description": "Read one settings value from system, secure, or global",
+      "aliases": []
+    },
+    {
+      "name": "read-bytes",
+      "description": "Read exact provider memory bytes at one analysis address",
+      "aliases": []
+    },
+    {
+      "name": "reconcile-javascript-runtime",
+      "description": "Reconcile static application and passive runtime Evidence JSON",
+      "aliases": []
+    },
+    {
+      "name": "recover-javascript-sources",
+      "description": "Recover readable JavaScript modules with source provenance and verified files",
+      "aliases": []
+    },
+    {
+      "name": "resolve-adb-packages",
+      "description": "Find installed packages by case-insensitive name substring",
+      "aliases": []
+    },
+    {
+      "name": "resolve-native-call-targets",
+      "description": "Resolve one static native call site",
+      "aliases": []
+    },
+    {
+      "name": "search",
+      "description": "Search every analyzed string or procedure name",
+      "aliases": []
+    },
+    {
+      "name": "search-android-classes",
+      "description": "Search APK class names; empty query inventories all classes",
+      "aliases": []
+    },
+    {
+      "name": "search-bytes",
+      "description": "Find masked byte patterns in initialized provider memory",
+      "aliases": []
+    },
+    {
+      "name": "setup",
+      "description": "Configure agent integrations and optional analysis providers",
+      "aliases": []
+    },
+    {
+      "name": "start-adb-activity",
+      "description": "Start an intent with am start (action, URI, component, extras)",
+      "aliases": []
+    },
+    {
+      "name": "start-adb-app",
+      "description": "Start one installed app by resolving and launching its launcher activity",
+      "aliases": []
+    },
+    {
+      "name": "stop-adb-app",
+      "description": "Force-stop every process of one package",
+      "aliases": []
+    },
+    {
+      "name": "trace",
+      "description": "Trace a literal feature through analyzed references",
+      "aliases": []
+    },
+    {
+      "name": "trace-android-references",
+      "description": "Trace incoming APK using nodes for a class or selected method",
+      "aliases": []
+    },
+    {
+      "name": "trace-application-feature",
+      "description": "Trace a typed seed through authenticated application Evidence JSON",
+      "aliases": []
+    },
+    {
+      "name": "trace-dylib-resolution",
+      "description": "Trace dyld load-path resolution for a Mach-O or every executable in an app bundle",
+      "aliases": []
+    },
+    {
+      "name": "trace-javascript-semantics",
+      "description": "Trace bounded static semantic relations through authenticated application Evidence",
+      "aliases": []
+    },
+    {
+      "name": "trace-native-ui-action",
+      "description": "Trace a compiled UI action selector to its native handler and direct callees",
+      "aliases": []
+    },
+    {
+      "name": "trace-native-values",
+      "description": "Trace bounded native def-use and call dependencies",
+      "aliases": []
+    },
+    {
+      "name": "trace-web-module-imports",
+      "description": "Trace one captured script's native imports to URLs and captured source candidates",
+      "aliases": []
+    },
+    {
+      "name": "trace-web-source-location",
+      "description": "Trace one retained script position through an explicitly selected local source map",
+      "aliases": []
+    },
+    {
+      "name": "uninstall",
+      "description": "Remove REA-owned agent configuration and skill files",
+      "aliases": []
+    },
+    {
+      "name": "uninstall-adb-package",
+      "description": "Uninstall one package and its data from the device",
+      "aliases": []
+    },
+    {
+      "name": "update",
+      "description": "Update this REA installation and verify the installed release",
+      "aliases": []
+    },
+    {
+      "name": "verify-managed-native-boundaries",
+      "description": "Verify managed P/Invoke declarations against authenticated native Evidence",
+      "aliases": []
+    },
+    {
+      "name": "xrefs",
+      "description": "List bounded references to an analyzed address",
+      "aliases": []
+    }
+  ]
+}

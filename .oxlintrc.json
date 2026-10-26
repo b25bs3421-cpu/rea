@@ -37,6 +37,14 @@
       }
     },
     {
+      "files": ["workbench/**/*.js", "workbench/**/*.mjs"],
+      "rules": {
+        "max-lines": "off",
+        "max-lines-per-function": "off",
+        "complexity": "off"
+      }
+    },
+    {
       "files": ["tests/**/*.ts", "src/**/*.test.ts", "src/**/*.fixture.ts"],
       "rules": {
         "max-lines": "off",

@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-10-26T05:07:20.430Z",
+  "checkout": {
+    "branch": "arena/5cca6736-rea",
+    "commit": "8fef2aa",
+    "remote": "https://github.com/b25bs3421-cpu/rea.git",
+    "repository": "https://github.com/b25bs3421-cpu/rea"
+  },
+  "package": {
+    "name": "rea-agents",
+    "version": "6.4.0"
+  },
+  "sources": {
+    ".cache/mcp-tool-catalog.json": "0bd47f0c344de9fc",
+    "docs/public/product-catalog.json": "2b778952069871bf",
+    "README.md": "eaf16011c791c8a3",
+    "docs/mcp-prompts.md": "6bd9684f4de66a5b",
+    "package.json": "38a5cc894ddd0ca7"
+  },
+  "datasets": {
+    "tools.json": {
+      "bytes": 328449,
+      "sha256": "014eaa643ccc1137"
+    },
+    "cli.json": {
+      "bytes": 23017,
+      "sha256": "75605b503496c5c0"
+    },
+    "product.json": {
+      "bytes": 28948,
+      "sha256": "1ffb29a6dbed74cb"
+    },
+    "docs.json": {
+      "bytes": 53612,
+      "sha256": "e1a5bdb976f1f8dd"
+    },
+    "repo.json": {
+      "bytes": 31753,
+      "sha256": "0fc11eccb0e6c42e"
+    },
+    "prompts.json": {
+      "bytes": 941,
+      "sha256": "c8c3b7121ea38b15"
+    }
+  }
+}
